@@ -29,15 +29,21 @@ const CHAR_TEXT_COLOR := {0: Color(109.0 / 255, 182.0 / 255, 73.0 / 255), 1: Col
 # sprite_port_data.json animation_index_table). Grounded against live
 # behavior: anim 0 = horizontal walk (faces right unflipped, h-flipped for
 # left), anim 2 = away (up), anim 3 = toward camera (down).
+# Anims 0-3 are the 8-frame WALK cycles; anims 4-7 are the dedicated single-frame
+# STANDING/REST poses (4=right side, 5=left side native, 6=UP/back view, 7=DOWN/
+# front view -- confirmed by rendering the frames) -- same layout for both
+# source_00 (Shaggy) and source_01 (Scooby). Idle must use the rest poses, NOT
+# walk-anim frame 0 (a mid-stride, one-leg-up pose). a5 is a native-left rest so
+# idle_left needs no flip.
 const SHAGGY_ANIMS := {
 	"walk_right": 0, "walk_left": 0, "walk_up": 2, "walk_down": 3,
-	"idle": 3, "idle_left": 0, "idle_right": 0, "idle_up": 2, "idle_down": 3,
+	"idle": 7, "idle_left": 5, "idle_right": 4, "idle_up": 6, "idle_down": 7,
 }
 const SCOOBY_ANIMS := {
 	"walk_right": 0, "walk_left": 0, "walk_up": 2, "walk_down": 3,
-	"idle": 3, "idle_left": 0, "idle_right": 0, "idle_up": 2, "idle_down": 3,
+	"idle": 7, "idle_left": 5, "idle_right": 4, "idle_up": 6, "idle_down": 7,
 }
-const HERO_FLIP := {"walk_left": true, "idle_left": true}
+const HERO_FLIP := {"walk_left": true}
 
 var room: Node2D
 var chars: Array[Node2D] = []      # [shaggy, scooby]
