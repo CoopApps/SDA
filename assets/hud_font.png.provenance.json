@@ -1,6 +1,6 @@
 {
- "provenance": "ROM_DERIVED",
+ "provenance": "code_derived",
  "producer": "exporters/gen_hud_font.py",
- "cite": "ROM 0x30F12 ingame_font_glyphs (ROM_MAP row 470, VERIFIED); 4bpp 8x8, ASCII from 0x20; consumer font_glyph_upload_4bpp 0x7A48",
+ "cite": "ROM 0x30F12 ingame_font_glyphs (ROM_MAP row 470); 4bpp 8x8 ASCII from 0x20; consumer 0x7A48",
  "rom_addr": "0x30F12"
 }
