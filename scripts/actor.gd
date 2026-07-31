@@ -177,18 +177,25 @@ func advance_anim(delta: float) -> void:
 		_apply_step()
 
 func update_depth() -> void:
-	# Characters DO shrink as they walk toward the back (user-confirmed ground
-	# truth, lobby + intro). The Genesis can't hardware-zoom sprites, so the ROM
-	# achieves this some other way (software size, or scaled OAM piece math) --
-	# the exact mechanism is being re-derived. INTERIM: this lerp(0.55..1.0)
-	# by-Y approximation restores the visible effect until the real formula lands.
+	# Characters shrink toward the back (user ground truth, lobby + intro). This is
+	# now the REAL ROM curve, not a guess: scale = (255-bound)/256 (ROM 0xB52A),
+	# where bound is the interpolation of the actor's Y through the room zone table
+	# ($FF0692) at 0x7136/0x71CC, gated by $FF09E8 bit3. Per-room near/far scale +
+	# Y anchors were derived by EXECUTING that path over a Y sweep
+	# (exporters/gen_depth_scale.py -> depth_scale.json); NO save-state/capture.
+	# Rooms whose zone table is flat get enabled:false and stay at scale 1.0.
 	if room == null:
 		return
-	var size: Vector2 = room.pixel_size()
-	var horizon: float = size.y * 0.35
-	var front: float = size.y
-	var tt: float = clampf((position.y - horizon) / (front - horizon), 0.0, 1.0)
-	var s: float = lerpf(0.55, 1.0, tt)
+	var s := 1.0
+	if Game.depth_scale:
+		var ds: Dictionary = Game.depth_scale.get("%s.%d" % [Game.cluster, room.room_id], {})
+		if ds.get("enabled", false):
+			var yf: float = float(ds["y_far"])
+			var yn: float = float(ds["y_near"])
+			var sf: float = float(ds["far_scale"])
+			var sn: float = float(ds["near_scale"])
+			var tt: float = clampf((position.y - yf) / (yn - yf), 0.0, 1.0)
+			s = lerpf(sf, sn, tt)
 	scale = Vector2(s, s)
 	z_index = int(position.y)
 

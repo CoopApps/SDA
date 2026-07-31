@@ -1,0 +1,5 @@
+{
+ "provenance": "code_derived",
+ "producer": "exporters/gen_depth_scale.py",
+ "cite": "executed 0x7136 bound interp over room zone table $FF0692; scale=(255-bound)/256 @0xB52A; lobby measured 0.5->1.0 over Y 64..152"
+}

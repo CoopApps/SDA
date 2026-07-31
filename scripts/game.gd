@@ -29,6 +29,7 @@ var room_by_id: Dictionary = {}
 var gamepad_enabled := true
 
 var cluster: String = "hotel"
+var depth_scale: Dictionary = {}       # "<cluster>.<room_id>" -> depth-scale curve
 var pending_cluster: String = "hotel"
 var pending_start_room: int = 16
 var current_room: int = 16
@@ -45,6 +46,11 @@ func _ready() -> void:
 	icon_items = load_json(kit_path("analysis/icon_items.json"))
 	verb_dispatch = load_json(kit_path("analysis/verb_dispatch.json"))
 	sprite_sheets = _scan_sprite_sheets()
+	# Per-room actor perspective depth-scale curve, derived by EXECUTION from the
+	# ROM (exporters/gen_depth_scale.py). rooms["<cluster>.<id>"] = {enabled,
+	# y_far, far_scale, y_near, near_scale}. Consumed by actor.gd::update_depth().
+	var dsdoc: Variant = load_json("res://assets/data/global/depth_scale.json")
+	depth_scale = dsdoc.get("rooms", {}) if dsdoc is Dictionary else {}
 	_load_manifest()
 	_build_rooms()
 

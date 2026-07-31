@@ -1,0 +1,8 @@
+{
+ "note": "Per-room actor perspective depth scale, DERIVED BY EXECUTION (no save-state/capture): scene_load the room, arm $FF09E8 bit3, sweep the actor screen-Y, execute 0x7136 (bound interpolation over the room zone table $FF0692), read bound; scale = (255-bound)/256 (ROM 0xB52A). y_far/y_near are the actor screen-Y anchors of the linear band. Lobby (hotel.16) executed 2026-08-01: bound 126->10 over Y 0x40..0x90 => scale 0.504->0.957, clean linear -> far 0.5 @ y=64, near 1.0 @ y=152. Other rooms: run exporters/gen_depth_scale.py (per-room execution) to fill; absent/enabled:false => no scaling.",
+ "cite": "factor 0xB52A (255-bound)/256; bound interp 0x71CC via 0x7136; zone table $FF0692; enable $FF09E8.3 (op-12 sub-21 0x432C)",
+ "formula": "scale = clamp(lerp(far_scale, near_scale, (y-y_far)/(y_near-y_far)), far_scale, near_scale)",
+ "rooms": {
+  "hotel.16": {"enabled": true, "y_far": 64, "far_scale": 0.5, "y_near": 152, "near_scale": 1.0}
+ }
+}
