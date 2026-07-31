@@ -44,18 +44,35 @@ def collect(chapter):
                 ent_rooms.setdefault(int(o["entity_id"]), set()).add(str(rid))
     der_path = r"D:/scoobydoo/work/hotspot_geometry_derived%s.json" % (
         "" if chapter == "hotel" else "_" + chapter)
-    if os.path.isfile(der_path):
-        der = json.load(open(der_path, encoding="utf-8"))
+    der = json.load(open(der_path, encoding="utf-8")) if os.path.isfile(der_path) else {}
+    if der:
         for grp in ("derived_geometry_hotspots", "sprite_hit_actors"):
             for h in der.get(grp, []):
                 if h.get("room") is not None:
                     ent_rooms.setdefault(int(h["entity_id"]), set()).add(str(h["room"]))
+
+    # SPRITE actors are NOT cel objects: their op-0x0B `value` is an ANIMATION
+    # index (0x7C4A frame select), not a background-cel descriptor. Rendering it
+    # through the cel table produces garbage (e.g. room 11's Bear eid177 "cel 1").
+    # Skip every known sprite actor: residents (npc_actors) + positioned
+    # sprite-hit actors (derived geometry, record+24 bit1 SET).
+    sprite_entities = set()
+    npc = json.load(open(os.path.join(PORT, "assets/data/global/npc_actors_%s.json" % chapter),
+                         encoding="utf-8")).get("rooms", {}) if os.path.isfile(
+        os.path.join(PORT, "assets/data/global/npc_actors_%s.json" % chapter)) else {}
+    for lst in npc.values():
+        for a in lst:
+            sprite_entities.add(int(a.get("entity_id", -1)))
+    for a in der.get("sprite_hit_actors", []):
+        sprite_entities.add(int(a.get("entity_id", -1)))
 
     def scan(actions, rid):
         for a in actions or []:
             if a.get("op") == "actor_set_word0_and_raise_pending_flag":
                 ent = int(a.get("actor", a.get("entity", -1)))
                 val = int(a.get("value", -1))
+                if ent in sprite_entities:
+                    continue                     # sprite anim index, not a cel
                 if ent >= 0 and val > 0:
                     # A cel is the ACTOR's own graphic, so it renders in the
                     # ACTOR's room(s) -- NOT the room whose behaviour set it. The
