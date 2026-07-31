@@ -1,0 +1,24 @@
+{
+ "note": "Carnival Bumper Cars duel. ROM handler 0x003142 (VM op-0C subop 50), reached from the Bumper Car object 0x1B49FE. Player=RED (sprites/source_34), CPU=BLUE (source_35). Spec: D:/scoobydoo/work/bumpercar_minigame_spec.md. Movement geometry from displacement table 0x3D96; health/win logic from 0x3AF0/0x337A.",
+ "frame_px": 82,
+ "n_dirs": 8,
+ "start_health": 63,
+ "comment_dirs": "0=up 1=up-right 2=right 3=down-right 4=down 5=down-left 6=left 7=up-left (ROM 0x3D96 order)",
+ "dir_vectors": [
+  [0, -1], [0.71, -0.71], [1, 0], [0.71, 0.71],
+  [0, 1], [-0.71, 0.71], [-1, 0], [-0.71, -0.71]
+ ],
+ "cardinal_speed_px_per_step": 7,
+ "diagonal_speed_px_per_step": 5,
+ "player_max_speed": 2.2,
+ "player_accel": 0.12,
+ "player_friction": 0.04,
+ "turn_frames": 7,
+ "cpu_speed": 1.7,
+ "cpu_turn_frames": 9,
+ "bump_base_damage": 9,
+ "bump_headon_bonus": 9,
+ "knockback_px": 18,
+ "win_flag": "bumpercar_won",
+ "outcome": "on WIN move villain entity 0x77 (119) to room 7 (ROM 0x1B4A02 outcome handler op05 0077 0007); advances the carnival puzzle. On LOSE nothing."
+}

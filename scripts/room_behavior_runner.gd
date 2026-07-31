@@ -158,6 +158,25 @@ func _hw_bit(key: String, bit: int, on: bool) -> void:
 	var v: int = int(Game.flags.get(key, 0))
 	Game.flags[key] = (v | (1 << bit)) if on else (v & ~(1 << bit))
 
+## Launch the carnival Bumper Cars duel (ROM 0x3142) and apply its outcome.
+## Instantiates the self-contained overlay on the gameplay layer, awaits the
+## win/lose result, records it, and on a WIN applies the ROM outcome handler's
+## effect (0x1B4A02): villain entity 0x77 (119) moves to room 7, which advances
+## the carnival puzzle. Recorded as flags so downstream conditions can read it.
+func _run_bumper_car() -> void:
+	if actor_layer == null:
+		return
+	var mg = load("res://scripts/bumper_car_minigame.gd").new()
+	actor_layer.add_child(mg)
+	mg.start()
+	var won: bool = await mg.finished
+	Game.flags["bumpercar_won"] = 1 if won else 0
+	if won:
+		Game.flags["villain_defeated"] = 1
+		Game.flags["ent119_room"] = 7          # ROM outcome: villain -> room 7
+		if actors.has(119):
+			actors[119].visible = false        # villain left this room
+
 ## The left/right operand value for a 0x03/0x04 condition (ROM 0x2796
 ## cond_predicate_compare, decoded this session). "flag"/"actor_field" read
 ## from the SAME Game.flags keys the assign ops (0x08/0x09) write --
@@ -442,6 +461,12 @@ func _run_one(act: Dictionary) -> void:
 					Game.flags["pending_sfx_footstep"] = int(Game.flags.get("pending_sfx_footstep", 0)) + 1
 				21:
 					Game.flags["depth_scale_armed"] = 1
+				50:
+					# op-0C subop 50 (ROM 0x3142): the carnival BUMPER CARS duel.
+					# Launch the minigame, await the result, apply the ROM outcome
+					# (0x1B4A02): a WIN sends the villain (entity 0x77=119) to room 7,
+					# advancing the carnival puzzle; a loss does nothing.
+					await _run_bumper_car()
 				9:
 					_hw_bit("hw_09DE", 7, true)
 					_hw_bit("hw_0ABF", 1, true)
