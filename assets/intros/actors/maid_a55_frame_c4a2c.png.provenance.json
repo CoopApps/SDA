@@ -1,0 +1,5 @@
+{
+ "provenance": "code_derived",
+ "producer": "D5 sprite lift (off-table cutscene bank)",
+ "cite": "ROM off-table sprite bank16 0xB5D02 (registered table id16); frame graphics at ROM 0xc4a2c"
+}
