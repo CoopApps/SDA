@@ -1,0 +1,9 @@
+{
+  "path": "assets/screens/menu/logo.json",
+  "provenance": "code_derived",
+  "producer": "scooby_menu_decode",
+  "capture_state": "",
+  "capture_frame": null,
+  "cite": "rasters scooby_lz 0x010162/0x010838 (1B/px); OAM layout $085F8 (upload 0x88C2)",
+  "note": "SCOOBY-DOO logo decoded from ROM; fly-in draws these rasters pixel-by-pixel"
+}

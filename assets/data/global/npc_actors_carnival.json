@@ -1,0 +1,219 @@
+{
+ "note": "Resident NPC actors, presence derived by EXECUTING the ROM chain cluster_init 0x7F66 -> scene_load 0x758A -> tick 0x7C04 (see work/dump_presence.py). frame+hx,hy place top-left at (x-hx,y-hy) = SEGA screen=pos-hotspot. clickable = has verb behaviors in this room's manifest scene. Keyed by room/scene id.",
+ "rooms": {
+  "4": [
+   {
+    "entity_id": 5,
+    "shape": 35,
+    "x": 108,
+    "y": 99,
+    "name": "",
+    "dir": "sprites/source_33",
+    "frame": "frame_01ae.png",
+    "hx": 18,
+    "hy": 61,
+    "w": 64,
+    "h": 64,
+    "clickable": false
+   },
+   {
+    "entity_id": 6,
+    "shape": 35,
+    "x": 127,
+    "y": 144,
+    "name": "",
+    "dir": "sprites/source_33",
+    "frame": "frame_01ae.png",
+    "hx": 18,
+    "hy": 61,
+    "w": 64,
+    "h": 64,
+    "clickable": false
+   }
+  ],
+  "5": [
+   {
+    "entity_id": 9,
+    "shape": 34,
+    "x": 150,
+    "y": 128,
+    "name": "",
+    "dir": "sprites/source_32",
+    "frame": "frame_004e.png",
+    "hx": 23,
+    "hy": 51,
+    "w": 64,
+    "h": 64,
+    "clickable": false
+   }
+  ],
+  "10": [
+   {
+    "entity_id": 31,
+    "shape": 31,
+    "x": 160,
+    "y": 40,
+    "name": "",
+    "dir": "sprites/source_29",
+    "frame": "frame_0078.png",
+    "hx": 18,
+    "hy": 73,
+    "w": 32,
+    "h": 80,
+    "clickable": false
+   }
+  ],
+  "13": [
+   {
+    "entity_id": 122,
+    "shape": 19,
+    "x": 160,
+    "y": 216,
+    "name": "Balancing Bear",
+    "dir": "sprites/source_18",
+    "frame": "frame_00cc.png",
+    "hx": 25,
+    "hy": 77,
+    "w": 48,
+    "h": 80,
+    "clickable": true
+   }
+  ],
+  "16": [
+   {
+    "entity_id": 144,
+    "shape": 22,
+    "x": 24,
+    "y": 128,
+    "name": "",
+    "dir": "sprites/source_21",
+    "frame": "frame_00ce.png",
+    "hx": 24,
+    "hy": 77,
+    "w": 48,
+    "h": 80,
+    "clickable": false
+   },
+   {
+    "entity_id": 150,
+    "shape": 16,
+    "x": 178,
+    "y": 99,
+    "name": "",
+    "dir": "sprites/source_15",
+    "frame": "frame_05d2.png",
+    "hx": 24,
+    "hy": 79,
+    "w": 48,
+    "h": 80,
+    "clickable": false
+   }
+  ],
+  "18": [
+   {
+    "entity_id": 143,
+    "shape": 24,
+    "x": 72,
+    "y": 132,
+    "name": "Inky",
+    "dir": "sprites/source_23",
+    "frame": "frame_0026.png",
+    "hx": 39,
+    "hy": 43,
+    "w": 80,
+    "h": 48,
+    "clickable": true
+   }
+  ],
+  "19": [
+   {
+    "entity_id": 53,
+    "shape": 32,
+    "x": 184,
+    "y": 72,
+    "name": "",
+    "dir": "sprites/source_30",
+    "frame": "frame_00ca.png",
+    "hx": 28,
+    "hy": 69,
+    "w": 48,
+    "h": 80,
+    "clickable": false
+   },
+   {
+    "entity_id": 61,
+    "shape": 28,
+    "x": 387,
+    "y": 104,
+    "name": "",
+    "dir": "sprites/source_26",
+    "frame": "frame_0112.png",
+    "hx": 21,
+    "hy": 76,
+    "w": 48,
+    "h": 80,
+    "clickable": false
+   }
+  ],
+  "28": [
+   {
+    "entity_id": 47,
+    "shape": 30,
+    "x": 120,
+    "y": 88,
+    "name": "",
+    "dir": "sprites/source_28",
+    "frame": "frame_00f0.png",
+    "hx": 36,
+    "hy": 55,
+    "w": 64,
+    "h": 64,
+    "clickable": false
+   }
+  ],
+  "31": [
+   {
+    "entity_id": 34,
+    "shape": 16,
+    "x": 400,
+    "y": 1,
+    "name": "",
+    "dir": "sprites/source_15",
+    "frame": "frame_05d2.png",
+    "hx": 24,
+    "hy": 79,
+    "w": 48,
+    "h": 80,
+    "clickable": false
+   },
+   {
+    "entity_id": 35,
+    "shape": 16,
+    "x": 100,
+    "y": 0,
+    "name": "",
+    "dir": "sprites/source_15",
+    "frame": "frame_05d2.png",
+    "hx": 24,
+    "hy": 79,
+    "w": 48,
+    "h": 80,
+    "clickable": false
+   },
+   {
+    "entity_id": 36,
+    "shape": 16,
+    "x": 100,
+    "y": 4,
+    "name": "",
+    "dir": "sprites/source_15",
+    "frame": "frame_05d2.png",
+    "hx": 24,
+    "hy": 79,
+    "w": 48,
+    "h": 80,
+    "clickable": false
+   }
+  ]
+ }
+}

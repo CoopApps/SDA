@@ -1,0 +1,12 @@
+{
+ "note": "flag_word -> hex color, decoded from room3 (van interior) CRAM palette via scooby_intro_scenes_export.decode_scene; only valid for scene-3 dialogue lines",
+ "colors": {
+  "9": "#6c6cfc",
+  "27": "#fc6c90",
+  "6": "#246c00",
+  "25": "#d84800",
+  "29": "#fcfc90",
+  "14": "#fc48fc",
+  "4102": "#246c00"
+ }
+}

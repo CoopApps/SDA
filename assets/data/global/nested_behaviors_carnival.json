@@ -1,0 +1,326 @@
+{
+ "note": "Object behaviours nested inside state conditionals -- the manifest bake only walks top-level op-01 guards, so these (the REAL open/shut/use handlers) were missing and only the fallback text survived. Actions are pre-wrapped in their enclosing condition(s). tools/gen_nested_behaviors.py",
+ "behaviors": {
+  "155": [
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 9,
+        "selector": 4
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "if_compare_then_block",
+        "condition": {
+         "left": {
+          "source": "flag",
+          "index": 9,
+          "selector": 6
+         },
+         "right": {
+          "source": "immediate",
+          "index": 0,
+          "selector": 0
+         },
+         "comparator": "eq"
+        },
+        "then": [
+         {
+          "op": "move_entity_to_anchor_of_reference",
+          "subject": 1,
+          "reference": 155,
+          "x_addend": 12,
+          "extra": 1
+         },
+         {
+          "op": "start_anim_sequence_and_wait",
+          "channel": 1,
+          "seq": 13
+         },
+         {
+          "op": "actor_set_word0_and_raise_pending_flag",
+          "actor": 155,
+          "value": 151
+         },
+         {
+          "op": "queue_sound_driver_id",
+          "sound_id": 62
+         },
+         {
+          "op": "assign_flagbit_or_actor_field",
+          "dest": "flag",
+          "dest_index": 9,
+          "dest_bit_or_actor": 6,
+          "src_value": 1,
+          "src_bit_or_actor": 0,
+          "mode": 17,
+          "operation": "set_clear"
+         },
+         {
+          "op": "actor_set_byte_field_and_refresh",
+          "actor": 155,
+          "value": 4,
+          "field_offset": 22
+         }
+        ]
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 4102,
+        "text_offset": 4708,
+        "text": "It's already open."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 9,
+        "selector": 4
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "if_compare_then_block",
+        "condition": {
+         "left": {
+          "source": "flag",
+          "index": 9,
+          "selector": 6
+         },
+         "right": {
+          "source": "immediate",
+          "index": 0,
+          "selector": 0
+         },
+         "comparator": "eq"
+        },
+        "then": [
+         {
+          "op": "draw_text_message_and_wait",
+          "flag_word": 4102,
+          "text_offset": 7305,
+          "text": "It's already closed."
+         }
+        ]
+       },
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 155,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 13
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 155,
+        "value": 0
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 55
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 9,
+        "dest_bit_or_actor": 6,
+        "src_value": 0,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 155,
+        "value": 3,
+        "field_offset": 22
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 9,
+        "selector": 5
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 9,
+        "dest_bit_or_actor": 5,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 155,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 13
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 155,
+        "value": 151
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 156,
+        "room": 21
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 62
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 120
+       },
+       {
+        "op": "wait_n_frames",
+        "frames": 30
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 74
+       },
+       {
+        "op": "wait_until_anim_channel_signalled",
+        "channel": 1
+       },
+       {
+        "op": "wait_n_frames",
+        "frames": 30
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 13
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 155,
+        "value": 0
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 157,
+        "room": 21
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 1,
+        "dest_bit_or_actor": 2,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 156,
+        "room": 0
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 55
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 9,
+        "selector": 5
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 4102,
+        "text_offset": 7305,
+        "text": "It's already closed."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ]
+ }
+}

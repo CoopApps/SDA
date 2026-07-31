@@ -1,0 +1,15 @@
+{
+ "note": "Takeable room items rendered from their CEL descriptors (ctx+0x24 table, words at +0xE) with the room's own tiles/palette. Position+size ARE the cel rect -- items' actor records carry (0,0). tools/gen_room_items.py",
+ "items": [
+  {
+   "entity_id": 69,
+   "name": "Application",
+   "shape": 105,
+   "x": 24,
+   "y": 104,
+   "w": 48,
+   "h": 32,
+   "png": "69.png"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "pos": [
+  77,
+  15
+ ],
+ "period_ticks": 1,
+ "frames": 2,
+ "cram_run": [
+  62,
+  63
+ ],
+ "note": "op-$1A palette-cycle animation. install_cycle_anim_channel (ROM 0x2626) writes ring [62,63] and period 1 into the channel block; animate_cycle_tiles (ROM 0x00A7CE, called from 0xA68C in gameplay_per_frame 0xA65C, i.e. once per VBLANK) rotates that CRAM run in the $FF06F8 palette buffer and DMAs it to CRAM via 0x9B10 (control words 0xC000/0x0080 = CD %100011, CRAM DMA write). Rotation fires on the timer going NEGATIVE (0xA7E4 subq / 0xA7E8 bpl), so a period of P is P+1 VBLANK frames -- CycleAnim applies that +1. Frames rendered from the ROM plane nametable + tile sheet by decoding the palette INDEX per pixel and recolouring only indices in the ring; 2 frames = the ring length. room_14. tools/gen_cycle_frames.py"
+}

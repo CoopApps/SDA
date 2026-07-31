@@ -1,0 +1,2188 @@
+{
+ "note": "Complete per-scene cross-reference for the carnival chapter: for every room, everywhere the game touches it -- objects, clickable hit-test rects, inventory items yielded, per-object DECOMPILED behaviour (verb -> spoken line + STRUCTURED, executable actions: real opcode name from gameplay_spec.json's grounded 34-op table + decoded operand fields for move/shape/anim/sound/room-change/flag ops), sounds, animations, and the exit graph both ways (exits + entrances). Joined by entity_id from room_map, hotspots, scripts.json (the carver's decompiled per-scene bytecode), verb_dispatch, and icon_items. Same 34-opcode VM as the intro cutscene (dispatcher 0x2406 / table 0x2354) -- action decode conventions (actor id &0x7FFF, move's live anim-index override) are the ones proven against godot/scripts/intro_vm.gd.",
+ "chapter": "carnival",
+ "scene_count": 30,
+ "scenes": {
+  "2": {
+   "id": 2,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 8,
+     "to_name": "room 8",
+     "arrival": null,
+     "via": "Tickets"
+    }
+   ],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [
+    {
+     "entity_id": 64,
+     "name": "Tickets",
+     "clickable": {
+      "x": 184,
+      "y": 48,
+      "w": 16,
+      "h": 16,
+      "shape": 12,
+      "geo_off": "0xEEA",
+      "units": "pixels"
+     },
+     "gives_item": "Tickets",
+     "dialogue": [
+      {
+       "verb": "LOOK",
+       "text": "It's a roll of tickets for the rides and stuff."
+      },
+      {
+       "verb": "GIVE",
+       "text": "One prize per customer, mac. Beat it."
+      },
+      {
+       "verb": "GIVE",
+       "text": "Mr. Roller Coaster guy?"
+      },
+      {
+       "verb": "GIVE",
+       "text": "Yes?"
+      },
+      {
+       "verb": "GIVE",
+       "text": "We want to ride the roller coaster."
+      },
+      {
+       "verb": "GIVE",
+       "text": "Step right this way!"
+      },
+      {
+       "verb": "GIVE",
+       "text": "Gotta have four riders for the coaster."
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "LOOK",
+       "verb_code": 10,
+       "sel2": 0,
+       "say": "It's a roll of tickets for the rides and stuff.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 6512,
+         "text": "It's a roll of tickets for the rides and stuff."
+        }
+       ]
+      },
+      {
+       "verb": "GIVE",
+       "verb_code": 6,
+       "sel2": 53,
+       "say": "One prize per customer, mac. Beat it.",
+       "actions": [
+        {
+         "op": "move_actor_to_xy",
+         "actor": 1,
+         "move_op1": 1,
+         "walk_anim": 0,
+         "x": 227,
+         "y": 107
+        },
+        {
+         "op": "set_actor_turn_anim_from_transition_table",
+         "slot": 1,
+         "wait": true,
+         "state": 1
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 1,
+         "seq": 13
+        },
+        {
+         "op": "if_compare_then_block",
+         "condition": {
+          "left": {
+           "source": "actor_field",
+           "index": 12,
+           "selector": 55
+          },
+          "right": {
+           "source": "immediate",
+           "index": 3,
+           "selector": 0
+          },
+          "comparator": "eq"
+         },
+         "then": [
+          {
+           "op": "start_anim_sequence_and_wait",
+           "channel": 53,
+           "seq": 2
+          },
+          {
+           "op": "draw_text_message_and_wait",
+           "flag_word": 29,
+           "text_offset": 6560,
+           "text": "One prize per customer, mac. Beat it."
+          }
+         ]
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 53,
+         "seq": 3
+        },
+        {
+         "op": "move_actor_to_room",
+         "entity": 55,
+         "room": 19
+        },
+        {
+         "op": "assign_flagbit_or_actor_field",
+         "dest": "flag",
+         "dest_index": 3,
+         "dest_bit_or_actor": 3,
+         "src_value": 1,
+         "src_bit_or_actor": 0,
+         "mode": 17,
+         "operation": "set_clear"
+        }
+       ]
+      },
+      {
+       "verb": "GIVE",
+       "verb_code": 6,
+       "sel2": 99,
+       "say": "Gotta have four riders for the coaster.",
+       "actions": [
+        {
+         "op": "move_actor_to_xy",
+         "actor": 1,
+         "move_op1": 1,
+         "walk_anim": 0,
+         "x": 83,
+         "y": 120
+        },
+        {
+         "op": "set_actor_turn_anim_from_transition_table",
+         "slot": 1,
+         "wait": false,
+         "state": 1
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 6598,
+         "text": "Mr. Roller Coaster guy?"
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 99,
+         "seq": 2
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 13,
+         "text_offset": 3966,
+         "text": "Yes?"
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 6622,
+         "text": "We want to ride the roller coaster."
+        },
+        {
+         "op": "if_compare_then_block",
+         "condition": {
+          "left": {
+           "source": "flag",
+           "index": 5,
+           "selector": 6
+          },
+          "right": {
+           "source": "immediate",
+           "index": 1,
+           "selector": 0
+          },
+          "comparator": "eq"
+         },
+         "then": [
+          {
+           "op": "start_anim_sequence_and_wait",
+           "channel": 99,
+           "seq": 3
+          },
+          {
+           "op": "draw_text_message_and_wait",
+           "flag_word": 13,
+           "text_offset": 6658,
+           "text": "Step right this way!"
+          },
+          {
+           "op": "change_scene_with_palette_fadeout",
+           "to_room": 8,
+           "to_name": "room 8"
+          }
+         ]
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 99,
+         "seq": 3
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 13,
+         "text_offset": 6679,
+         "text": "Gotta have four riders for the coaster."
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [
+      {
+       "to": 8,
+       "to_name": "room 8"
+      }
+     ],
+     "animations": 8,
+     "script": {
+      "start": "0x1B75DA",
+      "end": "0x1B76A6",
+      "context": "carnival.context.061"
+     }
+    },
+    {
+     "entity_id": 68,
+     "name": "Tent Flap",
+     "clickable": null,
+     "gives_item": null,
+     "dialogue": [],
+     "behaviors": [
+      {
+       "verb": "EVENT",
+       "verb_code": 11,
+       "sel2": 0,
+       "say": null,
+       "actions": [
+        {
+         "op": "change_scene_with_palette_fadeout",
+         "to_room": 19,
+         "to_name": "room 19"
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [
+      {
+       "to": 19,
+       "to_name": "room 19"
+      }
+     ],
+     "animations": 0,
+     "script": {
+      "start": "0x1B77C0",
+      "end": "0x1B77CA",
+      "context": "carnival.context.065"
+     }
+    },
+    {
+     "entity_id": 72,
+     "name": "Wrench",
+     "clickable": null,
+     "gives_item": "Wrench",
+     "dialogue": [
+      {
+       "verb": "LOOK",
+       "text": "For turning bolts, of course. Find your own bolts."
+      },
+      {
+       "verb": "USE",
+       "text": "What do I use the bolts with?"
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "LOOK",
+       "verb_code": 10,
+       "sel2": 0,
+       "say": "For turning bolts, of course. Find your own bolts.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 7332,
+         "text": "For turning bolts, of course. Find your own bolts."
+        }
+       ]
+      },
+      {
+       "verb": "TAKE",
+       "verb_code": 2,
+       "sel2": 0,
+       "say": null,
+       "actions": [
+        {
+         "op": "assign_flagbit_or_actor_field",
+         "dest": "flag",
+         "dest_index": 3,
+         "dest_bit_or_actor": 6,
+         "src_value": 1,
+         "src_bit_or_actor": 0,
+         "mode": 17,
+         "operation": "set_clear"
+        },
+        {
+         "op": "move_entity_to_anchor_of_reference",
+         "subject": 1,
+         "reference": 71,
+         "x_addend": 8,
+         "extra": 1
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 1,
+         "seq": 10
+        },
+        {
+         "op": "move_actor_to_room",
+         "entity": 72,
+         "room": 1
+        },
+        {
+         "op": "call_subcommand_from_table",
+         "operands": [
+          19
+         ]
+        }
+       ]
+      },
+      {
+       "verb": "USE",
+       "verb_code": 5,
+       "sel2": 154,
+       "say": "What do I use the bolts with?",
+       "actions": [
+        {
+         "op": "if_compare_then_block",
+         "condition": {
+          "left": {
+           "source": "actor_field",
+           "index": 6,
+           "selector": 154
+          },
+          "right": {
+           "source": "immediate",
+           "index": 1,
+           "selector": 0
+          },
+          "comparator": "ne"
+         },
+         "then": [
+          {
+           "op": "assign_flagbit_or_actor_field",
+           "dest": "flag",
+           "dest_index": 3,
+           "dest_bit_or_actor": 7,
+           "src_value": 1,
+           "src_bit_or_actor": 0,
+           "mode": 17,
+           "operation": "set_clear"
+          },
+          {
+           "op": "move_entity_to_anchor_of_reference",
+           "subject": 1,
+           "reference": 154,
+           "x_addend": 12,
+           "extra": 1
+          },
+          {
+           "op": "start_anim_sequence_and_wait",
+           "channel": 1,
+           "seq": 15
+          },
+          {
+           "op": "move_actor_to_room",
+           "entity": 154,
+           "room": 1
+          },
+          {
+           "op": "call_subcommand_from_table",
+           "operands": [
+            19
+           ]
+          }
+         ]
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 7383,
+         "text": "What do I use the bolts with?"
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [],
+     "animations": 2,
+     "script": {
+      "start": "0x1B79FA",
+      "end": "0x1B7A7C",
+      "context": "carnival.context.069"
+     }
+    },
+    {
+     "entity_id": 122,
+     "name": "Balancing Bear",
+     "clickable": {
+      "x": 144,
+      "y": 192,
+      "w": 32,
+      "h": 32,
+      "shape": 68,
+      "geo_off": "0x1E44",
+      "units": "pixels"
+     },
+     "gives_item": null,
+     "dialogue": [
+      {
+       "verb": "LOOK",
+       "text": "As far as bears go, she seems friendly enough."
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "LOOK",
+       "verb_code": 10,
+       "sel2": 0,
+       "say": "As far as bears go, she seems friendly enough.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 12228,
+         "text": "As far as bears go, she seems friendly enough."
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [],
+     "animations": 0,
+     "script": {
+      "start": "0x1B90EE",
+      "end": "0x1B9194",
+      "context": "carnival.context.119"
+     }
+    }
+   ],
+   "summary": {
+    "objects": 4,
+    "clickable": 2,
+    "dialogue_responses": 10,
+    "behaviors": 8,
+    "items": 0,
+    "exits": 1,
+    "entrances": 0,
+    "with_script": 4,
+    "animations": 10,
+    "sounds": []
+   }
+  },
+  "3": {
+   "id": 3,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "4": {
+   "id": 4,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "5": {
+   "id": 5,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 7,
+     "to_name": "room 7",
+     "arrival": null,
+     "via": "Exit"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 7,
+     "from_name": "room 7",
+     "via": "Exit"
+    }
+   ],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 1,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "6": {
+   "id": 6,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "7": {
+   "id": 7,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 5,
+     "to_name": "room 5",
+     "arrival": null,
+     "via": "Exit"
+    },
+    {
+     "to": 24,
+     "to_name": "The Boardwalk",
+     "arrival": null,
+     "via": "Exit"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 5,
+     "from_name": "room 5",
+     "via": "Exit"
+    }
+   ],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 2,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "8": {
+   "id": 8,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [
+    {
+     "from": 2,
+     "from_name": "room 2",
+     "via": "Tickets"
+    }
+   ],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "9": {
+   "id": 9,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [
+    {
+     "entity_id": 119,
+     "name": "Clown",
+     "clickable": null,
+     "gives_item": null,
+     "dialogue": [],
+     "behaviors": [],
+     "sounds": [],
+     "transitions": [],
+     "animations": 0,
+     "script": null
+    }
+   ],
+   "summary": {
+    "objects": 1,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "10": {
+   "id": 10,
+   "name": "The Pond",
+   "name_from": "exit object 'Path to the Pond'",
+   "exits": [
+    {
+     "to": 12,
+     "to_name": "The Front Lot",
+     "arrival": null,
+     "via": "Path to the Front Lot"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 12,
+     "from_name": "The Front Lot",
+     "via": "Path to the Pond"
+    }
+   ],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 1,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "11": {
+   "id": 11,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 12,
+     "to_name": "The Front Lot",
+     "arrival": null,
+     "via": "Exit"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 12,
+     "from_name": "The Front Lot",
+     "via": "Office Door"
+    }
+   ],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 1,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "12": {
+   "id": 12,
+   "name": "The Front Lot",
+   "name_from": "exit object 'Path to the Front Lot'",
+   "exits": [
+    {
+     "to": 11,
+     "to_name": "room 11",
+     "arrival": null,
+     "via": "Office Door"
+    },
+    {
+     "to": 19,
+     "to_name": "room 19",
+     "arrival": null,
+     "via": "Tent Flap"
+    },
+    {
+     "to": 24,
+     "to_name": "The Boardwalk",
+     "arrival": null,
+     "via": "Path to the Boardwalk"
+    },
+    {
+     "to": 16,
+     "to_name": "room 16",
+     "arrival": null,
+     "via": "Archway"
+    },
+    {
+     "to": 10,
+     "to_name": "The Pond",
+     "arrival": null,
+     "via": "Path to the Pond"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 10,
+     "from_name": "The Pond",
+     "via": "Path to the Front Lot"
+    },
+    {
+     "from": 19,
+     "from_name": "room 19",
+     "via": "Tent Flap"
+    },
+    {
+     "from": 11,
+     "from_name": "room 11",
+     "via": "Exit"
+    },
+    {
+     "from": 24,
+     "from_name": "The Boardwalk",
+     "via": "Path to the Front Lot"
+    },
+    {
+     "from": 16,
+     "from_name": "room 16",
+     "via": "Path to the Front Lot"
+    },
+    {
+     "from": 16,
+     "from_name": "room 16",
+     "via": "Path to the Front Lot"
+    }
+   ],
+   "items_here": [
+    {
+     "item": "Sign",
+     "entity_id": 87,
+     "icon": "inventory_icons/carnival_icon_23.png"
+    }
+   ],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 1,
+    "exits": 5,
+    "entrances": 6,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "13": {
+   "id": 13,
+   "name": "The Back Lot",
+   "name_from": "exit object 'Path to the Back Lot'",
+   "exits": [
+    {
+     "to": 24,
+     "to_name": "The Boardwalk",
+     "arrival": null,
+     "via": "Path to the Boardwalk"
+    },
+    {
+     "to": 20,
+     "to_name": "The Diving Bell",
+     "arrival": null,
+     "via": "Path to the Diving Bell"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 24,
+     "from_name": "The Boardwalk",
+     "via": "Path to the Back Lot"
+    },
+    {
+     "from": 20,
+     "from_name": "The Diving Bell",
+     "via": "Path to the Back Lot"
+    }
+   ],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 2,
+    "entrances": 2,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "14": {
+   "id": 14,
+   "name": "The Boathouse",
+   "name_from": "exit object 'Path to the Boathouse'",
+   "exits": [
+    {
+     "to": 24,
+     "to_name": "The Boardwalk",
+     "arrival": null,
+     "via": "Path to the Boardwalk"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 24,
+     "from_name": "The Boardwalk",
+     "via": "Path to the Boathouse"
+    }
+   ],
+   "items_here": [
+    {
+     "item": "Bottle",
+     "entity_id": 111,
+     "icon": "inventory_icons/carnival_icon_03.png"
+    },
+    {
+     "item": "Boat",
+     "entity_id": 113,
+     "icon": "inventory_icons/carnival_icon_04.png"
+    }
+   ],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 2,
+    "exits": 1,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "15": {
+   "id": 15,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [
+    {
+     "from": 22,
+     "from_name": "room 22",
+     "via": "Bungee Harness"
+    }
+   ],
+   "items_here": [
+    {
+     "item": "Bucket",
+     "entity_id": 128,
+     "icon": "inventory_icons/carnival_icon_11.png"
+    }
+   ],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 1,
+    "exits": 0,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "16": {
+   "id": 16,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 12,
+     "to_name": "The Front Lot",
+     "arrival": null,
+     "via": "Path to the Front Lot"
+    },
+    {
+     "to": 12,
+     "to_name": "The Front Lot",
+     "arrival": null,
+     "via": "Path to the Front Lot"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 12,
+     "from_name": "The Front Lot",
+     "via": "Archway"
+    }
+   ],
+   "items_here": [
+    {
+     "item": "Magnet",
+     "entity_id": 147,
+     "icon": "inventory_icons/carnival_icon_10.png"
+    }
+   ],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 1,
+    "exits": 2,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "17": {
+   "id": 17,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 19,
+     "to_name": "room 19",
+     "arrival": null,
+     "via": "Tent Flap"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 19,
+     "from_name": "room 19",
+     "via": "Tent Flap"
+    }
+   ],
+   "items_here": [
+    {
+     "item": "Application",
+     "entity_id": 69,
+     "icon": "inventory_icons/carnival_icon_01.png"
+    }
+   ],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 1,
+    "exits": 1,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "18": {
+   "id": 18,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [
+    {
+     "entity_id": 85,
+     "name": "Kid",
+     "clickable": null,
+     "gives_item": null,
+     "dialogue": [
+      {
+       "verb": "LOOK",
+       "text": "He looks kinda lost."
+      },
+      {
+       "verb": "TALK",
+       "text": "Hey, kid."
+      },
+      {
+       "verb": "TALK",
+       "text": "Whatcha want, Mister?"
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "LOOK",
+       "verb_code": 10,
+       "sel2": 0,
+       "say": "He looks kinda lost.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 7937,
+         "text": "He looks kinda lost."
+        }
+       ]
+      },
+      {
+       "verb": "TALK",
+       "verb_code": 8,
+       "sel2": 0,
+       "say": "Whatcha want, Mister?",
+       "actions": [
+        {
+         "op": "move_entity_to_anchor_of_reference",
+         "subject": 1,
+         "reference": 85,
+         "x_addend": 12,
+         "extra": 1
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 7958,
+         "text": "Hey, kid."
+        },
+        {
+         "op": "if_compare_then_block",
+         "condition": {
+          "left": {
+           "source": "flag",
+           "index": 8,
+           "selector": 6
+          },
+          "right": {
+           "source": "immediate",
+           "index": 0,
+           "selector": 0
+          },
+          "comparator": "eq"
+         },
+         "then": [
+          {
+           "op": "start_anim_sequence_and_wait",
+           "channel": 85,
+           "seq": 4
+          }
+         ]
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 85,
+         "seq": 12
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 9,
+         "text_offset": 7968,
+         "text": "Whatcha want, Mister?"
+        }
+       ]
+      }
+     ],
+     "sounds": [
+      3
+     ],
+     "transitions": [
+      {
+       "to": 24,
+       "to_name": "The Boardwalk"
+      }
+     ],
+     "animations": 38,
+     "script": {
+      "start": "0x1B7E44",
+      "end": "0x1B830A",
+      "context": "carnival.context.082"
+     }
+    }
+   ],
+   "summary": {
+    "objects": 1,
+    "clickable": 0,
+    "dialogue_responses": 3,
+    "behaviors": 2,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 1,
+    "animations": 38,
+    "sounds": [
+     3
+    ]
+   }
+  },
+  "19": {
+   "id": 19,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 12,
+     "to_name": "The Front Lot",
+     "arrival": null,
+     "via": "Tent Flap"
+    },
+    {
+     "to": 17,
+     "to_name": "room 17",
+     "arrival": null,
+     "via": "Tent Flap"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 17,
+     "from_name": "room 17",
+     "via": "Tent Flap"
+    },
+    {
+     "from": 12,
+     "from_name": "The Front Lot",
+     "via": "Tent Flap"
+    }
+   ],
+   "items_here": [
+    {
+     "item": "Teddy Bear",
+     "entity_id": 54,
+     "icon": "inventory_icons/carnival_icon_15.png"
+    }
+   ],
+   "objects": [
+    {
+     "entity_id": 63,
+     "name": "Water Pistol",
+     "clickable": null,
+     "gives_item": "Water Pistol",
+     "dialogue": [
+      {
+       "verb": "LOOK",
+       "text": "Comes with a free supply of ammunition."
+      },
+      {
+       "verb": "GIVE",
+       "text": "Guess what I got."
+      },
+      {
+       "verb": "GIVE",
+       "text": "What?"
+      },
+      {
+       "verb": "GIVE",
+       "text": "I won the water pistol first try."
+      },
+      {
+       "verb": "GIVE",
+       "text": "Aw, man! There was only one!"
+      },
+      {
+       "verb": "GIVE",
+       "text": "I'll trade for those tickets you have."
+      },
+      {
+       "verb": "GIVE",
+       "text": "Okay! Deal!"
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "LOOK",
+       "verb_code": 10,
+       "sel2": 0,
+       "say": "Comes with a free supply of ammunition.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 6334,
+         "text": "Comes with a free supply of ammunition."
+        }
+       ]
+      },
+      {
+       "verb": "TAKE",
+       "verb_code": 2,
+       "sel2": 0,
+       "say": null,
+       "actions": [
+        {
+         "op": "assign_flagbit_or_actor_field",
+         "dest": "flag",
+         "dest_index": 3,
+         "dest_bit_or_actor": 2,
+         "src_value": 1,
+         "src_bit_or_actor": 0,
+         "mode": 17,
+         "operation": "set_clear"
+        },
+        {
+         "op": "move_entity_to_anchor_of_reference",
+         "subject": 1,
+         "reference": 63,
+         "x_addend": 12,
+         "extra": 1
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 1,
+         "seq": 14
+        },
+        {
+         "op": "call_subcommand_from_table",
+         "operands": [
+          19
+         ]
+        },
+        {
+         "op": "move_actor_to_room",
+         "entity": 63,
+         "room": 1
+        }
+       ]
+      },
+      {
+       "verb": "GIVE",
+       "verb_code": 6,
+       "sel2": 85,
+       "say": "Okay! Deal!",
+       "actions": [
+        {
+         "op": "move_entity_to_anchor_of_reference",
+         "subject": 1,
+         "reference": 85,
+         "x_addend": 12,
+         "extra": 1
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 6374,
+         "text": "Guess what I got."
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 85,
+         "seq": 4
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 9,
+         "text_offset": 6392,
+         "text": "What?"
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 6398,
+         "text": "I won the water pistol first try."
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 85,
+         "seq": 5
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 9,
+         "text_offset": 6432,
+         "text": "Aw, man! There was only one!"
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 6461,
+         "text": "I'll trade for those tickets you have."
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 85,
+         "seq": 4
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 9,
+         "text_offset": 6500,
+         "text": "Okay! Deal!"
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 85,
+         "seq": 7
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 1,
+         "seq": 13
+        },
+        {
+         "op": "actor_set_word0_and_raise_pending_flag",
+         "actor": 85,
+         "value": 2
+        },
+        {
+         "op": "move_actor_to_room",
+         "entity": 63,
+         "room": 0
+        },
+        {
+         "op": "move_actor_to_room",
+         "entity": 64,
+         "room": 1
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 85,
+         "seq": 2
+        },
+        {
+         "op": "assign_flagbit_or_actor_field",
+         "dest": "flag",
+         "dest_index": 8,
+         "dest_bit_or_actor": 6,
+         "src_value": 1,
+         "src_bit_or_actor": 0,
+         "mode": 17,
+         "operation": "set_clear"
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [],
+     "animations": 7,
+     "script": {
+      "start": "0x1B750E",
+      "end": "0x1B75CE",
+      "context": "carnival.context.060"
+     }
+    }
+   ],
+   "summary": {
+    "objects": 1,
+    "clickable": 0,
+    "dialogue_responses": 7,
+    "behaviors": 3,
+    "items": 1,
+    "exits": 2,
+    "entrances": 2,
+    "with_script": 1,
+    "animations": 7,
+    "sounds": []
+   }
+  },
+  "20": {
+   "id": 20,
+   "name": "The Diving Bell",
+   "name_from": "exit object 'Path to the Diving Bell'",
+   "exits": [
+    {
+     "to": 13,
+     "to_name": "The Back Lot",
+     "arrival": null,
+     "via": "Path to the Back Lot"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 13,
+     "from_name": "The Back Lot",
+     "via": "Path to the Diving Bell"
+    }
+   ],
+   "items_here": [],
+   "objects": [
+    {
+     "entity_id": 100,
+     "name": "Taffy Machine",
+     "clickable": {
+      "x": 96,
+      "y": 8,
+      "w": 64,
+      "h": 48,
+      "shape": 78,
+      "geo_off": "0x209C",
+      "units": "pixels"
+     },
+     "gives_item": null,
+     "dialogue": [
+      {
+       "verb": "TAKE",
+       "text": "The machine is too heavy."
+      },
+      {
+       "verb": "LOOK",
+       "text": "Hey, looks like that machine is whipping up something to eat."
+      },
+      {
+       "verb": "LOOK",
+       "text": "I wonder how old that taffy is."
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "TAKE",
+       "verb_code": 2,
+       "sel2": 0,
+       "say": "The machine is too heavy.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 61446,
+         "text_offset": 10603,
+         "text": "The machine is too heavy."
+        }
+       ]
+      },
+      {
+       "verb": "LOOK",
+       "verb_code": 10,
+       "sel2": 0,
+       "say": "I wonder how old that taffy is.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 10629,
+         "text": "Hey, looks like that machine is whipping up something to eat."
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 10691,
+         "text": "I wonder how old that taffy is."
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [],
+     "animations": 0,
+     "script": {
+      "start": "0x1B8722",
+      "end": "0x1B8744",
+      "context": "carnival.context.097"
+     }
+    }
+   ],
+   "summary": {
+    "objects": 1,
+    "clickable": 1,
+    "dialogue_responses": 3,
+    "behaviors": 2,
+    "items": 0,
+    "exits": 1,
+    "entrances": 1,
+    "with_script": 1,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "21": {
+   "id": 21,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 24,
+     "to_name": "The Boardwalk",
+     "arrival": null,
+     "via": "Exit"
+    }
+   ],
+   "entered_from": [],
+   "items_here": [
+    {
+     "item": "Boots",
+     "entity_id": 153,
+     "icon": "inventory_icons/carnival_icon_06.png"
+    },
+    {
+     "item": "Bolts",
+     "entity_id": 154,
+     "icon": "inventory_icons/carnival_icon_07.png"
+    }
+   ],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 2,
+    "exits": 1,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "22": {
+   "id": 22,
+   "name": null,
+   "name_from": null,
+   "exits": [
+    {
+     "to": 15,
+     "to_name": "room 15",
+     "arrival": null,
+     "via": "Bungee Harness"
+    }
+   ],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 1,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "23": {
+   "id": 23,
+   "name": "The Fun House",
+   "name_from": "exit object 'Path to the Fun House'",
+   "exits": [],
+   "entered_from": [
+    {
+     "from": 24,
+     "from_name": "The Boardwalk",
+     "via": "Path to the Fun House"
+    }
+   ],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 1,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "24": {
+   "id": 24,
+   "name": "The Boardwalk",
+   "name_from": "exit object 'Path to the Boardwalk'",
+   "exits": [
+    {
+     "to": 12,
+     "to_name": "The Front Lot",
+     "arrival": null,
+     "via": "Path to the Front Lot"
+    },
+    {
+     "to": 23,
+     "to_name": "The Fun House",
+     "arrival": null,
+     "via": "Path to the Fun House"
+    },
+    {
+     "to": 14,
+     "to_name": "The Boathouse",
+     "arrival": null,
+     "via": "Path to the Boathouse"
+    },
+    {
+     "to": 13,
+     "to_name": "The Back Lot",
+     "arrival": null,
+     "via": "Path to the Back Lot"
+    }
+   ],
+   "entered_from": [
+    {
+     "from": 7,
+     "from_name": "room 7",
+     "via": "Exit"
+    },
+    {
+     "from": 12,
+     "from_name": "The Front Lot",
+     "via": "Path to the Boardwalk"
+    },
+    {
+     "from": 14,
+     "from_name": "The Boathouse",
+     "via": "Path to the Boardwalk"
+    },
+    {
+     "from": 13,
+     "from_name": "The Back Lot",
+     "via": "Path to the Boardwalk"
+    },
+    {
+     "from": 21,
+     "from_name": "room 21",
+     "via": "Exit"
+    }
+   ],
+   "items_here": [
+    {
+     "item": "Coupon",
+     "entity_id": 148,
+     "icon": "inventory_icons/carnival_icon_09.png"
+    },
+    {
+     "item": "Head",
+     "entity_id": 95,
+     "icon": "inventory_icons/carnival_icon_30.png"
+    }
+   ],
+   "objects": [
+    {
+     "entity_id": 97,
+     "name": "",
+     "clickable": {
+      "x": 240,
+      "y": 40,
+      "w": 16,
+      "h": 112,
+      "shape": 173,
+      "geo_off": "0x59D2",
+      "units": "pixels"
+     },
+     "gives_item": null,
+     "dialogue": [
+      {
+       "verb": null,
+       "text": "Mr. Roller Coaster guy?"
+      },
+      {
+       "verb": null,
+       "text": "Yes?"
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "EVENT",
+       "verb_code": 11,
+       "sel2": 0,
+       "say": null,
+       "actions": [
+        {
+         "op": "branch_if_compare_false",
+         "condition": {
+          "left": {
+           "source": "actor_field",
+           "index": 6,
+           "selector": 100
+          },
+          "right": {
+           "source": "immediate",
+           "index": 0,
+           "selector": 0
+          },
+          "comparator": "eq"
+         },
+         "then": []
+        },
+        {
+         "op": "move_actor_to_room",
+         "entity": 99,
+         "room": 0
+        },
+        {
+         "op": "move_actor_to_room",
+         "entity": 100,
+         "room": 24
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [],
+     "animations": 2,
+     "script": {
+      "start": "0x1B85D8",
+      "end": "0x1B861E",
+      "context": "carnival.context.094"
+     }
+    },
+    {
+     "entity_id": 98,
+     "name": "",
+     "clickable": {
+      "x": 136,
+      "y": 32,
+      "w": 16,
+      "h": 120,
+      "shape": 174,
+      "geo_off": "0x59DE",
+      "units": "pixels"
+     },
+     "gives_item": null,
+     "dialogue": [],
+     "behaviors": [
+      {
+       "verb": "EVENT",
+       "verb_code": 11,
+       "sel2": 0,
+       "say": null,
+       "actions": [
+        {
+         "op": "branch_if_compare_false",
+         "condition": {
+          "left": {
+           "source": "actor_field",
+           "index": 6,
+           "selector": 99
+          },
+          "right": {
+           "source": "immediate",
+           "index": 0,
+           "selector": 0
+          },
+          "comparator": "eq"
+         },
+         "then": []
+        },
+        {
+         "op": "move_actor_to_room",
+         "entity": 100,
+         "room": 0
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [],
+     "animations": 0,
+     "script": {
+      "start": "0x1B862A",
+      "end": "0x1B8648",
+      "context": "carnival.context.095"
+     }
+    },
+    {
+     "entity_id": 143,
+     "name": "Inky",
+     "clickable": null,
+     "gives_item": null,
+     "dialogue": [
+      {
+       "verb": "LOOK",
+       "text": "Now there's a unique pet! Cute once you get past the slime."
+      },
+      {
+       "verb": "TAKE",
+       "text": "I'd need something to carry him in. He can't survive unless he's in salt water."
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "LOOK",
+       "verb_code": 10,
+       "sel2": 0,
+       "say": "Now there's a unique pet! Cute once you get past the slime.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 13080,
+         "text": "Now there's a unique pet! Cute once you get past the slime."
+        }
+       ]
+      },
+      {
+       "verb": "TAKE",
+       "verb_code": 2,
+       "sel2": 0,
+       "say": "I'd need something to carry him in. He can't survive unless he's in salt water.",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 61446,
+         "text_offset": 13140,
+         "text": "I'd need something to carry him in. He can't survive unless he's in salt water."
+        }
+       ]
+      }
+     ],
+     "sounds": [],
+     "transitions": [],
+     "animations": 0,
+     "script": {
+      "start": "0x1B9DC8",
+      "end": "0x1B9DE2",
+      "context": "carnival.context.140"
+     }
+    },
+    {
+     "entity_id": 99,
+     "name": "Attendant",
+     "clickable": {
+      "x": 0,
+      "y": 0,
+      "w": 24,
+      "h": 32,
+      "shape": 29,
+      "geo_off": "0x12FA",
+      "units": "pixels"
+     },
+     "gives_item": null,
+     "dialogue": [
+      {
+       "verb": "LOOK",
+       "text": "He seems pretty interested in that video game he's playing."
+      },
+      {
+       "verb": "TALK",
+       "text": "Mr. Roller Coaster guy?"
+      },
+      {
+       "verb": "TALK",
+       "text": "Yes?"
+      },
+      {
+       "verb": "LOOK",
+       "text": "There's somthing about that smile he's wearing...."
+      },
+      {
+       "verb": "TALK",
+       "text": "Um, Mr. Hammer Man?"
+      },
+      {
+       "verb": "TALK",
+       "text": "Whaddya want, kid?"
+      }
+     ],
+     "behaviors": [
+      {
+       "verb": "LOOK",
+       "verb_code": 10,
+       "sel2": 0,
+       "say": "There's somthing about that smile he's wearing....",
+       "actions": [
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 10362,
+         "text": "He seems pretty interested in that video game he's playing."
+        }
+       ]
+      },
+      {
+       "verb": "TALK",
+       "verb_code": 8,
+       "sel2": 0,
+       "say": "Whaddya want, kid?",
+       "actions": [
+        {
+         "op": "move_actor_to_xy",
+         "actor": 1,
+         "move_op1": 1,
+         "walk_anim": 0,
+         "x": 83,
+         "y": 120
+        },
+        {
+         "op": "set_actor_turn_anim_from_transition_table",
+         "slot": 1,
+         "wait": false,
+         "state": 1
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 4102,
+         "text_offset": 6598,
+         "text": "Mr. Roller Coaster guy?"
+        },
+        {
+         "op": "start_anim_sequence_and_wait",
+         "channel": 99,
+         "seq": 2
+        },
+        {
+         "op": "draw_text_message_and_wait",
+         "flag_word": 13,
+         "text_offset": 3966,
+         "text": "Yes?"
+        }
+       ]
+      }
+     ],
+     "sounds": [
+      3
+     ],
+     "transitions": [
+      {
+       "to": 8,
+       "to_name": "room 8"
+      }
+     ],
+     "animations": 3,
+     "script": {
+      "start": "0x1B8654",
+      "end": "0x1B8716",
+      "context": "carnival.context.096"
+     }
+    }
+   ],
+   "summary": {
+    "objects": 4,
+    "clickable": 3,
+    "dialogue_responses": 10,
+    "behaviors": 6,
+    "items": 2,
+    "exits": 4,
+    "entrances": 5,
+    "with_script": 4,
+    "animations": 5,
+    "sounds": [
+     3
+    ]
+   }
+  },
+  "25": {
+   "id": 25,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "26": {
+   "id": 26,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "27": {
+   "id": 27,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [
+    {
+     "entity_id": 117,
+     "name": "Balloon",
+     "clickable": null,
+     "gives_item": null,
+     "dialogue": [],
+     "behaviors": [],
+     "sounds": [],
+     "transitions": [],
+     "animations": 0,
+     "script": null
+    }
+   ],
+   "summary": {
+    "objects": 1,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "28": {
+   "id": 28,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "29": {
+   "id": 29,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "30": {
+   "id": 30,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  },
+  "31": {
+   "id": 31,
+   "name": null,
+   "name_from": null,
+   "exits": [],
+   "entered_from": [],
+   "items_here": [],
+   "objects": [],
+   "summary": {
+    "objects": 0,
+    "clickable": 0,
+    "dialogue_responses": 0,
+    "behaviors": 0,
+    "items": 0,
+    "exits": 0,
+    "entrances": 0,
+    "with_script": 0,
+    "animations": 0,
+    "sounds": []
+   }
+  }
+ }
+}

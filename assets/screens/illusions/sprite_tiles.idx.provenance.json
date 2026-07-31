@@ -1,0 +1,9 @@
+{
+ "path": "assets/screens/illusions/sprite_tiles.idx",
+ "provenance": "code_derived",
+ "capture_state": "",
+ "capture_frame": null,
+ "producer": "empty sprite atlas (screen has no sprites)",
+ "cite": "this screen's ROM load plan (scooby_intro_decode PLAN) has no sprite ops -- tiles + nametable + palette only, and its SAT holds a single blank entry, so there are no sprite tiles to upload.",
+ "note": "the capture was already 100% transparent; re-emitted as explicit zeros."
+}

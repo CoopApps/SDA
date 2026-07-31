@@ -1,0 +1,1469 @@
+{
+ "chapter": "carnival",
+ "chapter_id": 1,
+ "struct": "0xFCA40",
+ "string_base": "0x1AF33C",
+ "script_body": "0x1BADA2",
+ "script_len": 1518,
+ "start_scene": 12,
+ "start_scene2": 119,
+ "event_count": 189,
+ "events": [
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    58
+   ],
+   "at": "0x1BADA2"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 26,
+   "at": "0x1BADA6"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    29
+   ],
+   "at": "0x1BADAE"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    57
+   ],
+   "at": "0x1BADB2"
+  },
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 1,
+   "at": "0x1BADB6"
+  },
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 2,
+   "at": "0x1BADBA"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 30,
+   "at": "0x1BADBE"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 30,
+   "at": "0x1BADC2"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    2
+   ],
+   "at": "0x1BADC6"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    26
+   ],
+   "at": "0x1BADCA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BADCE"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 37,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BADDA"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 6,
+   "text_offset": 535,
+   "text": "Like, man, I can't wait to get there!  Drive faster, Fred!",
+   "at": "0x1BADE6"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BADEE"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 2,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BADFA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 40,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAE06"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 594,
+   "text": "Statistics show that people hurrying are ten times more likely to have an accident, Shaggy.",
+   "at": "0x1BAE12"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 2,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAE1A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAE26"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 37,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAE32"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 6,
+   "text_offset": 686,
+   "text": "Zoinks!  Let's not and say we did!",
+   "at": "0x1BAE3E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAE46"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 1,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAE52"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 41,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAE5E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 27,
+   "text_offset": 721,
+   "text": "What do you guys want to ride first?",
+   "at": "0x1BAE6A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 1,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAE72"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAE7E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 6,
+   "text_offset": 758,
+   "text": "The hot dog cart!",
+   "at": "0x1BAE8A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAE92"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAE9E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 38,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAEAA"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 776,
+   "text": "Yummy!",
+   "at": "0x1BAEB6"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAEBE"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 0,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAECA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 39,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAED6"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 783,
+   "text": "Definitely the roller coaster.",
+   "at": "0x1BAEE2"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 0,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAEEA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 1,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAEF6"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 27,
+   "text_offset": 814,
+   "text": "I want to ride the paddle boats.",
+   "at": "0x1BAF02"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 1,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAF0A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 2,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAF16"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 40,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAF22"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 847,
+   "text": "I like that one, Daphne.",
+   "at": "0x1BAF2E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 2,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAF36"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 0,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAF42"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 39,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAF4E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 872,
+   "text": "Me, too. I'll try the roller coaster later.",
+   "at": "0x1BAF5A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 0,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAF62"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAF6E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 38,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAF7A"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 916,
+   "text": "Rook!",
+   "at": "0x1BAF86"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAF8E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAF9A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 37,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAFA6"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 6,
+   "text_offset": 922,
+   "text": "There it is!  The Ha Ha Carnival!  Like, man, I can smell the food from here!",
+   "at": "0x1BAFB2"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAFBA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAFC6"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 38,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BAFD2"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 0,
+   "at": "0x1BAFDE"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1000,
+   "text": "(slurp)",
+   "at": "0x1BAFE2"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAFEA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 2,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BAFF6"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 40,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BB002"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 1008,
+   "text": "You guys are definitely going to be sick.",
+   "at": "0x1BB00E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 2,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB016"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB022"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 37,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BB02E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 6,
+   "text_offset": 1050,
+   "text": "Like, that's part of the carnival experience, Velma!",
+   "at": "0x1BB03A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB042"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 2,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB04E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 40,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BB05A"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 1103,
+   "text": "Not for me!",
+   "at": "0x1BB066"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 2,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB06E"
+  },
+  {
+   "op": "actor_set_word0_and_raise_pending_flag",
+   "actor": 40,
+   "value": 0,
+   "at": "0x1BB07A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 0,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB080"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 39,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BB08C"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1115,
+   "text": "Well, here we are guys!  Let's go get some tickets.",
+   "at": "0x1BB098"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 0,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB0A0"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB0AC"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 38,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x1BB0B8"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1167,
+   "text": "Rooby Rooby Roo!",
+   "at": "0x1BB0C4"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB0CC"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    3
+   ],
+   "at": "0x1BB0D8"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    27
+   ],
+   "at": "0x1BB0DC"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 30,
+   "at": "0x1BB0E0"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 8,
+   "at": "0x1BB0E4"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 119,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 128,
+   "y": 85,
+   "at": "0x1BB0EC"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 119,
+   "room": 8,
+   "at": "0x1BB0F8"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 119,
+   "seq": 9,
+   "at": "0x1BB0FE"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    2
+   ],
+   "at": "0x1BB104"
+  },
+  {
+   "op": "wait_until_anim_channel_signalled",
+   "channel": 119,
+   "at": "0x1BB108"
+  },
+  {
+   "op": "actor_set_word0_and_raise_pending_flag",
+   "actor": 20,
+   "value": 15,
+   "at": "0x1BB10C"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 119,
+   "seq": 10,
+   "at": "0x1BB112"
+  },
+  {
+   "op": "wait_until_anim_channel_signalled",
+   "channel": 119,
+   "at": "0x1BB118"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 100,
+   "at": "0x1BB11C"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    3
+   ],
+   "at": "0x1BB120"
+  },
+  {
+   "op": "resume_anim_channel_wait_drawn",
+   "channel": 1,
+   "at": "0x1BB124"
+  },
+  {
+   "op": "resume_anim_channel_wait_drawn",
+   "channel": 2,
+   "at": "0x1BB128"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 43,
+   "room": 3,
+   "at": "0x1BB12C"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 44,
+   "room": 3,
+   "at": "0x1BB132"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 45,
+   "room": 3,
+   "at": "0x1BB138"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 43,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 70,
+   "y": 116,
+   "at": "0x1BB13E"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 44,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 20,
+   "y": 116,
+   "at": "0x1BB14A"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 45,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 40,
+   "y": 116,
+   "at": "0x1BB156"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 3,
+   "at": "0x1BB162"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    2
+   ],
+   "at": "0x1BB16A"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 43,
+   "seq": 4,
+   "at": "0x1BB16E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1184,
+   "text": "I wonder where everyone is?",
+   "at": "0x1BB174"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 45,
+   "seq": 4,
+   "at": "0x1BB17C"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 27,
+   "text_offset": 1212,
+   "text": "Maybe it's an off night.",
+   "at": "0x1BB182"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 1237,
+   "text": "Like, that means no waiting in lines!",
+   "at": "0x1BB18A"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 65,
+   "at": "0x1BB192"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1275,
+   "text": "Reh!",
+   "at": "0x1BB198"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 44,
+   "seq": 4,
+   "at": "0x1BB1A0"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 1280,
+   "text": "It's creepy if you ask me.",
+   "at": "0x1BB1A6"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 44,
+   "seq": 5,
+   "at": "0x1BB1AE"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 1307,
+   "text": "I've seen off nights, but this place is DEAD.",
+   "at": "0x1BB1B4"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 65,
+   "at": "0x1BB1BC"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1353,
+   "text": "D-d-dead?",
+   "at": "0x1BB1C2"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 1363,
+   "text": "Like, boring, Scoob. Unhip, not happening. Get it?",
+   "at": "0x1BB1CA"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 65,
+   "at": "0x1BB1D2"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1414,
+   "text": "Oh!",
+   "at": "0x1BB1D8"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 71,
+   "at": "0x1BB1E0"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 3,
+   "at": "0x1BB1E6"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 43,
+   "seq": 5,
+   "at": "0x1BB1EA"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1418,
+   "text": "I'm with Velma. Something feels funny.",
+   "at": "0x1BB1F0"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 43,
+   "seq": 4,
+   "at": "0x1BB1F8"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1457,
+   "text": "I don't even see anyone selling tickets.",
+   "at": "0x1BB1FE"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 45,
+   "seq": 5,
+   "at": "0x1BB206"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 27,
+   "text_offset": 1498,
+   "text": "Oh, stop being a worry wart. All the lights on the rides are on.",
+   "at": "0x1BB20C"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 45,
+   "seq": 4,
+   "at": "0x1BB214"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 27,
+   "text_offset": 1563,
+   "text": "Let's go.",
+   "at": "0x1BB21A"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 43,
+   "seq": 5,
+   "at": "0x1BB222"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1573,
+   "text": "Okay, okay. Shaggy, Scooby, you coming?",
+   "at": "0x1BB228"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 65,
+   "at": "0x1BB230"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1613,
+   "text": "Uh UH. No ray.",
+   "at": "0x1BB236"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 1628,
+   "text": "Like Scooby here's allergic to boats.",
+   "at": "0x1BB23E"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 65,
+   "at": "0x1BB246"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1666,
+   "text": "And water!",
+   "at": "0x1BB24C"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 44,
+   "seq": 4,
+   "at": "0x1BB254"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 1677,
+   "text": "You mean you're both AFRAID of the boats.",
+   "at": "0x1BB25A"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 65,
+   "at": "0x1BB262"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1719,
+   "text": "Uh huh. Rat's right.",
+   "at": "0x1BB268"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 1740,
+   "text": "Not to mention starved.",
+   "at": "0x1BB270"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 43,
+   "seq": 5,
+   "at": "0x1BB278"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1764,
+   "text": "Well, let's meet back here in an hour then, okay?",
+   "at": "0x1BB27E"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 43,
+   "seq": 4,
+   "at": "0x1BB286"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1814,
+   "text": "Let's go girls.",
+   "at": "0x1BB28C"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 43,
+   "move_op1": 1,
+   "walk_anim": 1,
+   "x": 65456,
+   "y": 116,
+   "at": "0x1BB294"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 44,
+   "move_op1": 1,
+   "walk_anim": 1,
+   "x": 65456,
+   "y": 116,
+   "at": "0x1BB2A0"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 45,
+   "move_op1": 1,
+   "walk_anim": 1,
+   "x": 65456,
+   "y": 116,
+   "at": "0x1BB2AC"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 1830,
+   "text": "Well, Scoob, ol' buddy, ol' pal, let's find some food!",
+   "at": "0x1BB2B8"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 65,
+   "at": "0x1BB2C0"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 29,
+   "at": "0x1BB2C6"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 1885,
+   "text": "Scooby Dooby Doo!",
+   "at": "0x1BB2CA"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    3
+   ],
+   "at": "0x1BB2D2"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 43,
+   "room": 0,
+   "at": "0x1BB2D6"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 44,
+   "room": 0,
+   "at": "0x1BB2DC"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 45,
+   "room": 0,
+   "at": "0x1BB2E2"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 8,
+   "at": "0x1BB2E8"
+  },
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 1,
+   "at": "0x1BB2F0"
+  },
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 2,
+   "at": "0x1BB2F4"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 119,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 128,
+   "y": 85,
+   "at": "0x1BB2F8"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 119,
+   "room": 8,
+   "at": "0x1BB304"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 119,
+   "seq": 11,
+   "at": "0x1BB30A"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    2
+   ],
+   "at": "0x1BB310"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 121,
+   "at": "0x1BB314"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 60,
+   "at": "0x1BB318"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 122,
+   "at": "0x1BB31C"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 60,
+   "at": "0x1BB320"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 122,
+   "at": "0x1BB324"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 60,
+   "at": "0x1BB328"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 121,
+   "at": "0x1BB32C"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 60,
+   "at": "0x1BB330"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 122,
+   "at": "0x1BB334"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 60,
+   "at": "0x1BB338"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 121,
+   "at": "0x1BB33C"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 60,
+   "at": "0x1BB340"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    3
+   ],
+   "at": "0x1BB344"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    56
+   ],
+   "at": "0x1BB348"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 6,
+   "dest_bit_or_actor": 4,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB34C"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 17,
+   "room": 8,
+   "at": "0x1BB358"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 119,
+   "room": 0,
+   "at": "0x1BB35E"
+  },
+  {
+   "op": "resume_anim_channel_wait_drawn",
+   "channel": 1,
+   "at": "0x1BB364"
+  },
+  {
+   "op": "resume_anim_channel_wait_drawn",
+   "channel": 2,
+   "at": "0x1BB368"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    59
+   ],
+   "at": "0x1BB36C"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 12,
+   "at": "0x1BB370"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 0,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB378"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 5,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x1BB384"
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://scooby_intros"]
+
+[ext_resource type="Script" path="res://scripts/intro_player.gd" id="1"]
+
+[node name="Intros" type="Node2D"]
+script = ExtResource("1")

@@ -1,0 +1,876 @@
+{
+ "note": "dialogue choices lifted from script op $02 (ROM $25AC, ROM_MAP row 116); label=player line, reply=NPC line, actions=decoded inline consequence script (34-op VM, room_behavior_runner event shape); body_hex kept for reference. String base 0x14199C.",
+ "choices": {
+  "unlinked": [
+   {
+    "at": "0x146BFE",
+    "label": "Are you from around here?",
+    "reply": "My people have been here for centuries.",
+    "slot": 11,
+    "body_hex": "000200000a4400000a5a00fc000a00060006000b0010001e0000088b000300e00000000600ac00010000001200060006000b0010001e000008d100020000095e00000974002a000a00060006000a0010001e000009090006000600090010001e0000092f0002000009a9000009bc0086000a00060001000c000b00ac00a3000500ac0010000600010004000e000600010004000400150064000e000600010005000500060006000d00170006000600060003000500ac00000017000600060006000d0005002900100008000100000001000000110017000600060006000b0010001e00000994000c00010002000009e500000a010012000b000c0001000200000a6900000a6f0012000a000c0001",
+    "actions": [
+     {
+      "op": "raw_02",
+      "at": "0x146C0C"
+     }
+    ]
+   },
+   {
+    "at": "0x146C0C",
+    "label": "How do you know that?",
+    "reply": "It's my hobby.",
+    "slot": 10,
+    "body_hex": "00060006000b0010001e0000088b000300e00000000600ac00010000001200060006000b0010001e000008d100020000095e00000974002a000a00060006000a0010001e000009090006000600090010001e0000092f0002000009a9000009bc0086000a00060001000c000b00ac00a3000500ac0010000600010004000e000600010004000400150064000e000600010005000500060006000d00170006000600060003000500ac00000017000600060006000d0005002900100008000100000001000000110017000600060006000b0010001e00000994000c00010002000009e500000a010012000b000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 11
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": "0x88B",
+      "text": "I've studied our history a lot, and I collect ancient artifacts, too."
+     },
+     {
+      "op": "op_03",
+      "raw": "000300e00000000600ac000100000012"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 11
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": "0x8D1",
+      "text": "Like that kachina doll you're carrying.  Want to trade?"
+     },
+     {
+      "op": "raw_02",
+      "at": "0x146C46"
+     }
+    ]
+   },
+   {
+    "at": "0x146C46",
+    "label": "What do I get for it?",
+    "reply": "I'll trade a ceremonial goblet.",
+    "slot": 10,
+    "body_hex": "00060006000a0010001e000009090006000600090010001e0000092f",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 10
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": "0x909",
+      "text": "I have an extra one in my collection."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 9
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": "0x92F",
+      "text": "It's very nice.  And I would be most grateful."
+     }
+    ]
+   },
+   {
+    "at": "0x146C70",
+    "label": "Cool!  I'll trade!",
+    "reply": "You will not regret this, I promise you!",
+    "slot": 10,
+    "body_hex": "00060001000c000b00ac00a3000500ac0010000600010004000e000600010004000400150064000e000600010005000500060006000d00170006000600060003000500ac00000017000600060006000d0005002900100008000100000001000000110017000600060006000b0010001e00000994000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 1,
+      "seq": 12
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 172,
+      "value": 163
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 172,
+      "room": 16
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 1,
+      "seq": 4
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "actor": 6,
+      "anim": 4,
+      "waypoint": 4
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 100
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "actor": 6,
+      "anim": 5,
+      "waypoint": 5
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 13
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "raw": "00170006"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 3
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 172,
+      "room": 0
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "raw": "00170006"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 13
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 41,
+      "room": 16
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest_index": 1,
+      "dest_bit": 0,
+      "src_index": 1,
+      "src_bit": 0
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "raw": "00170006"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 11
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": "0x994",
+      "text": "Many thanks, friend!"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x146CF6",
+    "label": "No way!  My doll is better!",
+    "reply": "Suit yourself.  You're the one trying to finish this game, not me!",
+    "slot": 11,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x146D08",
+    "label": "Cool.",
+    "reply": "It's pretty neat, I think.",
+    "slot": 10,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x146D2A",
+    "label": "Have you seen Uncle Blake?",
+    "reply": "No, but I wish I knew where he was. I need my paycheck.",
+    "slot": 11,
+    "body_hex": "",
+    "actions": []
+   },
+   {
+    "at": "0x146D38",
+    "label": "Aren't you scared of the ghost?",
+    "reply": "Nope. I know a lot about my people's history, and I've never heard of this Ancient Chieftan character.",
+    "slot": 11,
+    "body_hex": "0006000600090010001e00000b1f",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 6,
+      "seq": 9
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": "0xB1F",
+      "text": "I think it's all some kind of scam."
+     }
+    ]
+   },
+   {
+    "at": "0x146D54",
+    "label": "Well, gotta go.",
+    "reply": "Check out time is eleven SHARP.",
+    "slot": 10,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x14826A",
+    "label": "How'd you get down here?",
+    "reply": "Not sure.",
+    "slot": 9,
+    "body_hex": "0006001a000a0010000e00000e910006001a000a0010000e00000ec20006001a000a0010000e00000ee1",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 10
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0xE91",
+      "text": "I was working in the office, and someone hit me."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 10
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0xEC2",
+      "text": "Next thing I knew, here I was."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 10
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0xEE1",
+      "text": "Can you get me out of here?"
+     }
+    ]
+   },
+   {
+    "at": "0x1482A2",
+    "label": "Don't worry, Uncle Blake. I'll get you out as soon as I can!",
+    "reply": "Thanks, son!  I know I can count on you!",
+    "slot": 10,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x1482B4",
+    "label": "What's so interesting?",
+    "reply": "These writings!",
+    "slot": 14,
+    "body_hex": "0006001a000f0010000e00000f860006001a000e0010000e00000fc70006001a00100010000e00000fee0006001a00100010000e000010220006001a000e0010000e0000103d001500320006001a000f0010000e000010690006001a00100010000e0000107e0006001a000f0010000e000010b50006001a00100010000e000010e90006001a000f0010000e00001110",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 15
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0xF86",
+      "text": "They say there's a magic gold medallion hidden here in the tomb."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 14
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0xFC7",
+      "text": "That must be what the rascal is after!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 16
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0xFEE",
+      "text": "That statue over there has something to do with it,"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 16
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x1022",
+      "text": "But I can't make out what."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 14
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x103D",
+      "text": "Something about a magic cup, it looks like."
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 50
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 15
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x1069",
+      "text": "Blast!  It's no use."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 16
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x107E",
+      "text": "I just can't remember what some of these symbols mean."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 15
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x10B5",
+      "text": "I used to have a book that would help me read them,"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 16
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x10E9",
+      "text": "but it went missing about a month ago."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 15
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x1110",
+      "text": "Come to think of it, that was when this ghost business started."
+     }
+    ]
+   },
+   {
+    "at": "0x148352",
+    "label": "Okay, later.",
+    "reply": "Good luck, son!",
+    "slot": 14,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x148374",
+    "label": "What do I do with this amulet?",
+    "reply": "I have a feeling someone wants it awfully bad.",
+    "slot": 15,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x148386",
+    "label": "What was it you said we needed to do to get the amulet again?",
+    "reply": "We have to place a ceremonial goblet in the hands of the statue.",
+    "slot": 15,
+    "body_hex": "0006001a000e0010000e000011e200101006000012000006001a0010000300180000000c001a0000000000120010080e00001218000300180000000c001a0001000000120010080e00001235000300180000000c001a0002000000120010080e0000124a000300180000000c001a0003000000120010080e0000125e000300180000000c001a0004000000120010080e00001270000300180000000c001a0005000000120010080e0000129f0008000c001a000600000092",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 14
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x11E2",
+      "text": "Then we say some magic words."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": "0x1200",
+      "text": "Like, what magic words?"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 16
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c001a000000000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2062,
+      "text_offset": "0x1218",
+      "text": "Have you tried Abra-Cadabra?"
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c001a000100000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2062,
+      "text_offset": "0x1235",
+      "text": "How about Ala-Kazam?"
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c001a000200000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2062,
+      "text_offset": "0x124A",
+      "text": "Hocus Pocus, maybe?"
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c001a000300000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2062,
+      "text_offset": "0x125E",
+      "text": "Um, Newport News?"
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c001a000400000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2062,
+      "text_offset": "0x1270",
+      "text": "How about supercali-- no, that wouldn't be it."
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c001a000500000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2062,
+      "text_offset": "0x129F",
+      "text": "Oh, blast, I don't know. Make something up."
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest_index": 12,
+      "dest_bit": 26,
+      "src_index": 6,
+      "src_bit": 0
+     }
+    ]
+   },
+   {
+    "at": "0x14844C",
+    "label": "I'll just be looking for the amulet.",
+    "reply": "Good for you, son!",
+    "slot": 15,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   }
+  ],
+  "71": [
+   {
+    "at": "0x14987E",
+    "label": "Hey, Snowman dude...",
+    "reply": "...",
+    "slot": 65535,
+    "body_hex": "0010f00600001f2e000c0001",
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": "0x1F2E",
+      "text": "See what I mean?"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Snowman",
+    "room_id": 12
+   }
+  ],
+  "125": [
+   {
+    "at": "0x14D842",
+    "label": "Hey, where's the chow?",
+    "reply": "You kids look well fed.  Buzz off.",
+    "slot": 3,
+    "body_hex": "00020000342f00003459000e0004000200003498000034b6000e000300020000350100003531002000030006007d00040010000b000034de000c0001",
+    "actions": [
+     {
+      "op": "raw_02",
+      "at": "0x14D850"
+     }
+    ],
+    "entity_name": "The Cook",
+    "room_id": 13
+   },
+   {
+    "at": "0x14D850",
+    "label": "Can't you just make us a quick hamburger?",
+    "reply": "I'll make you INTO a hamburger if you don't stop bothering me!",
+    "slot": 4,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "The Cook",
+    "room_id": 13
+   },
+   {
+    "at": "0x14D85E",
+    "label": "I NEED a pizza fix real soon!",
+    "reply": "You're gonna need a body fix real soon!",
+    "slot": 3,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "The Cook",
+    "room_id": 13
+   },
+   {
+    "at": "0x14D86C",
+    "label": "Some cook you are, leaving poor kids to starve!",
+    "reply": "Well..",
+    "slot": 3,
+    "body_hex": "0006007d00040010000b000034de000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 125,
+      "seq": 4
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 11,
+      "text_offset": "0x34DE",
+      "text": "Nah, you guys don't need any food."
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "The Cook",
+    "room_id": 13
+   },
+   {
+    "at": "0x14D88C",
+    "label": "Forget it.",
+    "reply": "And don't come back!",
+    "slot": 3,
+    "body_hex": "0006007d0001000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 125,
+      "seq": 1
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "The Cook",
+    "room_id": 13
+   }
+  ],
+  "166": [
+   {
+    "at": "0x14EA1E",
+    "label": "Um, Mr Statue?",
+    "reply": "...",
+    "slot": 65535,
+    "body_hex": "0010f00600003ecf000c0001",
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": "0x3ECF",
+      "text": "Why am I talking to a rock?"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Statue",
+    "room_id": 20
+   },
+   {
+    "at": "0x14EA38",
+    "label": "Abracadabra!",
+    "reply": "...",
+    "slot": 65535,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Statue",
+    "room_id": 20
+   },
+   {
+    "at": "0x14EA46",
+    "label": "Shazam!",
+    "reply": "...",
+    "slot": 65535,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Statue",
+    "room_id": 20
+   },
+   {
+    "at": "0x14EA54",
+    "label": "Hokus Pokus!",
+    "reply": "...",
+    "slot": 65535,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Statue",
+    "room_id": 20
+   },
+   {
+    "at": "0x14EA62",
+    "label": "XYZZY!",
+    "reply": "You have proven yourself worthy.",
+    "slot": 65535,
+    "body_hex": "000d00610010100600003f1c00150014000b0029000000150001000b00a600c9000b002900c700150014000b0029000000150001000b00a600ca000b002900c8000d8061000d003a0006001a00100010000e00003f340010000d00003f55000b00a400cb000d004600150014000b00a400cc000500a500140008000b0000000100000011000c0001",
+    "actions": [
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 97
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": "0x3F1C",
+      "text": "Zoinks!  Who said that?"
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 20
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 41,
+      "value": 0
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 1
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 166,
+      "value": 201
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 41,
+      "value": 199
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 20
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 41,
+      "value": 0
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 1
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 166,
+      "value": 202
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 41,
+      "value": 200
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 97
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 58
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 26,
+      "seq": 16
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x3F34",
+      "text": "Something's happening over here!"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 13,
+      "text_offset": "0x3F55",
+      "text": "You may look upon the medallion."
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 164,
+      "value": 203
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 70
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 20
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 164,
+      "value": 204
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 165,
+      "room": 20
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest_index": 11,
+      "dest_bit": 0,
+      "src_index": 1,
+      "src_bit": 0
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Statue",
+    "room_id": 20
+   },
+   {
+    "at": "0x14EAF8",
+    "label": "I give up.  Tell me.",
+    "reply": "...",
+    "slot": 65535,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Statue",
+    "room_id": 20
+   }
+  ]
+ }
+}

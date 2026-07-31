@@ -1,0 +1,9 @@
+{
+ "path": "assets/screens/chapter_hotel/palettes.json",
+ "provenance": "code_derived",
+ "producer": "chapter-card palette loader (ROM 0x1530)",
+ "capture_state": "",
+ "capture_frame": null,
+ "cite": "asset table 0x18FEC stride 16, +12 = palette ptr -> 0x01D58A (0x153C `MOVEA.L 12(A4,D0.W),A0`); 128B copied to $FF0778 (0x1546), then 60B from ROM 0x32482 at +2 (0x1554); colour 0 forced black for chapter 0 (0x156E)",
+ "note": "byte-identical to the previous runtime_capture; capture kept as .capturebak"
+}

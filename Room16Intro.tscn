@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/room16_scene.gd" id="1"]
+
+[node name="Room16Intro" type="Node2D"]
+script = ExtResource("1")
+data_path = "res://assets/intros/room16_data.json"
+front_over_actors = true
+next_scene_path = "res://Room4Intro.tscn"
+depth_scale_enabled = true

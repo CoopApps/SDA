@@ -1,0 +1,12 @@
+{
+ "note": "Chapter initial script-flag block copied to $FF2A00 by cluster_init_entities 0x7F66 (source 0x0FCA74..0x0FCA86). Keyed fb<index> = byte value; bits are read as fb<i>.<bit>. tools/gen_initial_flags.py",
+ "flags": {
+  "fb0": 1,
+  "fb9": 56,
+  "fb11": 64,
+  "fb12": 2,
+  "fb13": 130,
+  "fb14": 255,
+  "fb15": 1
+ }
+}

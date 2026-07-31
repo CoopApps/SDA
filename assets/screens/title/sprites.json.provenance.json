@@ -1,0 +1,9 @@
+{
+ "path": "assets/screens/title/sprites.json",
+ "provenance": "code_derived",
+ "producer": "ROM OAM/SAT derivation",
+ "capture_state": "",
+ "capture_frame": null,
+ "cite": "no sprite ops in this screen's ROM load plan (scooby_intro_decode PLAN: tiles + nametable + palette only). The capture held a single BLANK SAT entry (x=y=-128, tile 0) i.e. nothing drawn.",
+ "note": "capture recorded one empty SAT terminator; emitted as an empty list."
+}

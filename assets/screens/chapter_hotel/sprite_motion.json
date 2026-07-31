@@ -1,0 +1,22 @@
+{
+ "note": "Chapter-card 'Mystery Machine' motion, DERIVED FROM ROM (routine 0x1530). Replaces the captured per-sprite sprite_motion.json, which was fitted and WRONG two ways: dx=0.4958 (ROM = exactly 0.5) and dy flattened to a constant 0.0168 that ERASED the van's vertical bob.",
+ "x_px_per_step": 1,
+ "x_frames_per_step": 2,
+ "x_px_per_frame": 0.5,
+ "bob_table": [
+  0,
+  1,
+  1,
+  1,
+  2,
+  2,
+  2,
+  1,
+  1,
+  1,
+  0
+ ],
+ "wheel_toggle_mask": 60,
+ "cite": "X: 0x1632 SUBI.B #1,$FF0AD0 / BPL / MOVE.B #1 (reset) / 0x164C ADDQ.W #1,$FF0A18 -> +1 px per 2 frames. Y bob: 0x15D2 MOVE.W 56(PC,D0.W),$FF0A16 walks the 11-word table at 0x160C, D0 += 2 wrapping at 0x16. Wheel: 0x163C EORI.W #$3C,$FF0A1C.",
+ "provenance": "code_derived"
+}

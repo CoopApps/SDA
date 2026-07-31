@@ -1,0 +1,25 @@
+{
+  "path": "screens/save_select/screen.idx",
+  "provenance": "code_derived",
+  "producer": "D:/scoobydoo/work/derive_capture_screens.py",
+  "capture_state": "",
+  "capture_frame": null,
+  "cite": "plane-A script $18BFA selected at 0x855C (`LEA $18BFA,A0`) on $FF09ED bit0 set / bit1 clear, with 0x8562 `MOVEQ #$2,D0` = two menu options and the option handler table at $85E8 = {$8CD6,$8F8A} -- two options is exactly CONTINUE / QUIT MYSTERY ($1896C=3, $18CBE=4 cannot be this screen). Decoded by $9C64 into $FF3000 and uploaded 0x380 words to VRAM $C000 by 0x85AA ($99F6). Plane B mansion nametable $0165B8 (raw 0x380 words), base tiles LZ $01155A, cursor banks $016D38/$016E6A/$016F76, palette $016CB8 with CRAM words 1..30 overlaid from $032482 (0x83C8). Plane 32x32 cells (reg16=$00).",
+  "rom_addrs": [
+    "0x00855C",
+    "0x018BFA",
+    "0x0165B8",
+    "0x01155A",
+    "0x016CB8",
+    "0x032482"
+  ],
+  "rom_map_row": [
+    "row 329 `0x00853A-0x0085DC` hud_mode_dispatch",
+    "row 446 `0x01896C-0x018DD0` menu_screen_nametables ($1896C)",
+    "row 439 `0x0165B8-0x016CB8` title_tiles_raw ($165B8)",
+    "row 438 `0x01155A-0x0165B8` title_tiles_lz ($1155A)",
+    "row 440 `0x016CB8-0x016D38` title_palette ($16CB8)",
+    "row 474 `0x032406-0x0324C0` cursor_item_sprite ($32406)"
+  ],
+  "note": "REPLACES a runtime_capture from save_select.state. The capture had the SRAM save-slot text baked into the picture -- two rows of garbage glyphs above CONTINUE / QUIT MYSTERY that are written at runtime from save RAM and are NOT part of the nametable. The ROM decode has only the two menu lines, which is what the screen looks like before the slot text is drawn."
+}

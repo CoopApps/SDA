@@ -1,0 +1,9 @@
+{
+ "path": "assets/screens/chapter_carnival/sprites.json",
+ "provenance": "code_derived",
+ "producer": "scooby_sprite_atlas",
+ "capture_state": "",
+ "capture_frame": null,
+ "cite": "packed from ROM-decoded logo rasters (scooby_lz): van banks @ROM 0x10B14 -> VRAM tile 0x458. Tiles extracted column-major and placed at the VRAM bases the menu SAT (ROM 0x0085F8) specifies. Referenced-but-unsourced tiles (the DOO logo's bottom 1632..1663) are transparent -- nothing in the ROM writes them, confirmed blank.",
+ "note": "NOT byte-identical to the old capture (a mid-dissolve VRAM snapshot); this is the real logo tiles packed fresh. Atlas layout is our own -- vdp_screen.gd reads it via tiles_index, so layout is internal."
+}

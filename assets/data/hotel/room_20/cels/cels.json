@@ -1,0 +1,25 @@
+{
+ "note": "Runtime CEL states per object (op 0x0B writes actor field +0 = the object's picture: open door, open cupboard...). Rendered from the ctx+0x24 descriptor with the room's tiles/palette. tools/gen_room_cels.py",
+ "by_entity": {
+  "164": [
+   {
+    "cel": 205,
+    "x": 176,
+    "y": 40,
+    "w": 40,
+    "h": 40,
+    "png": "205.png"
+   }
+  ],
+  "165": [
+   {
+    "cel": 6,
+    "x": 160,
+    "y": 48,
+    "w": 16,
+    "h": 24,
+    "png": "6.png"
+   }
+  ]
+ }
+}

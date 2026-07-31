@@ -1,0 +1,9 @@
+{
+ "path": "assets/screens/launch_hotel/palettes.json",
+ "provenance": "code_derived",
+ "producer": "menu palette + line-2 swap (ROM 0x75EC loader)",
+ "capture_state": "",
+ "capture_frame": null,
+ "cite": "base = menu palette (ROM 0x16CB8 128B @0x83A8, then 60B from 0x32482 @0x83C8). Line 2 replaced by loader 0x75EC: `LEA $FF07B8,A1` @0x7610 copies 32 words from palette-pointer table 0xA4E8 entry 0 -> ROM 0x016CF8 (D0*128+64 selects the set's line 2).",
+ "note": "byte-identical to the previous runtime_capture; capture kept as .capturebak"
+}

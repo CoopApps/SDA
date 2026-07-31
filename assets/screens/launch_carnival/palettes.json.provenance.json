@@ -1,0 +1,9 @@
+{
+ "path": "assets/screens/launch_carnival/palettes.json",
+ "provenance": "code_derived",
+ "producer": "menu palette + line-2 swap (ROM 0x75EC loader)",
+ "capture_state": "",
+ "capture_frame": null,
+ "cite": "base = menu palette (ROM 0x16CB8 128B @0x83A8 + 60B from 0x32482 @0x83C8). Line 2 replaced via loader 0x75EC (`LEA $FF07B8,A1` @0x7610, source picked by D0*128+64) from palette-pointer table 0xA4E8 entry 2 -> ROM 0x00A518. 16 words (line 2 only) -- VERIFIED empirically: copying 32 words corrupts line 3, which the real screen keeps from the menu palette.",
+ "note": "byte-identical to the previous runtime_capture; capture kept as .capturebak"
+}

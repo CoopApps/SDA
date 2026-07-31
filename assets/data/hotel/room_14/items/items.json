@@ -1,0 +1,55 @@
+{
+ "note": "Takeable room items rendered from their CEL descriptors (ctx+0x24 table, words at +0xE) with the room's own tiles/palette. Position+size ARE the cel rect -- items' actor records carry (0,0). tools/gen_room_items.py",
+ "items": [
+  {
+   "entity_id": 85,
+   "name": "Air Freshener",
+   "shape": 124,
+   "x": 184,
+   "y": 96,
+   "w": 24,
+   "h": 40,
+   "png": "85.png"
+  },
+  {
+   "entity_id": 89,
+   "name": "Poison Oak",
+   "shape": 123,
+   "x": 16,
+   "y": 80,
+   "w": 40,
+   "h": 40,
+   "png": "89.png"
+  },
+  {
+   "entity_id": 90,
+   "name": "Bed Spring",
+   "shape": 125,
+   "x": 136,
+   "y": 80,
+   "w": 24,
+   "h": 16,
+   "png": "90.png"
+  },
+  {
+   "entity_id": 91,
+   "name": "Book",
+   "shape": 126,
+   "x": 168,
+   "y": 88,
+   "w": 24,
+   "h": 16,
+   "png": "91.png"
+  },
+  {
+   "entity_id": 92,
+   "name": "Antacid",
+   "shape": 127,
+   "x": 64,
+   "y": 72,
+   "w": 8,
+   "h": 8,
+   "png": "92.png"
+  }
+ ]
+}

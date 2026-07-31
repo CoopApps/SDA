@@ -1,0 +1,1232 @@
+{
+ "note": "dialogue choices lifted from script op $02 (ROM $25AC, ROM_MAP row 116); label=player line, reply=NPC line, actions=decoded inline consequence script (34-op VM, room_behavior_runner event shape); body_hex kept for reference. String base 0x1AF33C.",
+ "choices": {
+  "unlinked": [
+   {
+    "at": "0x1B46AE",
+    "label": "Um, where is the cotton candy?",
+    "reply": "The answer lies within! Search your feelings!",
+    "slot": 1,
+    "body_hex": "",
+    "actions": []
+   },
+   {
+    "at": "0x1B46BC",
+    "label": "Will we get this evil bad guy clown, or will he get us?",
+    "reply": "The future holds great promise for you!",
+    "slot": 1,
+    "body_hex": "",
+    "actions": []
+   },
+   {
+    "at": "0x1B46CA",
+    "label": "What's the meaning of life?",
+    "reply": "It is...",
+    "slot": 1,
+    "body_hex": "000b005e00b7000800060002000100000011001a0000003500390009001a0001003a003e00090006000500010010001e0000086f000d000500100019000008770006000500010010001e0000086f001a0000003500390004001a0001003a003e00040010000600000880000d006800060005000200150014001a0000003500390000001a0001003a003e000000170005000d8068000d006b000b000700010015000a000b000700020015000a000b000700030015000a000b000700040015000a000b000700050015000a000b00070006001000060000089a00100019000004fb000c00030019000100190002000c00310018001800060000000c0002000c0001",
+    "actions": [
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 94,
+      "value": 183
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest_index": 6,
+      "dest_bit": 2,
+      "src_index": 1,
+      "src_bit": 0
+     },
+     {
+      "op": "set_palette_cycle_channel",
+      "operands": [
+       0,
+       53,
+       57,
+       9
+      ]
+     },
+     {
+      "op": "set_palette_cycle_channel",
+      "operands": [
+       1,
+       58,
+       62,
+       9
+      ]
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 5,
+      "seq": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": "0x86F",
+      "text": "It is.."
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 5
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 25,
+      "text_offset": "0x877",
+      "text": "Ruh roh!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 5,
+      "seq": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": "0x86F",
+      "text": "It is.."
+     },
+     {
+      "op": "set_palette_cycle_channel",
+      "operands": [
+       0,
+       53,
+       57,
+       4
+      ]
+     },
+     {
+      "op": "set_palette_cycle_channel",
+      "operands": [
+       1,
+       58,
+       62,
+       4
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 6,
+      "text_offset": "0x880",
+      "text": "Zoinks! She's gonna blow!"
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 104
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 5,
+      "seq": 2
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 20
+     },
+     {
+      "op": "set_palette_cycle_channel",
+      "operands": [
+       0,
+       53,
+       57,
+       0
+      ]
+     },
+     {
+      "op": "set_palette_cycle_channel",
+      "operands": [
+       1,
+       58,
+       62,
+       0
+      ]
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "raw": "00170005"
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 104
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 107
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 7,
+      "value": 1
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 10
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 7,
+      "value": 2
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 10
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 7,
+      "value": 3
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 10
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 7,
+      "value": 4
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 10
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 7,
+      "value": 5
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 10
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 7,
+      "value": 6
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 6,
+      "text_offset": "0x89A",
+      "text": "Some fireworks show!"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 25,
+      "text_offset": "0x4FB",
+      "text": "Reh!"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0003"
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "raw": "00190001"
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "raw": "00190002"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0031"
+     },
+     {
+      "op": "load_room_at_entry_with_facing",
+      "room": 24,
+      "entry": 6,
+      "facing": 0
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0002"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x1B47D8",
+    "label": "Well, I'm out of here.",
+    "reply": "Fare well, Traveller!",
+    "slot": 1,
+    "body_hex": "000c00030019000100190002000c00310018001800060000000c0002000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0003"
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "raw": "00190001"
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "raw": "00190002"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0031"
+     },
+     {
+      "op": "load_room_at_entry_with_facing",
+      "room": 24,
+      "entry": 6,
+      "facing": 0
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0002"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x1B6FF6",
+    "label": "I wanna play the dart game.",
+    "reply": "Caugh up a ticket or get lost.",
+    "slot": 2,
+    "body_hex": "",
+    "actions": []
+   },
+   {
+    "at": "0x1B7004",
+    "label": "Well, see ya.",
+    "reply": "Not if I see you first.",
+    "slot": 2,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x1B9E38",
+    "label": "How do I play this game?",
+    "reply": "It costs two bucks.",
+    "slot": 2,
+    "body_hex": "0006009000040010000e000034030006009000030010000e00003439",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 144,
+      "seq": 4
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x3403",
+      "text": "I give you a hammer, and you hit that pad over there."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 144,
+      "seq": 3
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x3439",
+      "text": "Ring that bell and win a prize."
+     }
+    ]
+   },
+   {
+    "at": "0x1B9E72",
+    "label": "I don't think this game is fair.",
+    "reply": "Life ain't fair, kid.",
+    "slot": 3,
+    "body_hex": "0006009000030010000e000034860002000034fe00003521001c00020006009000030010000e000034bd00020000355100003580001c00020006009000030010000e0000352b0002000035850000358500120002000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 144,
+      "seq": 3
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x3486",
+      "text": "Besides, what's it to you? You're playing on freebies."
+     },
+     {
+      "op": "raw_02",
+      "at": "0x1B9E8E"
+     }
+    ]
+   },
+   {
+    "at": "0x1B9E8E",
+    "label": "I bet I can beat your game anyway.",
+    "reply": "Oh, yeah?",
+    "slot": 2,
+    "body_hex": "0006009000030010000e000034bd",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 144,
+      "seq": 3
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x34BD",
+      "text": "You find a way to beat this game, I'll give you a special prize."
+     }
+    ]
+   },
+   {
+    "at": "0x1B9EAA",
+    "label": "Don't you feel bad, cheating people like this?",
+    "reply": "Nah.",
+    "slot": 2,
+    "body_hex": "0006009000030010000e0000352b",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 144,
+      "seq": 3
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": "0x352B",
+      "text": "I like to see that look on your face."
+     }
+    ]
+   },
+   {
+    "at": "0x1B9EC6",
+    "label": "Oh, well.",
+    "reply": "Oh, well.",
+    "slot": 2,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   },
+   {
+    "at": "0x1B9ED8",
+    "label": "Well, see ya.",
+    "reply": "Yeah, yeah. Come back when you have some money.",
+    "slot": 4,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ]
+   }
+  ],
+  "85": [
+   {
+    "at": "0x1B7EA4",
+    "label": "Hey, where did you get those tickets.",
+    "reply": "I found them in the ticket booth.",
+    "slot": 5,
+    "body_hex": "0006005500050010000900001f36000200001fbb00001fd5002000040006005500060010000900001f52000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 5
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 9,
+      "text_offset": "0x1F36",
+      "text": "Ain't no more there though."
+     },
+     {
+      "op": "raw_02",
+      "at": "0x1B7EC0"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B7EC0",
+    "label": "Wanna share some with me?",
+    "reply": "No way, Jose.",
+    "slot": 4,
+    "body_hex": "0006005500060010000900001f52000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 6
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 9,
+      "text_offset": "0x1F52",
+      "text": "I lost all my money on the crane game trying to get the water pistol. These tickets are all I have left!"
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B7EE0",
+    "label": "How come you're just standing around here?",
+    "reply": "'Cause I can't figure out what to ride.",
+    "slot": 6,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B7EEE",
+    "label": "Well, gotta run.",
+    "reply": "See ya.",
+    "slot": 4,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B7F20",
+    "label": "How come you're just standing around here?",
+    "reply": "'Cause I can't figure out what to ride.",
+    "slot": 13,
+    "body_hex": "000200002097000020b2000e000d0002000020cb000020e6000e000c0002000021df000022100106000d00060055000d00100009000020ee001010060000212300060055000c0010000900002163001b80010001000000880068001b80550001000800880068001f0001001b000100010000008800600005006400000005006300180011001800010003000e0055ffffffff0001000500550018001b80010001000000530078001b80550001000b00670084001b00020001000000670084001b80020001000000500090001f0055001b80550001000900350084001f0002000600020006001f0055000600550002001e00010001001010060000216c0006006300030010000d000021970006006300070010000d000021bd000600010062000c00280002000022270000223e0012000c000c0001",
+    "actions": [
+     {
+      "op": "raw_02",
+      "at": "0x1B7F2E"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B7F2E",
+    "label": "Have you tried the bungee?",
+    "reply": "Uh uh. That's too scary.",
+    "slot": 13,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B7F3C",
+    "label": "How about the diving bell?",
+    "reply": "Boring.",
+    "slot": 12,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B7F4A",
+    "label": "Wanna ride the roller coaster with me and Scoob?",
+    "reply": "Yeah! That's be great.",
+    "slot": 13,
+    "body_hex": "00060055000d00100009000020ee001010060000212300060055000c0010000900002163001b80010001000000880068001b80550001000800880068001f0001001b000100010000008800600005006400000005006300180011001800010003000e0055ffffffff0001000500550018001b80010001000000530078001b80550001000b00670084001b00020001000000670084001b80020001000000500090001f0055001b80550001000900350084001f0002000600020006001f0055000600550002001e00010001001010060000216c0006006300030010000d000021970006006300070010000d000021bd000600010062000c0028",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 13
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 9,
+      "text_offset": "0x20EE",
+      "text": "But the roller coaster guy said we need four people."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": "0x2123",
+      "text": "Scooby here is worth any two dogs.  Plus you and me makes four."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 12
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 9,
+      "text_offset": "0x2163",
+      "text": "Awright!"
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "x": 0,
+      "y": 136
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 85,
+      "x": 8,
+      "y": 136
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "raw": "001f0001"
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "x": 0,
+      "y": 136
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 100,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 99,
+      "room": 24
+     },
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "scene": 24,
+      "facing": 3
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "actor": 85,
+      "anim": 65535,
+      "waypoint": 1
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 85,
+      "room": 24
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "x": 0,
+      "y": 83
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 85,
+      "x": 11,
+      "y": 103
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 2,
+      "x": 0,
+      "y": 103
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 2,
+      "x": 0,
+      "y": 80
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "raw": "001f0055"
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 85,
+      "x": 9,
+      "y": 53
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "raw": "001f0002"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 2,
+      "seq": 6
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "raw": "001f0055"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 2
+     },
+     {
+      "op": "op_1E",
+      "raw": "001e00010001"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": "0x216C",
+      "text": "Okay, Mr. Roller Coaster Guy, here we are."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 99,
+      "seq": 3
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 13,
+      "text_offset": "0x2197",
+      "text": "Sorry, guy, but the kid is too short."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 99,
+      "seq": 7
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 13,
+      "text_offset": "0x21BD",
+      "text": "He's gotta be at least this tall."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 1,
+      "seq": 98
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0028"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B8050",
+    "label": "Yeah, bummer isn't it?",
+    "reply": "Yup.",
+    "slot": 12,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B8062",
+    "label": "I'm still tyrying to figure out how to get you on.",
+    "reply": "Hurry up!  I'm getting hungry!",
+    "slot": 12,
+    "body_hex": "0010f00600002243",
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": "0x2243",
+      "text": "I can definitely relate."
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B8078",
+    "label": "Later.",
+    "reply": "Bye.",
+    "slot": 12,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B808A",
+    "label": "How come you chickened out on us?",
+    "reply": "I didn't chicken out.",
+    "slot": 13,
+    "body_hex": "00060055000d000300180000000c005500000000001200100809000022ba000300180000000c005500010000001200100809000022dc000300180000000c005500020000001200100809000022fe0008000c005500030000009200020000232e00002349000e000c0002000023570000238c000e000d0002000025000000252701de000c00060055000d00100009000023a900101006000023ca001b80010001000000880068001b80550001000800880068001f0001001b000100010000008800600005006400000005006300180011001800010000000e0055ffffffff0001000500550018001b80010001000000530078001b80550001000b00670084001b00020001000000670084001b80020001000000500090001f0055001b80550001000900350084001f0002000600020006001f0055000600550002001e0001000100060055000d000300180000000c005500000000001200100809000023d7000300180000000c005500010000001200100809000023ec000300180000000c0055000200000012001008090000240c0008000c0055000300000092001b00550003000800670084000e00550002000a000100050055000c001b0055ffffffff00380068000d00030010100600002423000600630002000300180000000c00550000000000120010000d0000243b000300180000000c00550001000000120010000d00002457000300180000000c00550002000000120010000d00002494000300180000000c00550003000000120010000d000024d60003001c0000000c00550003000000420008000c0055000100000002000c002800020000252f000025540012000c000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 13
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000000000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2057,
+      "text_offset": "0x22BA",
+      "text": "I had to, um, go to the bathroom."
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000100000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2057,
+      "text_offset": "0x22DC",
+      "text": "I thought I heard my mom calling."
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000200000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2057,
+      "text_offset": "0x22FE",
+      "text": "Ralph Nader says this carnival is a death trap."
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest_index": 12,
+      "dest_bit": 85,
+      "src_index": 3,
+      "src_bit": 0
+     },
+     {
+      "op": "raw_02",
+      "at": "0x1B80F2"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B80F2",
+    "label": "I really believe you. Not.",
+    "reply": "I don't care.",
+    "slot": 12,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B8100",
+    "label": "Can't you at least think of something more creative?",
+    "reply": "I'm only six. Gimme a break.",
+    "slot": 13,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B810E",
+    "label": "Wanna try again on the roller coaster?",
+    "reply": "Uh huh.",
+    "slot": 12,
+    "body_hex": "00060055000d00100009000023a900101006000023ca001b80010001000000880068001b80550001000800880068001f0001001b000100010000008800600005006400000005006300180011001800010000000e0055ffffffff0001000500550018001b80010001000000530078001b80550001000b00670084001b00020001000000670084001b80020001000000500090001f0055001b80550001000900350084001f0002000600020006001f0055000600550002001e0001000100060055000d000300180000000c005500000000001200100809000023d7000300180000000c005500010000001200100809000023ec000300180000000c0055000200000012001008090000240c0008000c0055000300000092001b00550003000800670084000e00550002000a000100050055000c001b0055ffffffff00380068000d00030010100600002423000600630002000300180000000c00550000000000120010000d0000243b000300180000000c00550001000000120010000d00002457000300180000000c00550002000000120010000d00002494000300180000000c00550003000000120010000d000024d60003001c0000000c00550003000000420008000c0055000100000002000c0028",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 13
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 9,
+      "text_offset": "0x23A9",
+      "text": "I'm really gonna ride this time."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": "0x23CA",
+      "text": "Yeah, right."
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "x": 0,
+      "y": 136
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 85,
+      "x": 8,
+      "y": 136
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "raw": "001f0001"
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "x": 0,
+      "y": 136
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 100,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 99,
+      "room": 24
+     },
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "scene": 24,
+      "facing": 0
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "actor": 85,
+      "anim": 65535,
+      "waypoint": 1
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 85,
+      "room": 24
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "x": 0,
+      "y": 83
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 85,
+      "x": 11,
+      "y": 103
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 2,
+      "x": 0,
+      "y": 103
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 2,
+      "x": 0,
+      "y": 80
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "raw": "001f0055"
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 85,
+      "x": 9,
+      "y": 53
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "raw": "001f0002"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 2,
+      "seq": 6
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "raw": "001f0055"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 2
+     },
+     {
+      "op": "op_1E",
+      "raw": "001e00010001"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 85,
+      "seq": 13
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000000000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2057,
+      "text_offset": "0x23D7",
+      "text": "I'm outta here, man."
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000100000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2057,
+      "text_offset": "0x23EC",
+      "text": "I just remembered something...."
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000200000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 2057,
+      "text_offset": "0x240C",
+      "text": "Um, I changed my mind!"
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest_index": 12,
+      "dest_bit": 85,
+      "src_index": 3,
+      "src_bit": 0
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 85,
+      "x": 8,
+      "y": 103
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "actor": 85,
+      "anim": 10,
+      "waypoint": 1
+     },
+     {
+      "op": "move_actor_to_room",
+      "actor": 85,
+      "room": 12
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 85,
+      "x": 65535,
+      "y": 56
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 3
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": "0x2423",
+      "text": "He chickened out again!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 99,
+      "seq": 2
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000000000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 13,
+      "text_offset": "0x243B",
+      "text": "Lot's of kids do that, guy."
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000100000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 13,
+      "text_offset": "0x2457",
+      "text": "Aren't you tired of dragging that kid down here for nothing?"
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000200000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 13,
+      "text_offset": "0x2494",
+      "text": "Trust experience, guy: kids like that won't ride until next year."
+     },
+     {
+      "op": "op_03",
+      "raw": "000300180000000c0055000300000012"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 13,
+      "text_offset": "0x24D6",
+      "text": "I say we tie him to the tracks next time."
+     },
+     {
+      "op": "op_03",
+      "raw": "0003001c0000000c0055000300000042"
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest_index": 12,
+      "dest_bit": 85,
+      "src_index": 1,
+      "src_bit": 0
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0028"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B82EC",
+    "label": "Well, we're off to ride the coaster.",
+    "reply": "Rats!",
+    "slot": 12,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   },
+   {
+    "at": "0x1B82FE",
+    "label": "Later.",
+    "reply": "Bye.",
+    "slot": 12,
+    "body_hex": "000c0001",
+    "actions": [
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Kid",
+    "room_id": 18
+   }
+  ],
+  "99": [
+   {
+    "at": "0x1B86A4",
+    "label": "We want to ride the roller coaster.",
+    "reply": "Step right this way!",
+    "slot": 3,
+    "body_hex": "0011000800000000000c0001",
+    "actions": [
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "scene": 8,
+      "facing": 0
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Attendant",
+    "room_id": 24
+   },
+   {
+    "at": "0x1B86CE",
+    "label": "We want to ride the roller coaster.",
+    "reply": "The kid is still too short, guy.",
+    "slot": 3,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Attendant",
+    "room_id": 24
+   },
+   {
+    "at": "0x1B86DC",
+    "label": "We want to ride the roller coaster.",
+    "reply": "Gotta have tickets to ride, guy.",
+    "slot": 4,
+    "body_hex": "",
+    "actions": [],
+    "entity_name": "Attendant",
+    "room_id": 24
+   },
+   {
+    "at": "0x1B86EA",
+    "label": "Is that game you're playing any good?",
+    "reply": "Yup. It's a game about Scooby Doo.",
+    "slot": 3,
+    "body_hex": "000d000300101006000028f8",
+    "actions": [
+     {
+      "op": "queue_sound_driver_id",
+      "sound": 3
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": "0x28F8",
+      "text": "Hear that, Scoob? We're famous!"
+     }
+    ],
+    "entity_name": "Attendant",
+    "room_id": 24
+   },
+   {
+    "at": "0x1B8704",
+    "label": "Well, see ya.",
+    "reply": "Uh huh.",
+    "slot": 2,
+    "body_hex": "000600630001000c0001",
+    "actions": [
+     {
+      "op": "start_anim_sequence_and_wait",
+      "actor": 99,
+      "seq": 1
+     },
+     {
+      "op": "op_0C",
+      "raw": "000c0001"
+     }
+    ],
+    "entity_name": "Attendant",
+    "room_id": 24
+   }
+  ]
+ }
+}

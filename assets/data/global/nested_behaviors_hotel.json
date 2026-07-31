@@ -1,0 +1,921 @@
+{
+ "note": "Object behaviours nested inside state conditionals -- the manifest bake only walks top-level op-01 guards, so these (the REAL open/shut/use handlers) were missing and only the fallback text survived. Actions are pre-wrapped in their enclosing condition(s). tools/gen_nested_behaviors.py",
+ "behaviors": {
+  "28": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 4,
+        "selector": 28
+       },
+       "right": {
+        "source": "immediate",
+        "index": 42,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 5100,
+        "text": "Two wheels for the mine car."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 5,
+    "sel2": 29,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 4,
+        "selector": 28
+       },
+       "right": {
+        "source": "immediate",
+        "index": 42,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 5037,
+        "text": "I need the rest of the wheels before I bother with that."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "29": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 0,
+        "selector": 29
+       },
+       "right": {
+        "source": "immediate",
+        "index": 3,
+        "selector": 0
+       },
+       "comparator": "ne"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 4102,
+        "text_offset": 5167,
+        "text": "It's missing three wheels."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 5,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 0,
+        "selector": 29
+       },
+       "right": {
+        "source": "immediate",
+        "index": 3,
+        "selector": 0
+       },
+       "comparator": "ne"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 5194,
+        "text": "I can't use it without wheels!"
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "81": [
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 2
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "if_compare_then_block",
+        "condition": {
+         "left": {
+          "source": "flag",
+          "index": 11,
+          "selector": 3
+         },
+         "right": {
+          "source": "immediate",
+          "index": 1,
+          "selector": 0
+         },
+         "comparator": "eq"
+        },
+        "then": [
+         {
+          "op": "move_entity_to_anchor_of_reference",
+          "subject": 1,
+          "reference": 81,
+          "x_addend": 12,
+          "extra": 1
+         },
+         {
+          "op": "start_anim_sequence_and_wait",
+          "channel": 1,
+          "seq": 14
+         },
+         {
+          "op": "start_anim_sequence_and_wait",
+          "channel": 1,
+          "seq": 6
+         },
+         {
+          "op": "actor_set_word0_and_raise_pending_flag",
+          "actor": 81,
+          "value": 63
+         },
+         {
+          "op": "actor_set_word0_and_raise_pending_flag",
+          "actor": 86,
+          "value": 122
+         },
+         {
+          "op": "queue_sound_driver_id",
+          "sound_id": 62
+         },
+         {
+          "op": "assign_flagbit_or_actor_field",
+          "dest": "flag",
+          "dest_index": 14,
+          "dest_bit_or_actor": 2,
+          "src_value": 0,
+          "src_bit_or_actor": 0,
+          "mode": 17,
+          "operation": "set_clear"
+         },
+         {
+          "op": "actor_set_byte_field_and_refresh",
+          "actor": 81,
+          "value": 4,
+          "field_offset": 22
+         },
+         {
+          "op": "actor_set_byte_field_and_refresh",
+          "actor": 86,
+          "value": 4,
+          "field_offset": 22
+         }
+        ]
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 4102,
+        "text_offset": 8631,
+        "text": "It's locked."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 2
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 6,
+        "text_offset": 6192,
+        "text": "It's already shut, man."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "61": [
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 1
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 61,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 14
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 6
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 47,
+        "value": 164
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 61,
+        "value": 83
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 62
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 14,
+        "dest_bit_or_actor": 1,
+        "src_value": 0,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 47,
+        "value": 4,
+        "field_offset": 22
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 61,
+        "value": 4,
+        "field_offset": 22
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 1
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 6,
+        "text_offset": 6192,
+        "text": "It's already shut, man."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "128": [
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 125
+       },
+       "right": {
+        "source": "immediate",
+        "index": 13,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 13876,
+        "text": "I can't reach it from this side."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 125
+       },
+       "right": {
+        "source": "immediate",
+        "index": 13,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 13876,
+        "text": "I can't reach it from this side."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "86": [
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 2
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 86,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 12
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 4
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 81,
+        "value": 63
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 86,
+        "value": 122
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 62
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 14,
+        "dest_bit_or_actor": 2,
+        "src_value": 0,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 81,
+        "value": 4,
+        "field_offset": 22
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 86,
+        "value": 4,
+        "field_offset": 22
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 2
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 6,
+        "text_offset": 6192,
+        "text": "It's already shut, man."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "47": [
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 1
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 47,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 13
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 5
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 47,
+        "value": 164
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 61,
+        "value": 83
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 62
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 14,
+        "dest_bit_or_actor": 1,
+        "src_value": 0,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 47,
+        "value": 4,
+        "field_offset": 22
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 61,
+        "value": 4,
+        "field_offset": 22
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 1
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 6,
+        "text_offset": 6192,
+        "text": "It's already shut, man."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "101": [
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 0
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 101,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 14
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 6
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 101,
+        "value": 171
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 44,
+        "value": 165
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 62
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 14,
+        "dest_bit_or_actor": 0,
+        "src_value": 0,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 101,
+        "value": 4,
+        "field_offset": 22
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 0
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 6,
+        "text_offset": 6192,
+        "text": "It's already shut, man."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "166": [
+   {
+    "verb_code": 8,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 11,
+        "selector": 0
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_actor_to_waypoint",
+        "selector": 1,
+        "mode_speed": 1,
+        "anim_id": 0,
+        "waypoint_index": 3
+       },
+       {
+        "op": "set_actor_turn_anim_from_transition_table",
+        "slot": 1,
+        "wait": true,
+        "state": 0
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ],
+  "44": [
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 0
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 44,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 14
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 4
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 62
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 101,
+        "value": 171
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 44,
+        "value": 165
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 14,
+        "dest_bit_or_actor": 0,
+        "src_value": 0,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 101,
+        "value": 4,
+        "field_offset": 22
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 44,
+        "value": 4,
+        "field_offset": 22
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 0
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 6,
+        "text_offset": 6192,
+        "text": "It's already shut, man."
+       }
+      ]
+     }
+    ],
+    "depth": 1
+   }
+  ]
+ }
+}

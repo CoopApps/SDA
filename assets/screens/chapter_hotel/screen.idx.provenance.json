@@ -1,0 +1,19 @@
+{
+  "path": "screens/chapter_hotel/screen.idx",
+  "provenance": "code_derived",
+  "producer": "D:/scoobydoo/work/derive_capture_screens.py",
+  "capture_state": "",
+  "capture_frame": null,
+  "cite": "chapter record table $18FEC indexed by $FF06AA<<4 (0x140E `LEA $18FEC,A4` / 0x141A `LSL.W #4,D0`); 16-byte record = +0 tiles LZ -> VRAM $0000 (0x1420, $97AA then $992C with D0=0), +4 -> VRAM $E000 plane B (0x1442/0x144C), +8 -> VRAM $C000 plane A (0x145C/0x1466), +12 palette -> $FF0778 (0x152E/0x153C) with 15 longs of UI palette from $32482 at $FF077A (0x1550-0x1564). Plane geometry 128x32 cells from reg16=$03 (0x13E4 `MOVE.W #$9003`), confirmed by each layer decoding to 3584 words = 128 x 28 rows. Composed at hscroll=vscroll=0 -- the state 0x14C2 leaves the scroll buffers in before the first $17AE upload, i.e. loader frame 0.  $FF06AA=0 also forces backdrop word $FF0778=0 (0x156E).",
+  "rom_addrs": [
+    "0x018FEC",
+    "0x0013BA",
+    "0x032482"
+  ],
+  "rom_map_row": [
+    "row 450 `0x018FEC-0x01900C` lz_block_18fec ($18FEC)",
+    "row 62 `0x0013BA-0x00140E` special_screen_load_enter",
+    "row 474 `0x032406-0x0324C0` cursor_item_sprite ($32406)"
+  ],
+  "note": "REPLACES a runtime_capture from chapter_hotel.state. The capture was one arbitrary phase of the card's 8-band per-line parallax (built by 0x16C4/0x17EA/0x18F2, uploaded to the hscroll table at VRAM $BC00 by 0x17AE); this is the loader's frame-0 output. Cross-check: the palette this ROM record produces matches the capture's CRAM 64/64 entries. The carnival capture had also lost the top-left of the SCOOBY-DOO logo (captured mid-upload); the ROM decode has it."
+}

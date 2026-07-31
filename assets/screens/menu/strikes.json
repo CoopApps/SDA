@@ -1,0 +1,26 @@
+{
+ "note": "lightning-strike scene patches (vblank 0xA426, table 0xA578); on a strike, one is uploaded to plane B at its cell (x,y).",
+ "variants": [
+  {
+   "x": 176,
+   "y": 56,
+   "w": 32,
+   "h": 72,
+   "idx": "strike0.idx"
+  },
+  {
+   "x": 216,
+   "y": 56,
+   "w": 40,
+   "h": 48,
+   "idx": "strike1.idx"
+  },
+  {
+   "x": 40,
+   "y": 48,
+   "w": 32,
+   "h": 72,
+   "idx": "strike2.idx"
+  }
+ ]
+}

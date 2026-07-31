@@ -1,0 +1,9 @@
+{
+  "path": "assets/screens/acclaim/palettes.json",
+  "provenance": "code_derived",
+  "producer": "scooby_intro_decode",
+  "capture_state": "",
+  "capture_frame": null,
+  "cite": "fade-in source palette @ROM 0x2241A (0x9E7E reads it); 64 CRAM words expanded x36 to 8-bit RGB",
+  "note": "decoded from ROM, not a VDP capture"
+}

@@ -1,0 +1,9 @@
+{
+  "path": "assets/screens/launch_carnival/screen.idx",
+  "provenance": "code_derived",
+  "producer": "scooby_menu_decode",
+  "capture_state": "",
+  "capture_frame": null,
+  "cite": "menu setup 0x8196; plane A script 0x18B3C, plane B nt 0x0165B8 (32x28), pal 0x016CB8+0x032482",
+  "note": "ROM-decoded background; pre_menu=title (mansion only, ROOMS is $018DD0 map screen)"
+}

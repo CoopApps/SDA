@@ -1,0 +1,62 @@
+{
+ "6": {
+  "char": "shaggy",
+  "x": 9,
+  "y": 2,
+  "plane": "B",
+  "base": "shaggy_0.png",
+  "talking": [
+   "shaggy_1.png",
+   "shaggy_2.png",
+   "shaggy_3.png"
+  ]
+ },
+ "25": {
+  "char": "scooby",
+  "x": 15,
+  "y": 2,
+  "plane": "B",
+  "base": "scooby_0.png",
+  "talking": [
+   "scooby_1.png",
+   "scooby_2.png",
+   "scooby_3.png"
+  ]
+ },
+ "29": {
+  "char": "velma",
+  "x": 5,
+  "y": 8,
+  "plane": "A",
+  "base": "velma_0.png",
+  "talking": [
+   "velma_1.png",
+   "velma_2.png",
+   "velma_3.png"
+  ]
+ },
+ "9": {
+  "char": "fred",
+  "x": 21,
+  "y": 5,
+  "plane": "A",
+  "base": "fred_0.png",
+  "talking": [
+   "fred_1.png",
+   "fred_2.png",
+   "fred_3.png"
+  ]
+ },
+ "27": {
+  "char": "daphne",
+  "x": 12,
+  "y": 6,
+  "plane": "A",
+  "base": "daphne_0.png",
+  "talking": [
+   "daphne_1.png",
+   "daphne_2.png",
+   "daphne_3.png"
+  ]
+ }
+}

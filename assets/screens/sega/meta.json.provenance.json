@@ -1,0 +1,9 @@
+{
+ "path": "assets/screens/sega/meta.json",
+ "provenance": "code_derived",
+ "producer": "meta regen (drops save-state path)",
+ "capture_state": "",
+ "capture_frame": null,
+ "cite": "width from the ROM load plan (scooby_intro_decode PLAN['sega'])",
+ "note": "meta.json is not read by any script; regenerated to remove the absolute source_state path that made it a capture artifact."
+}

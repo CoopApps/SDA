@@ -1,0 +1,1584 @@
+{
+ "chapter": "hotel",
+ "chapter_id": 0,
+ "struct": "0xFCA0C",
+ "string_base": "0x14199C",
+ "script_body": "0x14F5E2",
+ "script_len": 1756,
+ "start_scene": 16,
+ "start_scene2": 110,
+ "event_count": 185,
+ "events": [
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 1,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F5E2"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    58
+   ],
+   "at": "0x14F5EE"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 3,
+   "at": "0x14F5F2"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    29
+   ],
+   "at": "0x14F5FA"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    57
+   ],
+   "at": "0x14F5FE"
+  },
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 1,
+   "at": "0x14F602"
+  },
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 2,
+   "at": "0x14F606"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 30,
+   "at": "0x14F60A"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 30,
+   "at": "0x14F60E"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    2
+   ],
+   "at": "0x14F612"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    26
+   ],
+   "at": "0x14F616"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 9,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F61A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 0,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F626"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 125,
+   "text": "It was really nice of your Uncle Blake to let us spend the weekend at his hotel, Daphne.",
+   "at": "0x14F632"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 0,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F63A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 1,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F646"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 11,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F652"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 27,
+   "text_offset": 214,
+   "text": "He says the snow is great this time of year. I can't wait to hit the slopes.",
+   "at": "0x14F65E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 1,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F666"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F672"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F67E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 6,
+   "text_offset": 291,
+   "text": "No skiing for me, thanks. Like, skiing gets you broken legs!",
+   "at": "0x14F68A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F692"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F69E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 8,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F6AA"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 352,
+   "text": "Reh! Roken Regs!",
+   "at": "0x14F6B6"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F6BE"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 2,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F6CA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 10,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F6D6"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 369,
+   "text": "Jinkies, you guys are such cowards! What are you going to do with yourselves all weekend if you don't ski with us?",
+   "at": "0x14F6E2"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 2,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F6EA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F6F6"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F702"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 6,
+   "text_offset": 484,
+   "text": "Room service!",
+   "at": "0x14F70E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F716"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F722"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 8,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F72E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 498,
+   "text": "Reh! Reh!",
+   "at": "0x14F73A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F742"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 6,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F74E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F75A"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 6,
+   "text_offset": 508,
+   "text": "Hello, room service?  Another pizza, please.",
+   "at": "0x14F766"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F76E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F77A"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 553,
+   "text": "Two rizzas!",
+   "at": "0x14F786"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F78E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 1,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F79A"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 11,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F7A6"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 27,
+   "text_offset": 565,
+   "text": "To each his own, right guys?",
+   "at": "0x14F7B2"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 1,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F7BA"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 9,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F7C6"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 0,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F7D2"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 594,
+   "text": "I think I see his hotel up ahead.",
+   "at": "0x14F7DE"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 10,
+   "dest_bit_or_actor": 0,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F7E6"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 7,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F7F2"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 16,
+   "dest_bit_or_actor": 8,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F7FE"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 29,
+   "at": "0x14F80A"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 25,
+   "text_offset": 628,
+   "text": "Rooby Rooby Roo!",
+   "at": "0x14F80E"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 7,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F816"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    3
+   ],
+   "at": "0x14F822"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    27
+   ],
+   "at": "0x14F826"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 30,
+   "at": "0x14F82A"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 9,
+   "at": "0x14F82E"
+  },
+  {
+   "op": "actor_set_word0_and_raise_pending_flag",
+   "actor": 3,
+   "value": 55,
+   "at": "0x14F836"
+  },
+  {
+   "op": "set_actor_shape_index",
+   "actor": 3,
+   "value": 16,
+   "at": "0x14F83C"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 3,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 192,
+   "y": 112,
+   "at": "0x14F842"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 3,
+   "room": 9,
+   "at": "0x14F84E"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    15
+   ],
+   "at": "0x14F854"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    2
+   ],
+   "at": "0x14F858"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 200,
+   "at": "0x14F85C"
+  },
+  {
+   "op": "actor_set_word0_and_raise_pending_flag",
+   "actor": 79,
+   "value": 70,
+   "at": "0x14F860"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 62,
+   "at": "0x14F866"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 5,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 376,
+   "y": 96,
+   "at": "0x14F86A"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 5,
+   "room": 9,
+   "at": "0x14F876"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 5,
+   "move_op1": 1,
+   "walk_anim": 5,
+   "x": 350,
+   "y": 96,
+   "at": "0x14F87C"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 5,
+   "move_op1": 1,
+   "walk_anim": 5,
+   "x": 300,
+   "y": 112,
+   "at": "0x14F888"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 5,
+   "seq": 9,
+   "at": "0x14F894"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 92,
+   "at": "0x14F89A"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 20,
+   "at": "0x14F89E"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 3,
+   "seq": 56,
+   "at": "0x14F8A2"
+  },
+  {
+   "op": "wait_until_anim_channel_signalled",
+   "channel": 3,
+   "at": "0x14F8A8"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 3,
+   "move_op1": 65535,
+   "walk_anim": 57,
+   "x": 152,
+   "y": 112,
+   "at": "0x14F8AC"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 5,
+   "seq": 9,
+   "at": "0x14F8B8"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 92,
+   "at": "0x14F8BE"
+  },
+  {
+   "op": "wait_until_anim_channel_signalled",
+   "channel": 5,
+   "at": "0x14F8C2"
+  },
+  {
+   "op": "wait_n_frames",
+   "frames": 30,
+   "at": "0x14F8C6"
+  },
+  {
+   "op": "move_actor_to_waypoint",
+   "selector": 5,
+   "mode_speed": 2,
+   "anim_id": 5,
+   "waypoint_index": 0,
+   "at": "0x14F8CA"
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "flag",
+     "index": 11,
+     "selector": 79
+    },
+    "right": {
+     "source": "flag",
+     "index": 0,
+     "selector": 20
+    },
+    "comparator": "lt"
+   },
+   "then": [],
+   "at": "0x14F8D6"
+  },
+  {
+   "op": "set_actor_shape_index",
+   "actor": 79,
+   "value": 59,
+   "at": "0x14F8E2"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 3,
+   "room": 0,
+   "at": "0x14F8E8"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 5,
+   "room": 0,
+   "at": "0x14F8EE"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 10,
+   "at": "0x14F8F4"
+  },
+  {
+   "op": "resume_anim_channel_wait_drawn",
+   "channel": 1,
+   "at": "0x14F8FC"
+  },
+  {
+   "op": "resume_anim_channel_wait_drawn",
+   "channel": 2,
+   "at": "0x14F900"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    15
+   ],
+   "at": "0x14F904"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 1,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 20,
+   "y": 130,
+   "at": "0x14F908"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 2,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 20,
+   "y": 144,
+   "at": "0x14F914"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    2
+   ],
+   "at": "0x14F920"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 10,
+   "dest_bit_or_actor": 13,
+   "src_value": 10,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F924"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 3,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F930"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 13,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 296,
+   "y": 112,
+   "at": "0x14F93C"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 10,
+   "dest_bit_or_actor": 15,
+   "src_value": 10,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F948"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 4,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F954"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 15,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 272,
+   "y": 112,
+   "at": "0x14F960"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 10,
+   "dest_bit_or_actor": 14,
+   "src_value": 10,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14F96C"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 5,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14F978"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 14,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 152,
+   "y": 124,
+   "at": "0x14F984"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 1,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 128,
+   "y": 128,
+   "at": "0x14F990"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 2,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 96,
+   "y": 144,
+   "at": "0x14F99C"
+  },
+  {
+   "op": "set_actor_turn_anim_from_transition_table",
+   "slot": 2,
+   "wait": false,
+   "state": 0,
+   "at": "0x14F9A8"
+  },
+  {
+   "op": "wait_while_channel_busy",
+   "operands": [
+    1
+   ],
+   "at": "0x14F9AE"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 1,
+   "seq": 4,
+   "at": "0x14F9B2"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 12,
+   "at": "0x14F9B8"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 645,
+   "text": "Hi, kids.  Looks like you'll have the place all to yourself.",
+   "at": "0x14F9BE"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 13,
+   "seq": 8,
+   "at": "0x14F9C6"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 706,
+   "text": "Really?  I thought this was a busy time of year.",
+   "at": "0x14F9CC"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 13,
+   "at": "0x14F9D4"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 755,
+   "text": "It is.  Only this blasted ghost has been scaring off all my customers.",
+   "at": "0x14F9DA"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 13,
+   "at": "0x14F9E2"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 826,
+   "text": "If this keeps up, I'll be bankrupt!",
+   "at": "0x14F9E8"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 862,
+   "text": "G-g-ghost?",
+   "at": "0x14F9F0"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 12,
+   "at": "0x14F9F8"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 873,
+   "text": "I knew I shouldn't have said anything.",
+   "at": "0x14F9FE"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 13,
+   "seq": 9,
+   "at": "0x14FA06"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 912,
+   "text": "We don't believe in Ghosts, Uncle Blake!",
+   "at": "0x14FA0C"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 953,
+   "text": "Speak for yourself, Fred!",
+   "at": "0x14FA14"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 13,
+   "seq": 11,
+   "at": "0x14FA1C"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 979,
+   "text": "Uncle Blake, tell us about this ghost.",
+   "at": "0x14FA22"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 13,
+   "at": "0x14FA2A"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1018,
+   "text": "Not much to tell. He showed up about a month ago and started running me broke.",
+   "at": "0x14FA30"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 12,
+   "at": "0x14FA38"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1097,
+   "text": "The gardener claims he's the ghost of the Ancient Chieftan.",
+   "at": "0x14FA3E"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 13,
+   "seq": 10,
+   "at": "0x14FA46"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1157,
+   "text": "Who's the Ancient Chieftan?",
+   "at": "0x14FA4C"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 12,
+   "at": "0x14FA54"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1185,
+   "text": "A long time ago, the Indians used this place as a burial ground.",
+   "at": "0x14FA5A"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 13,
+   "at": "0x14FA62"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 1250,
+   "text": "You mean like from India?",
+   "at": "0x14FA68"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 14,
+   "seq": 4,
+   "at": "0x14FA70"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 29,
+   "text_offset": 1276,
+   "text": "No, silly. He means Native Americans.",
+   "at": "0x14FA76"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 13,
+   "at": "0x14FA7E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1314,
+   "text": "The Ancient Chieftan was a famous warrior around these parts about two hundred years ago.",
+   "at": "0x14FA84"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 11,
+   "at": "0x14FA8C"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1404,
+   "text": "They say he's buried nearby.",
+   "at": "0x14FA92"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 13,
+   "seq": 8,
+   "at": "0x14FA9A"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1433,
+   "text": "Why would the ghost of the Ancient Chieftan be haunting you?",
+   "at": "0x14FAA0"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 12,
+   "at": "0x14FAA8"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1494,
+   "text": "I don't know for certain.",
+   "at": "0x14FAAE"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 13,
+   "at": "0x14FAB6"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1520,
+   "text": "But the gardener claims the Chieftan doesn't like his land being used for a hotel.",
+   "at": "0x14FABC"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 13,
+   "seq": 11,
+   "at": "0x14FAC4"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1603,
+   "text": "What I can't figure out is how come it took so long for him to get mad about it.",
+   "at": "0x14FACA"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 13,
+   "seq": 11,
+   "at": "0x14FAD2"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1684,
+   "text": "Where was this ghost seen last?",
+   "at": "0x14FAD8"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 12,
+   "at": "0x14FAE0"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1716,
+   "text": "The cook saw him across the river just yesterday.",
+   "at": "0x14FAE6"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 13,
+   "seq": 11,
+   "at": "0x14FAEE"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 9,
+   "text_offset": 1766,
+   "text": "Come on, guys. Let's check out that area.",
+   "at": "0x14FAF4"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 10,
+   "dest_bit_or_actor": 13,
+   "src_value": 10,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14FAFC"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 3,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14FB08"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 13,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 400,
+   "y": 128,
+   "at": "0x14FB14"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 10,
+   "dest_bit_or_actor": 15,
+   "src_value": 10,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14FB20"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 4,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14FB2C"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 15,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 400,
+   "y": 128,
+   "at": "0x14FB38"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 10,
+   "dest_bit_or_actor": 14,
+   "src_value": 10,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign",
+   "at": "0x14FB44"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 5,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear",
+   "at": "0x14FB50"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 14,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 400,
+   "y": 128,
+   "at": "0x14FB5C"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 4102,
+   "text_offset": 1808,
+   "text": "Not me! I'm not going anywhere near any ghosts. I'm going to hit room service.",
+   "at": "0x14FB68"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 13,
+   "at": "0x14FB70"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1887,
+   "text": "Sorry, son, but the staff all quit last week.",
+   "at": "0x14FB76"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 12,
+   "at": "0x14FB7E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1933,
+   "text": "The only ones who stayed were the cook and the gardener.",
+   "at": "0x14FB84"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 13,
+   "at": "0x14FB8C"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 1990,
+   "text": "If you talk to the cook nicely,maybe he'll make you something to eat.",
+   "at": "0x14FB92"
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 0,
+   "at": "0x14FB9A"
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 26,
+   "seq": 12,
+   "at": "0x14FB9E"
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 14,
+   "text_offset": 2060,
+   "text": "Let's move inside where it's warm, hmm?.",
+   "at": "0x14FBA4"
+  },
+  {
+   "op": "wait_while_channel_busy",
+   "operands": [
+    13
+   ],
+   "at": "0x14FBAC"
+  },
+  {
+   "op": "wait_while_channel_busy",
+   "operands": [
+    15
+   ],
+   "at": "0x14FBB0"
+  },
+  {
+   "op": "wait_while_channel_busy",
+   "operands": [
+    14
+   ],
+   "at": "0x14FBB4"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    3
+   ],
+   "at": "0x14FBB8"
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 16,
+   "at": "0x14FBBC"
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 26,
+   "room": 16,
+   "at": "0x14FBC4"
+  },
+  {
+   "op": "move_actor_to_waypoint",
+   "selector": 26,
+   "mode_speed": 65535,
+   "anim_id": 1,
+   "waypoint_index": 1,
+   "at": "0x14FBCA"
+  },
+  {
+   "op": "match_event_selectors_else_skip_block",
+   "operands": [
+    65535,
+    4,
+    248,
+    80,
+    27,
+    2,
+    65535,
+    4,
+    248,
+    81,
+    12,
+    2,
+    6,
+    26,
+    12,
+    16,
+    14,
+    0,
+    2101,
+    14,
+    26,
+    1,
+    7,
+    1,
+    11,
+    44,
+    165,
+    13,
+    62,
+    6,
+    26,
+    3,
+    21,
+    30,
+    5,
+    26,
+    5,
+    11,
+    44,
+    0,
+    13,
+    55,
+    12,
+    3,
+    22,
+    1,
+    22,
+    2,
+    5,
+    5,
+    4,
+    24,
+    4,
+    0,
+    0,
+    27,
+    5,
+    65535,
+    65535,
+    112,
+    104,
+    6,
+    5,
+    11,
+    12,
+    2,
+    13,
+    92,
+    21,
+    60,
+    13,
+    92,
+    21,
+    45,
+    13,
+    92,
+    21,
+    60,
+    13,
+    92,
+    21,
+    100,
+    12,
+    3,
+    5,
+    5,
+    0,
+    12,
+    56,
+    25,
+    1,
+    8,
+    8,
+    5,
+    1,
+    0,
+    17,
+    25,
+    2,
+    12,
+    59,
+    24,
+    16,
+    1,
+    0,
+    25,
+    1,
+    25,
+    2,
+    8,
+    9,
+    1,
+    1,
+    0,
+    17,
+    2266,
+    12,
+    14,
+    11,
+    79,
+    0,
+    20,
+    79
+   ],
+   "at": "0x14FBD6"
+  }
+ ]
+}

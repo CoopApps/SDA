@@ -1,0 +1,329 @@
+{
+  "_about": [
+    "Directory-level provenance declaration for every shipped asset under",
+    "D:/scoobygodot/assets.  A per-file <asset>.provenance.json sidecar, when",
+    "present, OVERRIDES the rule that matches here.",
+    "",
+    "class:",
+    "  ROM_DERIVED    a named generator reads the ROM (or a ROM-derived",
+    "                 intermediate) and the rule names the ROM address(es) it",
+    "                 reads, which resolve to ROM_MAP.md rows.",
+    "  GENERATOR_ONLY a named generator exists but the rule cannot name a ROM",
+    "                 address / ROM_MAP row for the values it emits.  Honest",
+    "                 intermediate tier -- NOT the same as verified.",
+    "  CAPTURE        derived from an emulator save-state, VRAM dump, screenshot",
+    "                 or hand-measured crop.  Must be re-derived.",
+    "  HAND           hand-authored, no generator.",
+    "  OWNED_ELSEWHERE another agent/session owns this file in the current pass.",
+    "",
+    "rules are matched longest-pattern-first; 'pattern' is a POSIX glob relative",
+    "to assets/."
+  ],
+  "rules": [
+    {
+      "pattern": "data/*/room_*/background.png",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobygodot/tools/regen_room_planes.py <- D:/tools/structural_carver/exporters/scooby_genesis.py",
+      "cite": "scene_load_activate 0x00758A installs engine ctx $FF068E; scene records at ctx+8 (20B stride) give the room's tile stream + nametable; planes split on nametable bit15 priority",
+      "rom_addrs": ["0x00758A", "0x0FCA0C"],
+      "note": "room tile/nametable payloads live in the room-background region walked by ROM_MAP batch 66"
+    },
+    {
+      "pattern": "data/*/room_*/foreground.png",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobygodot/tools/regen_room_planes.py <- scooby_genesis.py",
+      "cite": "same nametable as background.png, split on per-tile priority bit15 (the high-priority half)",
+      "rom_addrs": ["0x00758A", "0x0FCA0C"]
+    },
+    {
+      "pattern": "data/*/room_*/cels/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobygodot/tools/gen_room_cels.py",
+      "cite": "cel stamper 0x7D54 / 0x7DD0; descriptor via ctx+0x24 offset table + ctx+0x1C reloc; shape read from actor field +0 at 0x7C4A (op 0x0B writes it, op 0x14 writes +2 and does NOT change the cel)",
+      "rom_addrs": ["0x007D54", "0x007C4A", "0x0FCA0C"]
+    },
+    {
+      "pattern": "data/*/room_*/items/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobygodot/tools/gen_room_items.py",
+      "cite": "engine ctx 0x0FCA0C (hotel) / 0x0FCA40 (carnival); descriptor = reloc(ctx+0x1C) + offset_table(ctx+0x24)[shape-1]; fields +0 X, +2 Y, +4 W, +6 H, +0xC plane, +0xE nametable words; hit-test 0x1018",
+      "rom_addrs": ["0x007D54", "0x001018", "0x0FCA0C"]
+    },
+    {
+      "pattern": "data/*/room_*/cycle*",
+      "class": "OWNED_ELSEWHERE",
+      "generator": "D:/scoobygodot/tools/gen_cycle_frames.py",
+      "cite": "op $1A install_cycle_anim_channel 0x2626; animate_cycle_tiles 0x00A7CE; CRAM DMA $9B10",
+      "rom_addrs": ["0x002626", "0x00A7CE"],
+      "note": "room_16 fireplace cycle frames are a KNOWN CAPTURE, owned by a separate pass in this same session. Not audited here."
+    },
+    {
+      "pattern": "data/global/choices_*.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobygodot/tools/gen_choices.py",
+      "cite": "dialogue-choice handler $25AC; operand layout (2,A5).l label / (6,A5).l reply / (0xA,A5).w len / (0xC,A5).w slot; script bases 0x14199C hotel, 0x1AF33C carnival",
+      "rom_addrs": ["0x0025AC", "0x14199C", "0x1AF33C"]
+    },
+    {
+      "pattern": "data/global/initial_flags_*.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobygodot/tools/gen_initial_flags.py",
+      "cite": "cluster_init_entities 0x7F66 indexes the chapter table 0x31AF2 by $FF06AA and seeds the 256-byte flag area $FF2A00",
+      "rom_addrs": ["0x007F66", "0x031AF2"]
+    },
+    {
+      "pattern": "data/global/nested_behaviors_*.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobygodot/tools/gen_nested_behaviors.py",
+      "cite": "script VM dispatch 0x002406, 34-entry opcode table 0x002354; scene-script binding table at ctx+8 offset +12, pool at ctx+44",
+      "rom_addrs": ["0x002406", "0x002354", "0x00221A"]
+    },
+    {
+      "pattern": "data/global/puzzle_behaviors_*.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobygodot/tools/gen_puzzle_behaviors.py",
+      "cite": "script VM dispatch 0x002406; op5 set_actor_room 0x0029FE (room1 = grant to inventory, room0 = consume)",
+      "rom_addrs": ["0x002406", "0x0029FE"]
+    },
+    {
+      "pattern": "data/global/scene_manifest_*.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_scene_manifest.py",
+      "cite": "chapter table 0x31AF2 (indexed by $FF06AA); per-chapter scene records stride 20 at ctx+8, per-scene 128B block at ctx+20",
+      "rom_addrs": ["0x031AF2", "0x00758A"]
+    },
+    {
+      "pattern": "data/global/waypoints_*.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/work/dump_waypoints.py",
+      "cite": "op $0E waypoint operand indexes the room's entry-point table at $FF0696 (tile<<3 px); extracted by EXECUTING scene_load_activate 0x00758A in the m68k interpreter",
+      "rom_addrs": ["0x00758A"]
+    },
+    {
+      "pattern": "data/global/npc_actors_*.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/work/gen_npc_actors.py",
+      "cite": "cluster_init_entities 0x7F66 -> scene_load_activate 0x758A -> presence timer 0x7C2C, executed in the interpreter; sprite-source pointer table 0x032670 (36 longs) resolves each actor's sheet",
+      "rom_addrs": ["0x007F66", "0x00758A", "0x032670"],
+      "note": "depends on work/presence_baked.json (ROM-executed) and a hand-transcribed 36-entry shape->bank table duplicated in work/validate_port_vs_rom.py -- that table should be read from 0x032670 rather than transcribed. Tracked as outstanding."
+    },
+    {
+      "pattern": "hud/arrow_up.png",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/work/emit_hud_arrows.py",
+      "cite": "tiles 0x7A-0x7F of the ring-LZSS HUD tileset $30916 decompressed at 0x76B2 and uploaded at 0x76C8; palette line 0 from $32482",
+      "rom_addrs": ["0x0076B2", "0x030916", "0x032482"]
+    },
+    {
+      "pattern": "hud/arrow_down.png",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/work/emit_hud_arrows.py",
+      "cite": "vertical flip (VDP vflip bit) of tiles 0x7A-0x7F of $30916; palette line 0 from $32482",
+      "rom_addrs": ["0x0076B2", "0x030916", "0x032482"]
+    },
+    {
+      "pattern": "hud/arrow.png",
+      "class": "CAPTURE",
+      "generator": "D:/tools/structural_carver/exporters/scooby_hud.py lift_hud()",
+      "cite": null,
+      "reason": "cropped from emulator save-state D:/scoobydoo/hud/gameplay.state at hand-measured cells ARROW_COLS=(27,30) ARROW_ROWS=(22,26); the exporter stamps its own output Provenance.RUNTIME_CAPTURE",
+      "to_fix": "the verb-bar/HUD glyph tiles must be located in one of the LZ tile blocks the scene loader uploads ($30016, $31AFA, $31B7A, $31CFA, glyph table $3034C -- ROM_MAP rows 303/304/259). A whole-ROM raw opacity-mask search (work/find_hud_glyphs.py) found NO match, so the art is inside a compressed block that is not yet decoded, or the captured PNG was cleaned. Decode those blocks and re-run find_hud_glyphs.py."
+    },
+    {
+      "pattern": "hud/letters/*.png",
+      "class": "CAPTURE",
+      "generator": "D:/tools/structural_carver/exporters/scooby_hud.py lift_hud()",
+      "cite": null,
+      "reason": "8x16 greyscale crops from gameplay.state at hand-measured VERB_COL_STARTS=[2,7,12,17,22]; stamped RUNTIME_CAPTURE by their own producer",
+      "to_fix": "same as hud/arrow.png"
+    },
+    {
+      "pattern": "hud_font.png",
+      "class": "CAPTURE",
+      "generator": "D:/tools/structural_carver/exporters/scooby_hud.py (96-glyph thin atlas)",
+      "cite": null,
+      "reason": "font atlas assembled from the same gameplay.state VRAM crop",
+      "to_fix": "message-text font tiles are uploaded by the same 0x76B2 chain; the message row base is recorded in $FF068A at 0x7754. Decode the LZ blocks and match."
+    },
+    {
+      "pattern": "intros/scenes/faces/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_faces_export.py",
+      "cite": "engine ctx 0x0FCA0C, scene 3; object-def table at ctx+0x24 -> 0x145EB8, offsets into ctx+0x1C -> 0x13E9B6; object drawer 0x7C82",
+      "rom_addrs": ["0x0FCA0C", "0x145EB8", "0x13E9B6", "0x007C82"],
+      "note": "the speaker->character attribution (GANG map) is hand-assigned and verified by rendering, not read from the ROM"
+    },
+    {
+      "pattern": "intros/scenes/titlecard_*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_titlecard_export.py",
+      "cite": "chapter asset table 0x18FEC (16-byte records: +0 tiles LZ, +4 plane B, +8 plane A, +12 palette) loaded at 0x140E/0x152E; van sprite tile groups 0x10B14, van Y-bob table 0x160C, van start X = -158 ($FF0A18 seeded at 0x1508); palette overlay 0x32482",
+      "rom_addrs": ["0x0018FEC", "0x0013BA", "0x00160C", "0x010B14", "0x032482"]
+    },
+    {
+      "pattern": "intros/scenes/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_intro_scenes_export.py",
+      "cite": "chapter table 0x31AF2; chapter struct +0x08 graphics table (stride 20), +0x0C tiles reloc, +0x10 layout reloc, +0x14 descriptor (128B/scene, palette at +64), +0x20 name reloc",
+      "rom_addrs": ["0x031AF2", "0x00758A"]
+    },
+    {
+      "pattern": "intros/celart/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_scene_object_art.py",
+      "cite": "renders scene-object cels out of the ROM-decoded room tiles/palette (scooby_genesis.py); cel word bit15 priority / 14-13 palette / 12 vflip / 11 hflip / 10-0 tile; shapes come from script ops 0x0B and 0x14",
+      "rom_addrs": ["0x007D54", "0x0FCA0C"]
+    },
+    {
+      "pattern": "intros/actors/actors.json",
+      "class": "HAND",
+      "generator": null,
+      "cite": null,
+      "reason": "the animation timing is a PLACEHOLDER: all 129 frame entries carry \"dur\": 2, and 2 is a value the ROM never uses for any of the seven sheets this file references (source_00 uses {6,8,10,16,20,30}, source_01 {6,8,10}, source_02 {6,8}, source_04 {6,8}, source_06 {6,8}, source_09 {8}). A single value everywhere is the signature D:/scoobydoo/work/audit_legacy_data.py exists to catch. The frame LISTS and loop flags may be right; the timing is invented.",
+      "to_fix": "take each step's duration from the op-4 operand the ROM stores (run_one_tick 0x00B0B8 stores it at 0xB230 and reloads the slot countdown at 0xB370), which is already exported per sheet as sprites/source_NN/anims.json steps[].dur. Durations are VBLANK frames at 1/60 s (0xAFD0 subq.w #1 on $FF0618)."
+    },
+    {
+      "pattern": "intros/actors/maid_*",
+      "class": "UNKNOWN",
+      "generator": null,
+      "cite": null,
+      "reason": "the maid is an OFF-TABLE cutscene sprite (actors.json: 'bank16 (0xB5D02, registered table id16)'), not one of the 36 table sheets. Its nine PNGs match NO ROM lift anywhere in the workspace and no generator produces them; a whole-workspace pixel search found nothing.",
+      "to_fix": "decode them from the off-table registry: 18 records x 14 bytes at 0xB678E (+0 cel-descriptor pointer, +8 u16 frame count, +10 u32 bank pointer); the maid's frames (filename suffixes 0xC4A2C..0xC6B6C) fall in the bank starting 0xB5030. D:/scoobydoo/tools/scooby_offtable_sprites.py already decodes whole banks to D:/scoobydoo/global/offtable/cutscene_bank_B5030.png -- extend it to emit per-frame cels at the descriptor offsets. Note project memory: the maid's on-screen animation is an op-0x1A CRAM palette cycle over a STATIC sprite (ring $22-$25), so frame count and cycle must not be confused."
+    },
+    {
+      "pattern": "intros/actors/*",
+      "class": "UNKNOWN",
+      "generator": null,
+      "cite": null,
+      "reason": "NO generator emits this filename format or this manifest schema. actors.json declares source 'bank16 (0xB5D02, registered table id16)' and files named e.g. maid_a55_frame_c4a2c.png; the only candidate exporter (D:/scoobydoo/exporters/scooby_actors_export.py) emits a different schema for one actor. The upstream frames come from D:/scoobydoo/sprites/source_NN/ (ROM-static, bank table 0x32670, anim VM 0xB216-0xB374) but the copy/rename/manifest step is lost.",
+      "to_fix": "rewrite the exporter: walk 0x032670 (36 sprite-source pointers, ROM_MAP row 475) -> per-sheet anim-index table at +0xC, 14-byte frame descriptors (+6 packed-graphics offset, +0xA attr/flip), and emit both the PNGs and actors.json from that walk."
+    },
+    {
+      "pattern": "intros/room9_data.json",
+      "class": "OWNED_ELSEWHERE",
+      "generator": "D:/scoobydoo/work/room9_build.py (+ work/fix_room9_durs.py)",
+      "cite": null,
+      "note": "being rebuilt by a separate pass in this same session"
+    },
+    {
+      "pattern": "intros/room*_data.json",
+      "class": "GENERATOR_ONLY",
+      "generator": "D:/scoobydoo/work/room{3,4,10,16}_build.py",
+      "cite": null,
+      "reason": "the generator reads the ROM for scripts/anims but also embeds hand-fitted position/pose tables (TAB/POSE dicts) and base64-inlined PNGs; no ROM address can be named for those coordinates",
+      "to_fix": "replace the TAB/POSE dicts with the actor positions the intro script actually writes (op 0x0E waypoint -> $FF0696 entry table; sprite placement 0xAD5A-0xADAC screen = pos - scroll + hw_origin - frame_hotspot)"
+    },
+    {
+      "pattern": "intros/*_intro.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_intro_script_export.py",
+      "cite": "intro script decoded through the script VM dispatch 0x002406 / opcode table 0x002354",
+      "rom_addrs": ["0x002406", "0x002354"]
+    },
+    {
+      "pattern": "intros/*_line_colors.json",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_dialogue.py",
+      "cite": "per-line flag_word carries line/ink indices into the scene's 4-line CRAM palette",
+      "rom_addrs": ["0x002406"]
+    },
+    {
+      "pattern": "screens/chapter_*/screen.idx",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/work/derive_capture_screens.py",
+      "cite": "chapter record table 0x18FEC indexed by $FF06AA<<4 at 0x140E; three ring-LZSS layers at +0/+4/+8 uploaded to VRAM $0000/$E000/$C000 (0x1420/0x1442/0x145C); palette at +12 with $32482 overlay (0x152E-0x1574); composed at hscroll=vscroll=0, the state the loader leaves at frame 0 (0x14C2 zeroes the scroll buffers before the first $17AE upload)",
+      "rom_addrs": ["0x0018FEC", "0x0013BA", "0x032482"]
+    },
+    {
+      "pattern": "screens/save_select/screen.idx",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/work/derive_capture_screens.py",
+      "cite": "plane-A script $18BFA selected at 0x855C ($FF09ED bit0 set, bit1 clear) with MOVEQ #$2,D0 = two menu options and handler table $85E8; decoded by $9C64 and uploaded 0x380 words to VRAM $C000; plane B mansion nametable $0165B8, tiles $01155A, palette $016CB8 + $32482 overlay",
+      "rom_addrs": ["0x00855C", "0x018BFA", "0x0165B8", "0x01155A", "0x016CB8", "0x032482"]
+    },
+    {
+      "pattern": "screens/menu/bats/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_menu_decode.py",
+      "cite": "bat frame-pointer table 0x017064; build loop 0x8400 (D6=0x1B -> 28 frames); base tiles $01155A + banks $016D38/$016E6A/$016F76",
+      "rom_addrs": ["0x017064", "0x008400", "0x01155A"]
+    },
+    {
+      "pattern": "screens/menu/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_menu_decode.py",
+      "cite": "menu setup 0x8196; plane A script $01896C, plane B nametable $0165B8 (32x28), tiles $01155A, palette $016CB8 + $032482 overlay (0x83C8); logo rasters $010162/$010838 with OAM layout $085F8 (upload 0x88C2); lightning-strike patches table $A578 (vblank 0xA426)",
+      "rom_addrs": ["0x008196", "0x01896C", "0x0165B8", "0x016CB8", "0x032482", "0x00A578"]
+    },
+    {
+      "pattern": "screens/launch_*/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_menu_decode.py",
+      "cite": "entry function 0x8F8A: LEA $018A56 (hotel) / $018B3C (carnival), BSR 0x8D36 -- the same plane-A-script upload the menu uses",
+      "rom_addrs": ["0x008F8A", "0x018A56", "0x018B3C"]
+    },
+    {
+      "pattern": "screens/pre_menu/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_menu_decode.py",
+      "cite": "the TITLE variant: mansion plane B only, no baked plane-A text (the logo forms from sprites, 0x88A2 / $018DD0)",
+      "rom_addrs": ["0x0088A2", "0x018DD0", "0x0165B8"]
+    },
+    {
+      "pattern": "screens/save_select/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_menu_decode.py + work/derive_capture_screens.py",
+      "cite": "menu-family screen; palette $016CB8 + $032482 overlay; sprites from the ROM OAM/SAT build",
+      "rom_addrs": ["0x00855C", "0x016CB8", "0x032482"]
+    },
+    {
+      "pattern": "screens/illusions/anim/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_intro_decode.py",
+      "cite": "illusions filmstrip: tiles LZ $0287C8, 15-cel filmstrip LZ $028220 (20x5 words each) to VRAM $C410, background LZ $02864C to $C288, palette $02967A; sequencer 0xBF4-0xC96, tile-build 0xBC8",
+      "rom_addrs": ["0x0287C8", "0x028220", "0x02864C", "0x02967A", "0x000BF4"]
+    },
+    {
+      "pattern": "screens/illusions/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_intro_decode.py",
+      "cite": "as above; palette $02967A read by the fade-in 0x9E7E",
+      "rom_addrs": ["0x0287C8", "0x02967A", "0x000BF4"]
+    },
+    {
+      "pattern": "screens/sega/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_intro_decode.py",
+      "cite": "intro sequencer 0x95C-0x9A2: nametable raw $023226 -> VRAM $C594 (12x4), tiles LZ $023286 -> VRAM 0, palette $0236A0",
+      "rom_addrs": ["0x023226", "0x023286", "0x0236A0", "0x00095C"]
+    },
+    {
+      "pattern": "screens/title/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_intro_decode.py",
+      "cite": "0xA1E-0xA58 (H40): tiles raw $023720 (0x20E0 words) -> VRAM 0, nametable raw $0278E0 -> VRAM $C000 (40x28), palette $0281A0",
+      "rom_addrs": ["0x023720", "0x0278E0", "0x0281A0", "0x000A1E"]
+    },
+    {
+      "pattern": "screens/acclaim/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_intro_decode.py",
+      "cite": "0xA9C-0xAF6: nametable raw $0219C0 -> $C480 (32x6), $021B40 -> $E480 (64x6), tiles LZ $021E40, palette $02241A; plane B scrolls -256..+48 via $FF07FA (loop 0xB0E)",
+      "rom_addrs": ["0x0219C0", "0x021B40", "0x021E40", "0x02241A", "0x000A9C"]
+    },
+    {
+      "pattern": "screens/sunsoft/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_intro_decode.py",
+      "cite": "0xB50-0xB96: nametable raw $02249A -> $C406 (26x9), tiles LZ $02266E, palette $0231A6",
+      "rom_addrs": ["0x02249A", "0x02266E", "0x0231A6", "0x000B50"]
+    },
+    {
+      "pattern": "screens/chapter_*/*",
+      "class": "ROM_DERIVED",
+      "generator": "D:/scoobydoo/exporters/scooby_titlecard_export.py + work/derive_capture_screens.py",
+      "cite": "chapter record table 0x18FEC (0x140E); sprite_motion from the van driver: 0x1632 SUBI.B #1,$FF0AD0 / 0x164C ADDQ.W #1,$FF0A18 = +1 px per 2 frames; Y bob 0x15D2 walks the 11-word table at 0x160C; wheel 0x163C EORI.W #$3C,$FF0A1C",
+      "rom_addrs": ["0x0018FEC", "0x0013BA", "0x00160C", "0x010B14"]
+    }
+  ]
+}

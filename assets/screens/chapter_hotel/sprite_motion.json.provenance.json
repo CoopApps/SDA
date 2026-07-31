@@ -1,0 +1,9 @@
+{
+ "path": "assets/screens/chapter_hotel/sprite_motion.json",
+ "provenance": "code_derived",
+ "producer": "van motion driver (ROM 0x1530)",
+ "capture_state": "",
+ "capture_frame": null,
+ "cite": "X: 0x1632 SUBI.B #1,$FF0AD0 / BPL / MOVE.B #1 (reset) / 0x164C ADDQ.W #1,$FF0A18 -> +1 px per 2 frames. Y bob: 0x15D2 MOVE.W 56(PC,D0.W),$FF0A16 walks the 11-word table at 0x160C, D0 += 2 wrapping at 0x16. Wheel: 0x163C EORI.W #$3C,$FF0A1C.",
+ "note": "replaces a fitted capture that had the wrong dx and no bob"
+}

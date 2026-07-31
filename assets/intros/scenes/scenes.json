@@ -1,0 +1,66 @@
+{
+ "hotel_3": {
+  "chapter": "hotel",
+  "scene": 3,
+  "name": "The Mystery Machine",
+  "w": 256,
+  "h": 160,
+  "tiles": 799
+ },
+ "hotel_9": {
+  "chapter": "hotel",
+  "scene": 9,
+  "name": "The Hallway",
+  "w": 416,
+  "h": 152,
+  "tiles": 752
+ },
+ "hotel_10": {
+  "chapter": "hotel",
+  "scene": 10,
+  "name": "Outside the Hotel",
+  "w": 320,
+  "h": 152,
+  "tiles": 782
+ },
+ "hotel_16": {
+  "chapter": "hotel",
+  "scene": 16,
+  "name": "The Lobby",
+  "w": 512,
+  "h": 152,
+  "tiles": 784
+ },
+ "carnival_26": {
+  "chapter": "carnival",
+  "scene": 26,
+  "name": "The Mystery Machine",
+  "w": 256,
+  "h": 160,
+  "tiles": 799
+ },
+ "carnival_8": {
+  "chapter": "carnival",
+  "scene": 8,
+  "name": "The Roller Coaster",
+  "w": 512,
+  "h": 152,
+  "tiles": 702
+ },
+ "carnival_3": {
+  "chapter": "carnival",
+  "scene": 3,
+  "name": "The Front Lot",
+  "w": 256,
+  "h": 152,
+  "tiles": 506
+ },
+ "carnival_12": {
+  "chapter": "carnival",
+  "scene": 12,
+  "name": "The Front Lot",
+  "w": 480,
+  "h": 152,
+  "tiles": 948
+ }
+}

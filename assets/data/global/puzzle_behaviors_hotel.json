@@ -1,0 +1,5983 @@
+{
+ "note": "Global puzzle behaviors (USE-combinations + gated grants) from analysis/scripts.json 'unlinked' bucket -- the logic the manifest bake skipped. Keyed by target entity_id; verb_code + sel2(icon) match the port's _behavior_for. gen_puzzle_behaviors.py.",
+ "behaviors": {
+  "6": [
+   {
+    "verb_code": 8,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 6
+     },
+     {
+      "op": "set_actor_turn_anim_from_transition_table",
+      "slot": 1,
+      "wait": false,
+      "state": 0
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 2169,
+      "text": "Excuse me..."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 9
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": 2182,
+      "text": "Yes?"
+     }
+    ],
+    "target_name": "Bellhop"
+   }
+  ],
+  "20": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 3108,
+      "text": "It goes back to the tomb."
+     }
+    ],
+    "target_name": "Passage"
+   },
+   {
+    "verb_code": 11,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "to_room": 20
+     }
+    ],
+    "target_name": "Passage"
+   }
+  ],
+  "21": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 3142,
+      "text": "Zoinks! That must be worth a fortune!"
+     }
+    ],
+    "target_name": "Gold"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 3180,
+      "text": "I wish!  But I can't get through the bars."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 3223,
+      "text": "Besides, I think it's probably evidence."
+     }
+    ],
+    "target_name": "Gold"
+   }
+  ],
+  "22": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 3269,
+      "text": "Gulp! Looks like at least somebody got out of the cuffs!"
+     }
+    ],
+    "target_name": "Hand"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 3326,
+      "text": "Uh uh, man. NO WAY!"
+     }
+    ],
+    "target_name": "Hand"
+   }
+  ],
+  "23": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 3351,
+      "text": "Somebody here has NO sense of humor!"
+     }
+    ],
+    "target_name": "Cuffs"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 3388,
+      "text": "It's sort of DESIGNED not to move very far, man."
+     }
+    ],
+    "target_name": "Cuffs"
+   }
+  ],
+  "24": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 3443,
+      "text": "I think I hear something down there!"
+     }
+    ],
+    "target_name": "Hole"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 3480,
+      "text": "The walls are too slippery.  I'd fall and splatter if I tried that!"
+     }
+    ],
+    "target_name": "Hole"
+   }
+  ],
+  "25": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 3553,
+      "text": "It's the rope we used to climb down here."
+     }
+    ],
+    "target_name": "Rope"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 3595,
+      "text": "It's tied up top, remember?  I can't get it loose from down here."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 3661,
+      "text": "Besides, how would we get out if I moved it?"
+     }
+    ],
+    "target_name": "Rope"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 0
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 3,
+      "mode_speed": 65535,
+      "anim_id": 65535,
+      "waypoint_index": 0
+     },
+     {
+      "op": "set_actor_shape_index",
+      "actor": 3,
+      "value": 12
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 3,
+      "value": 1
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 3,
+      "room": 5
+     },
+     {
+      "op": "set_channel_suspend_bit",
+      "channel": 1
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 3,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 1
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       3
+      ]
+     },
+     {
+      "op": "load_room_at_entry_with_facing",
+      "to_room": 4
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "channel": 1
+     },
+     {
+      "op": "branch_if_compare_false",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 12,
+        "selector": 4
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": []
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "channel": 2
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 3,
+      "room": 0
+     }
+    ],
+    "target_name": "Rope"
+   }
+  ],
+  "26": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 3711,
+      "text": "It's Uncle Blake."
+     }
+    ],
+    "target_name": "Uncle Blake"
+   }
+  ],
+  "27": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 5006,
+      "text": "It's a wheel for the mine car."
+     }
+    ],
+    "target_name": "Wheel"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 29,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 5037,
+      "text": "I need the rest of the wheels before I bother with that."
+     }
+    ],
+    "target_name": "Wheel"
+   }
+  ],
+  "30": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 5348,
+      "text": "It looks like a wheel!"
+     }
+    ],
+    "target_name": "Wheel"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 7,
+      "dest_bit_or_actor": 1,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 30,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 13
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 30,
+      "room": 0
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 27
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_actor_to_room",
+        "entity": 27,
+        "room": 0
+       },
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         19
+        ]
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 28,
+        "room": 1
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 7,
+        "dest_bit_or_actor": 5,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       }
+      ]
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 28
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 7,
+        "dest_bit_or_actor": 4,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         19
+        ]
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 27,
+        "room": 1
+       }
+      ]
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "set_actor_icon_id_and_refresh_inventory",
+      "actor": 28,
+      "icon_value": 43
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 7,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Wheel"
+   }
+  ],
+  "31": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 5348,
+      "text": "It looks like a wheel!"
+     }
+    ],
+    "target_name": "Wheel"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 7,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 31,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 31,
+      "room": 0
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 27
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_actor_to_room",
+        "entity": 27,
+        "room": 0
+       },
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         19
+        ]
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 28,
+        "room": 1
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 7,
+        "dest_bit_or_actor": 5,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       }
+      ]
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 28
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         19
+        ]
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 27,
+        "room": 1
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 7,
+        "dest_bit_or_actor": 4,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       }
+      ]
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "set_actor_icon_id_and_refresh_inventory",
+      "actor": 28,
+      "icon_value": 43
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 7,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Wheel"
+   }
+  ],
+  "32": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 5348,
+      "text": "It looks like a wheel!"
+     }
+    ],
+    "target_name": "Wheel"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 7,
+      "dest_bit_or_actor": 3,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 32,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 32,
+      "room": 0
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 27
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_actor_to_room",
+        "entity": 27,
+        "room": 0
+       },
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         19
+        ]
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 7,
+        "dest_bit_or_actor": 5,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 28,
+        "room": 1
+       }
+      ]
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 28
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         19
+        ]
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 27,
+        "room": 1
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 7,
+        "dest_bit_or_actor": 4,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       }
+      ]
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 7,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Wheel"
+   }
+  ],
+  "33": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5371,
+      "text": "It goes back to the basement."
+     }
+    ],
+    "target_name": "Passage"
+   },
+   {
+    "verb_code": 11,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "to_room": 2
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 93
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 110
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 8,
+      "dest_bit_or_actor": 6,
+      "src_value": 0,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 8,
+      "dest_bit_or_actor": 5,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Passage"
+   }
+  ],
+  "34": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5401,
+      "text": "The track runs down a long way."
+     }
+    ],
+    "target_name": "Passage"
+   },
+   {
+    "verb_code": 11,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 5433,
+      "text": "Uh, uh.  That's way too steep!"
+     }
+    ],
+    "target_name": "Passage"
+   }
+  ],
+  "35": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5464,
+      "text": "A fake!  It's really electric."
+     }
+    ],
+    "target_name": "Lantern"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5495,
+      "text": "I can't take it.  It's wired in."
+     }
+    ],
+    "target_name": "Lantern"
+   }
+  ],
+  "36": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5536,
+      "text": "Wow!  Like, that could give you one king size headache!"
+     }
+    ],
+    "target_name": "Pick"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5592,
+      "text": "No way.  I'm not carrying that heavy thing around."
+     }
+    ],
+    "target_name": "Pick"
+   }
+  ],
+  "37": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5648,
+      "text": "A creepy picture.  The eyes look weird."
+     }
+    ],
+    "target_name": "Picture"
+   }
+  ],
+  "38": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5696,
+      "text": "Wonder who they'll get to push the gum, now?"
+     }
+    ],
+    "target_name": "Zebra"
+   }
+  ],
+  "39": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5747,
+      "text": "Nothing there but cobwebs."
+     }
+    ],
+    "target_name": "Mailbox"
+   }
+  ],
+  "40": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5782,
+      "text": "I like fires.  Too bad there's no marshmellows."
+     }
+    ],
+    "target_name": "Fire"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 5830,
+      "text": "I'm not THAT stupid."
+     }
+    ],
+    "target_name": "Fire"
+   }
+  ],
+  "41": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5856,
+      "text": "Definitely better than the doll."
+     }
+    ],
+    "target_name": "Goblet"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 166,
+    "actions": [
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 3
+     },
+     {
+      "op": "set_actor_turn_anim_from_transition_table",
+      "slot": 1,
+      "wait": true,
+      "state": 0
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 12
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 41,
+      "value": 198
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 41,
+      "room": 20
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 1,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Goblet"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 11,
+        "selector": 0
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 41,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 12
+       },
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         19
+        ]
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 41,
+        "room": 1
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 5889,
+      "text": "I'd never be able to reach it."
+     }
+    ],
+    "target_name": "Goblet"
+   }
+  ],
+  "42": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 42
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 4102,
+        "text_offset": 5927,
+        "text": "Fifth bottle from the left, third bottle down."
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 5974,
+        "text": "What bottles?"
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 5988,
+      "text": "I can't see it from here."
+     }
+    ],
+    "target_name": "Crumpled Note"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 42,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 10
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 6
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 40
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         19
+        ]
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 42,
+        "room": 1
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 1,
+        "dest_bit_or_actor": 3,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 6014,
+      "text": "Yee-owch!  The fire is too hot.  I can't get it!"
+     }
+    ],
+    "target_name": "Crumpled Note"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 145,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 6063,
+      "text": "Yeah!  That's gotta be the answer!"
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 2
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 14
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 70
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 145,
+      "value": 0
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 1
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 145,
+      "value": 9
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 4,
+      "dest_bit_or_actor": 4,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Crumpled Note"
+   }
+  ],
+  "43": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 6112,
+      "text": "I bet this calls the Bellhop."
+     }
+    ],
+    "target_name": "Bell"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 43,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 12
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 4
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 6142,
+      "text": "It doesn't work."
+     }
+    ],
+    "target_name": "Bell"
+   }
+  ],
+  "44": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 6164,
+      "text": "A door is a door is a door."
+     }
+    ],
+    "target_name": "Door"
+   },
+   {
+    "verb_code": 11,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "to_room": 17
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 6,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 456,
+      "y": 88
+     }
+    ],
+    "target_name": "Door"
+   },
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 6,
+      "text_offset": 6216,
+      "text": "It's already open."
+     }
+    ],
+    "target_name": "Door"
+   },
+   {
+    "verb_code": 11,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_actor_to_xy",
+      "actor": 6,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 456,
+      "y": 88
+     },
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "to_room": 17
+     }
+    ],
+    "target_name": "Door"
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 44,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 14
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 101,
+      "value": 0
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 44,
+      "value": 0
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 55
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 4
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 14,
+      "dest_bit_or_actor": 0,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "actor_set_byte_field_and_refresh",
+      "actor": 101,
+      "value": 3,
+      "field_offset": 22
+     }
+    ],
+    "target_name": "Door"
+   }
+  ],
+  "55": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 6477,
+      "text": "Looks kinda shakey to me."
+     }
+    ],
+    "target_name": "Totem Pole Bridge"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 3
+     },
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "to_room": 21
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 0
+     }
+    ],
+    "target_name": "Totem Pole Bridge"
+   }
+  ],
+  "56": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 6477,
+      "text": "Looks kinda shakey to me."
+     }
+    ],
+    "target_name": "Totem Pole Bridge"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 3
+     },
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "to_room": 21
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 0
+     }
+    ],
+    "target_name": "Totem Pole Bridge"
+   },
+   {
+    "verb_code": 11,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "to_room": 21
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 0
+     }
+    ],
+    "target_name": "Totem Pole Bridge"
+   }
+  ],
+  "63": [
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 6904,
+      "text": "No. I'll leave it as a memorial."
+     }
+    ],
+    "target_name": "Hat"
+   },
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 6937,
+      "text": "It's a ratty snowman hat."
+     }
+    ],
+    "target_name": "Hat"
+   }
+  ],
+  "65": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 7236,
+      "text": "These don't look very warm, but they're pretty tough."
+     }
+    ],
+    "target_name": "Work Gloves"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 5,
+      "dest_bit_or_actor": 4,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 64,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 13
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 65,
+      "room": 1
+     }
+    ],
+    "target_name": "Work Gloves"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 89,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 5,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 7290,
+      "text": "These old gloves will protect my hands from the mega itching!"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 89,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 15
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     }
+    ],
+    "target_name": "Work Gloves",
+    "item_name": "Poison Oak"
+   }
+  ],
+  "66": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 7364,
+      "text": "Aren't you glad you're not a weed?"
+     }
+    ],
+    "target_name": "Weed Killer"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 5,
+      "dest_bit_or_actor": 3,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 64,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 17
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 66,
+      "room": 1
+     }
+    ],
+    "target_name": "Weed Killer"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 168,
+    "actions": [
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 7399,
+      "text": "Sayonara, Death Lettuce!"
+     }
+    ],
+    "target_name": "Weed Killer"
+   }
+  ],
+  "67": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 7436,
+      "text": "Wonder why they call it a crowbar?  Doesn't look much like any crow I ever saw."
+     }
+    ],
+    "target_name": "Crowbar"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 70,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 7516,
+      "text": "This will never work.  That lock is too tough."
+     }
+    ],
+    "target_name": "Crowbar"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 5,
+      "dest_bit_or_actor": 5,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 64,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 13
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 67,
+      "room": 1
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 68,
+      "room": 12
+     }
+    ],
+    "target_name": "Crowbar"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 58,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 5,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "move_op1": 1,
+      "walk_anim": 0,
+      "x": 176,
+      "y": 116
+     },
+     {
+      "op": "set_actor_turn_anim_from_transition_table",
+      "slot": 1,
+      "wait": true,
+      "state": 2
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 58,
+      "room": 0
+     }
+    ],
+    "target_name": "Crowbar"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 108,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 7563,
+      "text": "No, I don't think Uncle Blake would appreciate that!"
+     }
+    ],
+    "target_name": "Crowbar"
+   }
+  ],
+  "91": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 9237,
+      "text": "This book tells how to read some funky writing."
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 15,
+        "selector": 6
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 9285,
+        "text": "I bet this is the missing book!"
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 9317,
+      "text": "Boring."
+     }
+    ],
+    "target_name": "Book"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 1,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 91,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 12
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 91,
+      "room": 1
+     }
+    ],
+    "target_name": "Book"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 98,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 9325,
+      "text": "That's where it belongs, but I might need it."
+     }
+    ],
+    "target_name": "Book"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 97,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 9325,
+      "text": "That's where it belongs, but I might need it."
+     }
+    ],
+    "target_name": "Book"
+   },
+   {
+    "verb_code": 6,
+    "sel2": 26,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 91,
+      "room": 0
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 14
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 9371,
+      "text": "That's the book!  Now let's see here..."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 3
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 9411,
+      "text": "Hmm..."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 9418,
+      "text": "Here we are!"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 9431,
+      "text": "We have to place a ceremonial goblet in the hands of the statue,"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 9496,
+      "text": "Then say some magic words, and the medallion will appear."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 15
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 9554,
+      "text": "Hrumph, well, we have to use the goblet at any rate."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 15
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 9607,
+      "text": "I don't believe in this magic tomfoolery."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 16
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 9649,
+      "text": "You wouldn't happen to have an Indian ceremonial goblet by any chance, would you son?"
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 12,
+      "dest_bit_or_actor": 0,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Book"
+   }
+  ],
+  "92": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 9740,
+      "text": "Pink medicine for your stomach."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 9772,
+      "text": "Wonder if it tastes good?"
+     }
+    ],
+    "target_name": "Antacid"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 1,
+      "dest_bit_or_actor": 7,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 92,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 13
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 92,
+      "room": 1
+     }
+    ],
+    "target_name": "Antacid"
+   },
+   {
+    "verb_code": 9,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "branch_if_compare_false",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 1
+       },
+       "right": {
+        "source": "immediate",
+        "index": 13,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": []
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 2
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 64
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 15
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 1
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 15
+     },
+     {
+      "op": "branch_if_compare_false",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 1
+       },
+       "right": {
+        "source": "immediate",
+        "index": 13,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": []
+     },
+     {
+      "op": "branch_if_compare_false",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 125
+       },
+       "right": {
+        "source": "immediate",
+        "index": 13,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": []
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 125,
+      "mode_speed": 1,
+      "anim_id": 2,
+      "waypoint_index": 0
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 125,
+      "seq": 4
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 11,
+      "text_offset": 9798,
+      "text": "Gosh, kid!  You really DO need food!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 125,
+      "seq": 4
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 11,
+      "text_offset": 9835,
+      "text": "I'll get you some right now!"
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 125
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 125,
+      "seq": 5
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 125
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 130,
+      "value": 111
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 5
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 125,
+      "room": 0
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 10
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 130,
+      "value": 0
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 15
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 130,
+      "value": 111
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 15
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 130,
+      "value": 0
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 15
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 12,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Antacid"
+   }
+  ],
+  "95": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 10025,
+      "text": "You know, for cutting stuff."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 10054,
+      "text": "Like pizza."
+     }
+    ],
+    "target_name": "Scissors"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 2,
+      "dest_bit_or_actor": 0,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 95,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 13
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 95,
+      "room": 1
+     }
+    ],
+    "target_name": "Scissors"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 169,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 13,
+        "selector": 2
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 10066,
+        "text": "No way, dude.  I might need it long like this."
+       }
+      ]
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 169,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 8
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 170,
+      "room": 21
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 15,
+      "text_offset": 10113,
+      "text": "Snip!"
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 13,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Scissors",
+    "item_name": "Rope"
+   }
+  ],
+  "96": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 10128,
+      "text": "Like, it's completely invisible when it's closed."
+     }
+    ],
+    "target_name": "Trap Door"
+   },
+   {
+    "verb_code": 11,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "change_scene_with_palette_fadeout",
+      "to_room": 2
+     }
+    ],
+    "target_name": "Trap Door"
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 96,
+      "room": 0
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 10178,
+      "text": "Zoinks! It's GONE!"
+     }
+    ],
+    "target_name": "Trap Door"
+   }
+  ],
+  "104": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 10834,
+      "text": "It's empty, but there's still gunk inside."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 10877,
+      "text": "A tasty little treat if I were small enough to get in there."
+     }
+    ],
+    "target_name": "Empty Chili Can"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 107,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 108
+       },
+       "right": {
+        "source": "immediate",
+        "index": 15,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 4102,
+        "text_offset": 10938,
+        "text": "The vent is in the way."
+       }
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 2,
+      "dest_bit_or_actor": 7,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 108,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 8
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 10962,
+      "text": "That's it, dudes!  Dinnertime!"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 104,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     }
+    ],
+    "target_name": "Empty Chili Can"
+   }
+  ],
+  "105": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 11009,
+      "text": "A chili can with termites inside."
+     }
+    ],
+    "target_name": "Termites"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 26,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 12,
+      "dest_bit_or_actor": 5,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 3,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 100,
+      "y": 152
+     },
+     {
+      "op": "set_actor_shape_index",
+      "actor": 3,
+      "value": 16
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 3,
+      "value": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 3,
+      "room": 5
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 13
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 100
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 3,
+      "room": 0
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 6
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 26,
+      "value": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 11
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 11043,
+      "text": "Free at last!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 12
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 11057,
+      "text": "Now, let's go get those rapscallions who put me here!"
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 92
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 60
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 6
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 45
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 6
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 25,
+      "text_offset": 11111,
+      "text": "Relp! Relp!"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 11123,
+      "text": "Zoinks!  Scooby's in trouble!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 13
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 11153,
+      "text": "Hurry then, and let's help him, son!"
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 12,
+      "dest_bit_or_actor": 4,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 125,
+      "room": 0
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 12,
+      "dest_bit_or_actor": 2,
+      "src_value": 0,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 138,
+      "room": 2
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 5,
+      "room": 2
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 0,
+      "dest_bit_or_actor": 5,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       9
+      ]
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       3
+      ]
+     },
+     {
+      "op": "load_room_at_entry_with_facing",
+      "to_room": 4
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 26,
+      "room": 4
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 26,
+      "mode_speed": 65535,
+      "anim_id": 2,
+      "waypoint_index": 2
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       2
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 11190,
+      "text": "He's gone!  What'll we do!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 14
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 11217,
+      "text": "Better start looking for him!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 15
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 11247,
+      "text": "Me, I have something that needs doing."
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 26,
+      "value": 2
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 26,
+      "mode_speed": 1,
+      "anim_id": 8,
+      "waypoint_index": 0
+     }
+    ],
+    "target_name": "Termites"
+   }
+  ],
+  "112": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 112,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "set_actor_turn_anim_from_transition_table",
+      "slot": 1,
+      "wait": true,
+      "state": 2
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       29
+      ]
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       3
+      ]
+     },
+     {
+      "op": "load_room_at_entry_with_facing",
+      "to_room": 22
+     },
+     {
+      "op": "set_channel_suspend_bit",
+      "channel": 1
+     },
+     {
+      "op": "set_channel_suspend_bit",
+      "channel": 2
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       2
+      ]
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 11,
+        "selector": 2
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 6,
+        "text_offset": 11800,
+        "text": "Shh!  Listen, scoob!"
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 17,
+        "seq": 7
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 13,
+        "text_offset": 11821,
+        "text": "Did you get Blake?"
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 11
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 9,
+        "text_offset": 11840,
+        "text": "Of course."
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 11
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 9,
+        "text_offset": 11851,
+        "text": "He's in the dungeon."
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 17,
+        "seq": 7
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 13,
+        "text_offset": 11872,
+        "text": "I don't trust you.  I want to see for myself."
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 11
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 9,
+        "text_offset": 11918,
+        "text": "Then see."
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 11
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 9,
+        "text_offset": 11928,
+        "text": "Here's the instructions on how to get down there."
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 12
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 17,
+        "seq": 8
+       },
+       {
+        "op": "wait_n_frames",
+        "frames": 30
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 10
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 17,
+        "seq": 9
+       },
+       {
+        "op": "wait_n_frames",
+        "frames": 100
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 17,
+        "seq": 7
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 13,
+        "text_offset": 11978,
+        "text": "Got it.  Now get rid of that before someone sees it."
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 12
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 17,
+        "seq": 8
+       },
+       {
+        "op": "wait_n_frames",
+        "frames": 30
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 17,
+        "seq": 6
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 11
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 9,
+        "text_offset": 11840,
+        "text": "Of course."
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 18,
+        "seq": 13
+       },
+       {
+        "op": "wait_until_anim_channel_signalled",
+        "channel": 18
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 17,
+        "seq": 7
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 13,
+        "text_offset": 12031,
+        "text": "No one will ever see it now!"
+       },
+       {
+        "op": "wait_n_frames",
+        "frames": 100
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 6,
+        "text_offset": 12060,
+        "text": "We have to get that note and find Uncle Blake, Scoob!"
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 25,
+        "text_offset": 12114,
+        "text": "Reh!"
+       },
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         3
+        ]
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 42,
+        "room": 16
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 18,
+        "room": 0
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 17,
+        "room": 0
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 11,
+        "dest_bit_or_actor": 2,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "load_room_at_entry_with_facing",
+        "to_room": 15
+       },
+       {
+        "op": "resume_anim_channel_wait_drawn",
+        "channel": 1
+       },
+       {
+        "op": "resume_anim_channel_wait_drawn",
+        "channel": 2
+       },
+       {
+        "op": "call_subcommand_from_table",
+        "operands": [
+         2
+        ]
+       }
+      ]
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       4
+      ]
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       3
+      ]
+     },
+     {
+      "op": "load_room_at_entry_with_facing",
+      "to_room": 15
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "channel": 1
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "channel": 2
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       2
+      ]
+     }
+    ],
+    "target_name": "Peephole"
+   }
+  ],
+  "117": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 12510,
+      "text": "There's a bell inside this block of ice."
+     }
+    ],
+    "target_name": "Frozen Bell"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 7,
+      "dest_bit_or_actor": 0,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 117
+       },
+       "right": {
+        "source": "immediate",
+        "index": 12,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 117,
+        "x_addend": 8,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 8
+       }
+      ]
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 116,
+      "x_addend": 16,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 18
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 15,
+      "dest_bit_or_actor": 4,
+      "src_value": 0,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 117,
+      "room": 1
+     }
+    ],
+    "target_name": "Frozen Bell"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 116,
+    "actions": [
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 116,
+      "x_addend": 16,
+      "extra": 1
+     },
+     {
+      "op": "branch_if_compare_false",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 13,
+        "selector": 3
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": []
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 18
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 116,
+      "value": 154
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 61
+     },
+     {
+      "op": "actor_set_byte_field_and_refresh",
+      "actor": 116,
+      "value": 4,
+      "field_offset": 22
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 13,
+      "dest_bit_or_actor": 3,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 117,
+      "value": 139
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 15,
+      "dest_bit_or_actor": 4,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Frozen Bell"
+   }
+  ],
+  "118": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 12563,
+      "text": "'To Bessie on graduation day.' Weird."
+     }
+    ],
+    "target_name": "Cow Bell"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 3,
+      "dest_bit_or_actor": 1,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 116,
+      "x_addend": 16,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 18
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 118,
+      "room": 1
+     }
+    ],
+    "target_name": "Cow Bell"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 83
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 1
+       },
+       "right": {
+        "source": "immediate",
+        "index": 16,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_actor_to_waypoint",
+        "selector": 6,
+        "mode_speed": 1,
+        "anim_id": 5,
+        "waypoint_index": 5
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 6,
+        "seq": 10
+       },
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 30,
+        "text_offset": 12601,
+        "text": "Yes? May I help you?"
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 12622,
+      "text": "Nothing."
+     }
+    ],
+    "target_name": "Cow Bell"
+   }
+  ],
+  "120": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 12961,
+      "text": "It's just as empty as the fridge."
+     }
+    ],
+    "target_name": "Fridge Door"
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 119,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 120,
+      "room": 0
+     },
+     {
+      "op": "branch_if_compare_false",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 122
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": []
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 122,
+      "room": 15
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 67
+     },
+     {
+      "op": "actor_set_byte_field_and_refresh",
+      "actor": 119,
+      "value": 3,
+      "field_offset": 22
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 13,
+      "dest_bit_or_actor": 4,
+      "src_value": 0,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Fridge Door"
+   }
+  ],
+  "121": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13007,
+      "text": "The top from a soda can! Cool! I collect these!"
+     }
+    ],
+    "target_name": "Soda Tab"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 3,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 121,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 10
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 121,
+      "room": 1
+     },
+     {
+      "op": "mark_object_present_or_scroll_inventory",
+      "object": 119
+     },
+     {
+      "op": "mark_object_present_or_scroll_inventory",
+      "object": 121
+     }
+    ],
+    "target_name": "Soda Tab"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 135,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 121,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 135,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 4,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 182,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 8270,
+      "text": "Cool!"
+     }
+    ],
+    "target_name": "Soda Tab",
+    "item_name": "Battery"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 179,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 179,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 121,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 180,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 8270,
+      "text": "Cool!"
+     }
+    ],
+    "target_name": "Soda Tab",
+    "item_name": "Light Bulb"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 181,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 121,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 181,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 7,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 183,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13055,
+      "text": "Bingo!"
+     }
+    ],
+    "target_name": "Soda Tab",
+    "item_name": "Bulb and Battery"
+   }
+  ],
+  "123": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13126,
+      "text": "There's water in this pot.  Hope it doesn't spill!"
+     }
+    ],
+    "target_name": "Pot o' Water"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 40,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 3,
+      "dest_bit_or_actor": 5,
+      "src_value": 0,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 40,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 9
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 40,
+      "seq": 1
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 40
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "actor_field",
+      "dest_index": 10,
+      "dest_bit_or_actor": 40,
+      "src_value": 900,
+      "src_bit_or_actor": 0,
+      "mode": 18,
+      "operation": "assign"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 40,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 123,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 124,
+      "room": 1
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 0,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Pot o' Water"
+   }
+  ],
+  "126": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 13723,
+      "text": "A cabinet is a cabinet is a cabinet."
+     }
+    ],
+    "target_name": "Cabinet"
+   },
+   {
+    "verb_code": 3,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 7
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 126,
+        "x_addend": 8,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 10
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 126,
+        "value": 117
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 58
+       },
+       {
+        "op": "branch_if_compare_false",
+        "condition": {
+         "left": {
+          "source": "actor_field",
+          "index": 6,
+          "selector": 127
+         },
+         "right": {
+          "source": "immediate",
+          "index": 0,
+          "selector": 0
+         },
+         "comparator": "eq"
+        },
+        "then": []
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 127,
+        "room": 13
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 6
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 126,
+        "value": 4,
+        "field_offset": 22
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 14,
+        "dest_bit_or_actor": 7,
+        "src_value": 0,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 6,
+      "text_offset": 6216,
+      "text": "It's already open."
+     }
+    ],
+    "target_name": "Cabinet"
+   },
+   {
+    "verb_code": 4,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 14,
+        "selector": 7
+       },
+       "right": {
+        "source": "immediate",
+        "index": 0,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 126,
+        "x_addend": 8,
+        "extra": 1
+       },
+       {
+        "op": "branch_if_compare_false",
+        "condition": {
+         "left": {
+          "source": "actor_field",
+          "index": 6,
+          "selector": 127
+         },
+         "right": {
+          "source": "immediate",
+          "index": 13,
+          "selector": 0
+         },
+         "comparator": "eq"
+        },
+        "then": []
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 127,
+        "room": 0
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 10
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 126,
+        "value": 0
+       },
+       {
+        "op": "queue_sound_driver_id",
+        "sound_id": 65
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 6
+       },
+       {
+        "op": "actor_set_byte_field_and_refresh",
+        "actor": 126,
+        "value": 3,
+        "field_offset": 22
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 14,
+        "dest_bit_or_actor": 7,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 6,
+      "text_offset": 6541,
+      "text": "It's already closed."
+     }
+    ],
+    "target_name": "Cabinet"
+   }
+  ],
+  "127": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13768,
+      "text": "Good for opening cans of all types."
+     }
+    ],
+    "target_name": "Can Opener"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 3,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 127,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 10
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 127,
+      "room": 1
+     }
+    ],
+    "target_name": "Can Opener"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 103,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 13804,
+      "text": "Slurp!"
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13811,
+      "text": "Poor chili never had a chance!"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 103,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     }
+    ],
+    "target_name": "Can Opener",
+    "item_name": "Chili"
+   }
+  ],
+  "135": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 14458,
+      "text": "DuraReady MegaVolt (TM) Energy Cell.  Cool."
+     }
+    ],
+    "target_name": "Battery"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 4,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 133,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 12
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 135,
+      "room": 1
+     },
+     {
+      "op": "mark_object_present_or_scroll_inventory",
+      "object": 134
+     },
+     {
+      "op": "mark_object_present_or_scroll_inventory",
+      "object": 135
+     }
+    ],
+    "target_name": "Battery"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 179,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 179,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 135,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 5,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 181,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 8270,
+      "text": "Cool!"
+     }
+    ],
+    "target_name": "Battery",
+    "item_name": "Light Bulb"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 121,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 135,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 121,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 4,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 182,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 8270,
+      "text": "Cool!"
+     }
+    ],
+    "target_name": "Battery",
+    "item_name": "Soda Tab"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 180,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 180,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 135,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 7,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 183,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13055,
+      "text": "Bingo!"
+     }
+    ],
+    "target_name": "Battery",
+    "item_name": "Bulb and Soda Tab"
+   }
+  ],
+  "165": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 15585,
+      "text": "It's made out of gold. I bet it's really valuable."
+     }
+    ],
+    "target_name": "Medallion"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 4,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 165,
+      "x_addend": 12,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 14
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 165,
+      "room": 1
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 164,
+      "value": 205
+     }
+    ],
+    "target_name": "Medallion"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 146,
+    "actions": [
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       29
+      ]
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 165,
+      "value": 6
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "move_op1": 1,
+      "walk_anim": 0,
+      "x": 157,
+      "y": 136
+     },
+     {
+      "op": "set_actor_turn_anim_from_transition_table",
+      "slot": 1,
+      "wait": true,
+      "state": 2
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 18
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 165,
+      "room": 2
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 5
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 32769,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 0
+     },
+     {
+      "op": "stop_script_slot",
+      "operands": [
+       138
+      ]
+     },
+     {
+      "op": "stop_script_slot",
+      "operands": [
+       5
+      ]
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "operands": [
+       138
+      ]
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 138,
+      "move_op1": 2,
+      "walk_anim": 8,
+      "x": 300,
+      "y": 80
+     },
+     {
+      "op": "wait_while_channel_busy",
+      "operands": [
+       5
+      ]
+     },
+     {
+      "op": "set_actor_turn_anim_from_transition_table",
+      "slot": 1,
+      "wait": true,
+      "state": 1
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 5,
+      "move_op1": 2,
+      "walk_anim": 5,
+      "x": 132,
+      "y": 84
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 5,
+      "seq": 0
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 3,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 132,
+      "y": 84
+     },
+     {
+      "op": "set_actor_shape_index",
+      "actor": 3,
+      "value": 16
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 3,
+      "value": 1
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 5,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 3,
+      "room": 2
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 3
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 3,
+      "room": 0
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 100
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       3
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 12,
+      "dest_bit_or_actor": 4,
+      "src_value": 0,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       10
+      ]
+     },
+     {
+      "op": "resume_anim_channel_wait_drawn",
+      "channel": 2
+     },
+     {
+      "op": "load_room_at_entry_with_facing",
+      "to_room": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 50,
+      "room": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 48,
+      "room": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 49,
+      "room": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 13,
+      "room": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 26,
+      "room": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 6,
+      "room": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 125,
+      "room": 10
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 51,
+      "room": 10
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 13,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 296,
+      "y": 112
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 26,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 240,
+      "y": 92
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 125,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 164,
+      "y": 112
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 6,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 128,
+      "y": 112
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 1,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 80,
+      "y": 135
+     },
+     {
+      "op": "move_actor_to_xy",
+      "actor": 2,
+      "move_op1": 65535,
+      "walk_anim": 65535,
+      "x": 96,
+      "y": 144
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 13,
+      "value": 3
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 26,
+      "value": 2
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 4
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 2,
+      "seq": 4
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 0
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 125,
+      "seq": 14
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       15
+      ]
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 30
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       2
+      ]
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 110
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 100
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 101
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 127
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 15
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 15636,
+      "text": "Let's see who this rascal is!"
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 50,
+      "value": 76
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 20
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 26,
+      "seq": 14
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 14,
+      "text_offset": 15666,
+      "text": "Jim the Gardener!"
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 48,
+      "value": 72
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 49,
+      "value": 74
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 50
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 48,
+      "value": 71
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 49,
+      "value": 73
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 13,
+      "seq": 9
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 9,
+      "text_offset": 15684,
+      "text": "We found the glowing paint he was using."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 13,
+      "seq": 12
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 60
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 13,
+      "seq": 13
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 6
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": 15725,
+      "text": "And he's not the only one involved."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 15761,
+      "text": "Yeah!  Like, we saw the cook with him through the peep hole!  We heard everything!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 125,
+      "seq": 16
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 6
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 125
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 6
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": 15844,
+      "text": "Tribal Police.  You're under arrest!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 2
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 48,
+      "value": 72
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 49,
+      "value": 74
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 6
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 125,
+      "seq": 15
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 48,
+      "value": 71
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 49,
+      "value": 73
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 7
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": 15881,
+      "text": "You kids did great!  You should come and work for me."
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 15935,
+      "text": "Like, thanks but no thanks, man.  I've had enough."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 13,
+      "seq": 8
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 9,
+      "text_offset": 15986,
+      "text": "Besides, we still have skiing to do!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 2,
+      "seq": 62
+     },
+     {
+      "op": "queue_sound_driver_id",
+      "sound_id": 29
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 25,
+      "text_offset": 16023,
+      "text": "Scooby Doo!"
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       3
+      ]
+     },
+     {
+      "op": "set_channel_suspend_bit",
+      "channel": 1
+     },
+     {
+      "op": "set_channel_suspend_bit",
+      "channel": 2
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 169,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 24,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       58
+      ]
+     },
+     {
+      "op": "load_room_at_entry_with_facing",
+      "to_room": 4
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 30
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       2
+      ]
+     }
+    ],
+    "target_name": "Medallion"
+   }
+  ],
+  "172": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 16706,
+      "text": "It's some kind of old doll."
+     }
+    ],
+    "target_name": "Doll"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 172,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 10
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 172,
+      "room": 1
+     }
+    ],
+    "target_name": "Doll"
+   },
+   {
+    "verb_code": 6,
+    "sel2": 6,
+    "actions": [
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 6
+     },
+     {
+      "op": "set_actor_turn_anim_from_transition_table",
+      "slot": 1,
+      "wait": false,
+      "state": 0
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 16734,
+      "text": "Here's your doll, guy."
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 9
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": 2492,
+      "text": "You will not regret this, I promise you!"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 12
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 172,
+      "value": 163
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 172,
+      "room": 16
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 4
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 6,
+      "mode_speed": 1,
+      "anim_id": 4,
+      "waypoint_index": 4
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 100
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 6,
+      "mode_speed": 1,
+      "anim_id": 5,
+      "waypoint_index": 5
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 13
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 6
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 3
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 172,
+      "room": 0
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 6
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 13
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 41,
+      "room": 16
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 1,
+      "dest_bit_or_actor": 0,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "wait_until_anim_channel_signalled",
+      "channel": 6
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 6,
+      "seq": 11
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 30,
+      "text_offset": 2452,
+      "text": "Many thanks, friend!"
+     }
+    ],
+    "target_name": "Doll"
+   }
+  ],
+  "176": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 16995,
+      "text": "Safe up to ten zillion volts."
+     }
+    ],
+    "target_name": "Extension Cord"
+   },
+   {
+    "verb_code": 2,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 8,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 176
+       },
+       "right": {
+        "source": "immediate",
+        "index": 2,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 144,
+        "x_addend": 12,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 13
+       }
+      ]
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 60,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 8
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 175,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 176,
+      "room": 1
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 8,
+      "dest_bit_or_actor": 3,
+      "src_value": 0,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "branch_if_compare_false",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 99
+       },
+       "right": {
+        "source": "immediate",
+        "index": 11,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": []
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 99,
+      "value": 0
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 99,
+      "value": 86
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 15,
+      "dest_bit_or_actor": 2,
+      "src_value": 0,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 177,
+      "seq": 5
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 177,
+      "value": 0
+     }
+    ],
+    "target_name": "Extension Cord"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 60,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 15,
+        "selector": 5
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 9074,
+        "text": "No way.  We've bothered him enough, I think.  Let him sleep."
+       }
+      ]
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 176,
+      "value": 88
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 60,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 8
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 176,
+      "room": 11
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 8,
+      "dest_bit_or_actor": 3,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 175,
+      "room": 11
+     },
+     {
+      "op": "branch_if_compare_false",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 99
+       },
+       "right": {
+        "source": "immediate",
+        "index": 11,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": []
+     },
+     {
+      "op": "move_entity_to_anchor_of_reference",
+      "subject": 1,
+      "reference": 99,
+      "x_addend": 8,
+      "extra": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 1,
+      "seq": 8
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 176,
+      "value": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 175,
+      "room": 0
+     },
+     {
+      "op": "wait_n_frames",
+      "frames": 1
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 99,
+      "value": 87
+     },
+     {
+      "op": "set_actor_shape_index",
+      "actor": 99,
+      "value": 86
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 176,
+      "value": 85
+     },
+     {
+      "op": "move_actor_to_waypoint",
+      "selector": 1,
+      "mode_speed": 1,
+      "anim_id": 0,
+      "waypoint_index": 3
+     },
+     {
+      "op": "actor_set_word0_and_raise_pending_flag",
+      "actor": 177,
+      "value": 1
+     },
+     {
+      "op": "start_anim_sequence_and_wait",
+      "channel": 177,
+      "seq": 2
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 15,
+      "dest_bit_or_actor": 2,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     }
+    ],
+    "target_name": "Extension Cord"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 99,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "flag",
+        "index": 15,
+        "selector": 5
+       },
+       "right": {
+        "source": "immediate",
+        "index": 1,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "draw_text_message_and_wait",
+        "flag_word": 61446,
+        "text_offset": 9074,
+        "text": "No way.  We've bothered him enough, I think.  Let him sleep."
+       }
+      ]
+     },
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 99
+       },
+       "right": {
+        "source": "immediate",
+        "index": 11,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 176,
+        "value": 88
+       },
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 60,
+        "x_addend": 8,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 8
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 176,
+        "room": 11
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 8,
+        "dest_bit_or_actor": 3,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 175,
+        "room": 11
+       },
+       {
+        "op": "move_entity_to_anchor_of_reference",
+        "subject": 1,
+        "reference": 99,
+        "x_addend": 8,
+        "extra": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 1,
+        "seq": 8
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 176,
+        "value": 0
+       },
+       {
+        "op": "move_actor_to_room",
+        "entity": 175,
+        "room": 0
+       },
+       {
+        "op": "wait_n_frames",
+        "frames": 1
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 99,
+        "value": 87
+       },
+       {
+        "op": "set_actor_shape_index",
+        "actor": 99,
+        "value": 86
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 176,
+        "value": 85
+       },
+       {
+        "op": "move_actor_to_waypoint",
+        "selector": 1,
+        "mode_speed": 1,
+        "anim_id": 0,
+        "waypoint_index": 3
+       },
+       {
+        "op": "actor_set_word0_and_raise_pending_flag",
+        "actor": 177,
+        "value": 1
+       },
+       {
+        "op": "start_anim_sequence_and_wait",
+        "channel": 177,
+        "seq": 2
+       },
+       {
+        "op": "assign_flagbit_or_actor_field",
+        "dest": "flag",
+        "dest_index": 15,
+        "dest_bit_or_actor": 2,
+        "src_value": 1,
+        "src_bit_or_actor": 0,
+        "mode": 17,
+        "operation": "set_clear"
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 17025,
+      "text": "I don't think that will help right now."
+     }
+    ],
+    "target_name": "Extension Cord",
+    "item_name": "Heater"
+   }
+  ],
+  "178": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 17266,
+      "text": "Do you think the guy that modelled for this got better?"
+     }
+    ],
+    "target_name": "Totem Pole"
+   }
+  ],
+  "179": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 17333,
+      "text": "It's a little light bulb."
+     }
+    ],
+    "target_name": "Light Bulb"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 135,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 179,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 135,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 5,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 181,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 8270,
+      "text": "Cool!"
+     }
+    ],
+    "target_name": "Light Bulb",
+    "item_name": "Battery"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 121,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 179,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 121,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 6,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 180,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 8270,
+      "text": "Cool!"
+     }
+    ],
+    "target_name": "Light Bulb",
+    "item_name": "Soda Tab"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 182,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 179,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 182,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 7,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 183,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13055,
+      "text": "Bingo!"
+     }
+    ],
+    "target_name": "Light Bulb",
+    "item_name": "Soda Tab and Battery"
+   }
+  ],
+  "180": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 17370,
+      "text": "I have a cunning plan!"
+     }
+    ],
+    "target_name": "Bulb and Soda Tab"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 135,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 180,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 135,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 7,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 183,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13055,
+      "text": "Bingo!"
+     }
+    ],
+    "target_name": "Bulb and Soda Tab",
+    "item_name": "Battery"
+   }
+  ],
+  "181": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 17370,
+      "text": "I have a cunning plan!"
+     }
+    ],
+    "target_name": "Bulb and Battery"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 121,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 181,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 121,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 7,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 183,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13055,
+      "text": "Bingo!"
+     }
+    ],
+    "target_name": "Bulb and Battery",
+    "item_name": "Soda Tab"
+   }
+  ],
+  "182": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 17370,
+      "text": "I have a cunning plan!"
+     }
+    ],
+    "target_name": "Soda Tab and Battery"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 179,
+    "actions": [
+     {
+      "op": "move_actor_to_room",
+      "entity": 182,
+      "room": 0
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 179,
+      "room": 0
+     },
+     {
+      "op": "call_subcommand_from_table",
+      "operands": [
+       19
+      ]
+     },
+     {
+      "op": "assign_flagbit_or_actor_field",
+      "dest": "flag",
+      "dest_index": 6,
+      "dest_bit_or_actor": 7,
+      "src_value": 1,
+      "src_bit_or_actor": 0,
+      "mode": 17,
+      "operation": "set_clear"
+     },
+     {
+      "op": "move_actor_to_room",
+      "entity": 183,
+      "room": 1
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 13055,
+      "text": "Bingo!"
+     }
+    ],
+    "target_name": "Soda Tab and Battery",
+    "item_name": "Light Bulb"
+   }
+  ],
+  "183": [
+   {
+    "verb_code": 10,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 4102,
+      "text_offset": 17449,
+      "text": "It's a jury-rigged flashlight."
+     }
+    ],
+    "target_name": "Flashlight"
+   },
+   {
+    "verb_code": 5,
+    "sel2": 0,
+    "actions": [
+     {
+      "op": "if_compare_then_block",
+      "condition": {
+       "left": {
+        "source": "actor_field",
+        "index": 6,
+        "selector": 1
+       },
+       "right": {
+        "source": "immediate",
+        "index": 7,
+        "selector": 0
+       },
+       "comparator": "eq"
+      },
+      "then": [
+       {
+        "op": "change_scene_with_palette_fadeout",
+        "to_room": 8
+       }
+      ]
+     },
+     {
+      "op": "draw_text_message_and_wait",
+      "flag_word": 61446,
+      "text_offset": 8853,
+      "text": "I don't need it right now."
+     }
+    ],
+    "target_name": "Flashlight"
+   }
+  ]
+ }
+}

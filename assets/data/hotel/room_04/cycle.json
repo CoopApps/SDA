@@ -1,0 +1,10 @@
+{
+ "pos": [
+  73,
+  43
+ ],
+ "period_ticks": 7,
+ "frames": 2,
+ "z": 80,
+ "note": "ANIMATED SCENERY ACTOR, not a palette cycle (this room has no op-$1A site; the game's only four are rooms 14 and 18). Entity 19 / actor slot 16, activated in scene 4 by EXECUTING cluster_init_entities 0x7F66 -> scene_load_activate 0x758A -> tick_room_object_timers 0x7C04. Record +2 (sprite bank id, consumer 0x2934) = 14 -> bank base 0x0B1BE2 via the ROM bank table 0x032670; record +0 (animation index, consumer 0xB1D8) = 3 -> anim index table base+word[base+2], stream 0x0B1C32 = RATE 8 / SHOW 0x00B4 / SHOW 0x00C2 / JUMP: 2 frames, 8 VBLANK frames each, looping (dur unit 0xAFD0 <- 0xAF24 <- 0xA65C <- VBLANK ISR, 60 Hz) -> period_ticks 7 for CycleAnim's +1 bias. Art = ROM sprite source_13 frames 0x00B4,0x00C2. pos from the 0xAD5A rule screen = pos - hotspot, applied PER FRAME (hotspots (43,46);(41,45)), unioned. z = actor Y: this is a sprite on hardware channel 1 and depth-sorts like an actor, it is not a front-plane overlay. No cram_run: nothing installs a cycle channel for it. Built by work/rec_fire/build_flames.py."
+}

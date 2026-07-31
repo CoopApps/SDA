@@ -1,0 +1,20 @@
+{
+  "path": "intros/actors/fred_a11_frame_04fe.png",
+  "provenance": "code_derived",
+  "producer": "D:/scoobydoo/work/relift_all_sprites.py (sprites/source_02) + a lost packaging step; identity re-proved by work/verify_intro_actor_frames.py",
+  "capture_state": "",
+  "capture_frame": null,
+  "cite": "pixel-identical to the ROM lift source_02/frame_04fe.png. Sheet resolved through the 36-entry sprite-source pointer table $32670 (consumers 0x2934/0x4C62/0x7B64 `moveq #$23,D1`); within the sheet the anim-index table is at base+0xC and frames are 14-byte descriptors (+6 packed-graphics offset, +0xA attr/flip). Filename suffix 0x04fe IS the frame-descriptor offset.",
+  "rom_addrs": [
+    "0x032670",
+    "0x07E91C"
+  ],
+  "rom_map_row": [
+    "row 475 `0x0324C0-0x032700` interaction_hotspot_data ($324C0)",
+    "row 478 `0x07E91C-0x082D78` sprite_02 ($7E91C)"
+  ],
+  "verify": {
+    "equals_rom_lift": "source_02/frame_04fe.png"
+  },
+  "note": "the generator that copied/renamed these into the port is lost; the CONTENT is ROM data and the sidecar records which lift it equals so the claim stays falsifiable."
+}
