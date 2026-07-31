@@ -8,8 +8,16 @@ extends "res://scripts/actor.gd"
 ## ROM walkability grid) instead of walking straight and sliding on walls.
 
 ## ROM walk velocity (row 236 / 0x548E): the dominant-axis step is speed*256 in
-## 8.8 fixed-point = `speed` pixels per 30fps tick. Shaggy's speed scalar (~3) at
-## 30 ticks/s ~= 90 px/s. Kept as one tunable until per-actor speed is lifted.
+## 8.8 fixed-point, applied once per VBLANK frame = 60 fps (NOT 30 -- that was the
+## same cached-30fps error corrected for animation timing). The real model
+## (analysis/opcodes.json op0E/op27, subroutine 0x4B24): step_per_frame =
+## base_velocity($FF051C+k*4) * speed_operand(4(A5)) -- speed is a PER-MOVE
+## parameter, not one global, and the player-walk value is set in the in-game
+## input handler (0x5E4A) which the interpreter can't currently reach.
+## SPEED below is therefore an UNVERIFIED PLACEHOLDER (not ROM-derived); the true
+## px/s needs an in-game measurement (save-state). Left at the prior tuning value
+## rather than guessing a "corrected" number -- a wrong constant would regress.
+## WORK ITEM: measure the player's px/frame in-game, then set SPEED = that*60.
 const SPEED := 90.0
 const ARRIVE_EPS := 2.0
 
