@@ -17,23 +17,24 @@
     },
     "comparator": "eq"
    },
-   "then": []
-  },
-  {
-   "op": "draw_text_message_and_wait",
-   "flag_word": 61446,
-   "text_offset": 77,
-   "text": "Uncle Blake is GONE!"
-  },
-  {
-   "op": "assign_flagbit_or_actor_field",
-   "dest": "flag",
-   "dest_index": 9,
-   "dest_bit_or_actor": 2,
-   "src_value": 1,
-   "src_bit_or_actor": 0,
-   "mode": 17,
-   "operation": "set_clear"
+   "then": [
+    {
+     "op": "draw_text_message_and_wait",
+     "flag_word": 61446,
+     "text_offset": 77,
+     "text": "Uncle Blake is GONE!"
+    },
+    {
+     "op": "assign_flagbit_or_actor_field",
+     "dest": "flag",
+     "dest_index": 9,
+     "dest_bit_or_actor": 2,
+     "src_value": 1,
+     "src_bit_or_actor": 0,
+     "mode": 17,
+     "operation": "set_clear"
+    }
+   ]
   }
  ]
 }

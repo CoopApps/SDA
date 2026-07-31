@@ -22,5 +22,96 @@
    "op": "wait_n_frames",
    "frames": 20
   }
+ ],
+ "secondary": [
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "flag",
+     "index": 9,
+     "selector": 0
+    },
+    "right": {
+     "source": "immediate",
+     "index": 0,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": [
+    {
+     "op": "attach_inline_position_track_to_slot",
+     "operands": [
+      316,
+      34,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    39
+   ]
+  },
+  {
+   "op": "resume_anim_channel_wait_drawn",
+   "channel": 1
+  },
+  {
+   "op": "resume_anim_channel_wait_drawn",
+   "channel": 2
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "actor_field",
+     "index": 12,
+     "selector": 3
+    },
+    "right": {
+     "source": "immediate",
+     "index": 1,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": [
+    {
+     "op": "move_actor_to_room",
+     "entity": 63,
+     "room": 19
+    },
+    {
+     "op": "assign_flagbit_or_actor_field",
+     "dest": "flag",
+     "dest_index": 9,
+     "dest_bit_or_actor": 0,
+     "src_value": 1,
+     "src_bit_or_actor": 0,
+     "mode": 17,
+     "operation": "set_clear"
+    }
+   ]
+  },
+  {
+   "op": "load_room_at_entry_with_facing",
+   "to_room": 19
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    2
+   ]
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    28
+   ]
+  }
  ]
 }

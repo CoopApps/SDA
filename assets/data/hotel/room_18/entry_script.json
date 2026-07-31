@@ -17,11 +17,12 @@
     },
     "comparator": "eq"
    },
-   "then": []
-  },
-  {
-   "op": "queue_sound_driver_id",
-   "sound_id": 88
+   "then": [
+    {
+     "op": "queue_sound_driver_id",
+     "sound_id": 88
+    }
+   ]
   }
  ]
 }

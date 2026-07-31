@@ -17,44 +17,45 @@
     },
     "comparator": "eq"
    },
-   "then": []
-  },
-  {
-   "op": "start_anim_sequence_and_wait",
-   "channel": 125,
-   "seq": 3
-  },
-  {
-   "op": "draw_text_message_and_wait",
-   "flag_word": 11,
-   "text_offset": 1,
-   "text": "Hey, where'd you go?"
-  },
-  {
-   "op": "start_anim_sequence_and_wait",
-   "channel": 125,
-   "seq": 4
-  },
-  {
-   "op": "draw_text_message_and_wait",
-   "flag_word": 11,
-   "text_offset": 22,
-   "text": "I made you a sandwich, but you were gone, so I ate it."
-  },
-  {
-   "op": "assign_flagbit_or_actor_field",
-   "dest": "flag",
-   "dest_index": 12,
-   "dest_bit_or_actor": 2,
-   "src_value": 0,
-   "src_bit_or_actor": 0,
-   "mode": 17,
-   "operation": "set_clear"
-  },
-  {
-   "op": "start_anim_sequence_and_wait",
-   "channel": 125,
-   "seq": 1
+   "then": [
+    {
+     "op": "start_anim_sequence_and_wait",
+     "channel": 125,
+     "seq": 3
+    },
+    {
+     "op": "draw_text_message_and_wait",
+     "flag_word": 11,
+     "text_offset": 1,
+     "text": "Hey, where'd you go?"
+    },
+    {
+     "op": "start_anim_sequence_and_wait",
+     "channel": 125,
+     "seq": 4
+    },
+    {
+     "op": "draw_text_message_and_wait",
+     "flag_word": 11,
+     "text_offset": 22,
+     "text": "I made you a sandwich, but you were gone, so I ate it."
+    },
+    {
+     "op": "assign_flagbit_or_actor_field",
+     "dest": "flag",
+     "dest_index": 12,
+     "dest_bit_or_actor": 2,
+     "src_value": 0,
+     "src_bit_or_actor": 0,
+     "mode": 17,
+     "operation": "set_clear"
+    },
+    {
+     "op": "start_anim_sequence_and_wait",
+     "channel": 125,
+     "seq": 1
+    }
+   ]
   }
  ]
 }

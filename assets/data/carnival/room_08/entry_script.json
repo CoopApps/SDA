@@ -17,34 +17,63 @@
     },
     "comparator": "eq"
    },
-   "then": []
-  },
-  {
-   "op": "set_channel_suspend_bit",
-   "channel": 2
-  },
-  {
-   "op": "move_actor_to_xy",
-   "actor": 1,
-   "move_op1": 65535,
-   "walk_anim": 65535,
-   "x": 152,
-   "y": 75
-  },
-  {
-   "op": "call_subcommand_from_table",
-   "operands": [
-    16
+   "then": [
+    {
+     "op": "set_channel_suspend_bit",
+     "channel": 2
+    },
+    {
+     "op": "move_actor_to_xy",
+     "actor": 1,
+     "move_op1": 65535,
+     "walk_anim": 65535,
+     "x": 152,
+     "y": 75
+    },
+    {
+     "op": "call_subcommand_from_table",
+     "operands": [
+      16
+     ]
+    },
+    {
+     "op": "queue_sound_driver_id",
+     "sound_id": 108
+    },
+    {
+     "op": "call_subcommand_from_table",
+     "operands": [
+      43
+     ]
+    }
    ]
-  },
+  }
+ ],
+ "secondary": [
   {
-   "op": "queue_sound_driver_id",
-   "sound_id": 108
-  },
-  {
-   "op": "call_subcommand_from_table",
-   "operands": [
-    43
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "flag",
+     "index": 6,
+     "selector": 4
+    },
+    "right": {
+     "source": "immediate",
+     "index": 0,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": [
+    {
+     "op": "attach_inline_position_track_to_slot",
+     "operands": [
+      272,
+      1,
+      2
+     ]
+    }
    ]
   }
  ]

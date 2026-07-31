@@ -219,6 +219,54 @@ func _enter_room(desc: Dictionary) -> void:
 		hotspot_overlay.queue_redraw()
 	_spawn_npcs()
 	ui.show_message("")     # sentence line stays blank until a real command
+	# Run the scene's ENTRY(+0xC)/SECONDARY(+0x10) scripts (ROM 0x221A/0x2278,
+	# run_initial_scene_scripts 0x000CD0 / row 40 -- the ROM runs these every scene
+	# load). They set initial flags, place/motion arrival actors, and play once-only
+	# on-arrival cutscenes (self-gated by their own op-03 flag guards, so replay is
+	# not an issue). Deferred so the room + NPCs finish building first; the run is
+	# its own coroutine so it doesn't block room setup.
+	_run_entry_scripts.call_deferred(room.room_id)
+
+## Run the room's scene entry/secondary scripts on arrival, once per entry, in
+## address order (entry then secondary), through the same behaviour runner that
+## drives object scripts. Data: assets/data/<cluster>/room_NN/entry_script.json
+## (exporters/gen_scene_entry_scripts.py; ROM +0xC/+0x10 scripts the port used to
+## drop). op-1A cycle anims are already stripped from that file (cycle.json owns
+## them). Guarded so a mid-cutscene room change aborts the leftover run.
+func _run_entry_scripts(rid: int) -> void:
+	var path := "res://assets/data/%s/room_%02d/entry_script.json" % [Game.cluster, rid]
+	if not FileAccess.file_exists(path):
+		return
+	var data: Variant = Game.load_json(path)
+	if not (data is Dictionary):
+		return
+	var runner := _ensure_runner()
+	for block in ["entry", "secondary"]:
+		var actions: Variant = data.get(block)
+		if actions is Array and not actions.is_empty():
+			if room == null or room.room_id != rid:
+				return                      # player already left -- abandon the run
+			await runner.run(_entry_safe(actions))
+
+## Arrival scripts do STATE/actor/anim/text setup -- they must never change the
+## room. Strip any scene-transition op (defence in depth: a mis-decode or an
+## unverified ROM special case, e.g. carnival room 31's unguarded
+## load_room_at_entry_with_facing, would otherwise teleport the player on entry).
+const _ENTRY_BANNED := ["load_room_at_entry_with_facing", "change_scene_with_palette_fadeout"]
+func _entry_safe(actions: Array) -> Array:
+	var out: Array = []
+	for a in actions:
+		if not (a is Dictionary):
+			continue
+		if String(a.get("op", "")) in _ENTRY_BANNED:
+			push_warning("entry_script: dropped scene-change op %s (arrival scripts don't change rooms)" % a.get("op"))
+			continue
+		var b: Dictionary = a.duplicate(true)
+		for k in ["then", "actions"]:
+			if b.get(k) is Array:
+				b[k] = _entry_safe(b[k])
+		out.append(b)
+	return out
 
 ## --- Companion behaviour (Scooby) ------------------------------------------
 ## ROM-derived: there is NO wander AI. The per-frame routine at 0x6D24 gates on

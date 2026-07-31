@@ -17,36 +17,38 @@
     },
     "comparator": "eq"
    },
-   "then": []
-  },
-  {
-   "op": "branch_if_compare_false",
-   "condition": {
-    "left": {
-     "source": "flag",
-     "index": 12,
-     "selector": 3
-    },
-    "right": {
-     "source": "immediate",
-     "index": 0,
-     "selector": 0
-    },
-    "comparator": "eq"
-   },
-   "then": []
-  },
-  {
-   "op": "move_actor_to_waypoint",
-   "selector": 26,
-   "mode_speed": 65535,
-   "anim_id": 65535,
-   "waypoint_index": 2
-  },
-  {
-   "op": "move_actor_to_room",
-   "entity": 58,
-   "room": 15
+   "then": [
+    {
+     "op": "branch_if_compare_false",
+     "condition": {
+      "left": {
+       "source": "flag",
+       "index": 12,
+       "selector": 3
+      },
+      "right": {
+       "source": "immediate",
+       "index": 0,
+       "selector": 0
+      },
+      "comparator": "eq"
+     },
+     "then": [
+      {
+       "op": "move_actor_to_waypoint",
+       "selector": 26,
+       "mode_speed": 65535,
+       "anim_id": 65535,
+       "waypoint_index": 2
+      },
+      {
+       "op": "move_actor_to_room",
+       "entity": 58,
+       "room": 15
+      }
+     ]
+    }
+   ]
   }
  ],
  "secondary": [
@@ -65,45 +67,47 @@
     },
     "comparator": "eq"
    },
-   "then": []
-  },
-  {
-   "op": "branch_if_compare_false",
-   "condition": {
-    "left": {
-     "source": "flag",
-     "index": 12,
-     "selector": 3
-    },
-    "right": {
-     "source": "immediate",
-     "index": 0,
-     "selector": 0
-    },
-    "comparator": "eq"
-   },
-   "then": []
-  },
-  {
-   "op": "assign_flagbit_or_actor_field",
-   "dest": "flag",
-   "dest_index": 12,
-   "dest_bit_or_actor": 3,
-   "src_value": 1,
-   "src_bit_or_actor": 0,
-   "mode": 17,
-   "operation": "set_clear"
-  },
-  {
-   "op": "start_anim_sequence_and_wait",
-   "channel": 26,
-   "seq": 14
-  },
-  {
-   "op": "draw_text_message_and_wait",
-   "flag_word": 14,
-   "text_offset": 98,
-   "text": "This is quite interesting!"
+   "then": [
+    {
+     "op": "branch_if_compare_false",
+     "condition": {
+      "left": {
+       "source": "flag",
+       "index": 12,
+       "selector": 3
+      },
+      "right": {
+       "source": "immediate",
+       "index": 0,
+       "selector": 0
+      },
+      "comparator": "eq"
+     },
+     "then": [
+      {
+       "op": "assign_flagbit_or_actor_field",
+       "dest": "flag",
+       "dest_index": 12,
+       "dest_bit_or_actor": 3,
+       "src_value": 1,
+       "src_bit_or_actor": 0,
+       "mode": 17,
+       "operation": "set_clear"
+      },
+      {
+       "op": "start_anim_sequence_and_wait",
+       "channel": 26,
+       "seq": 14
+      },
+      {
+       "op": "draw_text_message_and_wait",
+       "flag_word": 14,
+       "text_offset": 98,
+       "text": "This is quite interesting!"
+      }
+     ]
+    }
+   ]
   }
  ]
 }

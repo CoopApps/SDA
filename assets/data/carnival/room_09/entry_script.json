@@ -29,30 +29,31 @@
     },
     "comparator": "eq"
    },
-   "then": []
-  },
-  {
-   "op": "move_actor_to_room",
-   "entity": 119,
-   "room": 9
-  },
-  {
-   "op": "move_actor_to_xy",
-   "actor": 119,
-   "move_op1": 65535,
-   "walk_anim": 65535,
-   "x": 475,
-   "y": 112
-  },
-  {
-   "op": "start_anim_sequence_and_wait",
-   "channel": 119,
-   "seq": 2
-  },
-  {
-   "op": "actor_set_word0_and_raise_pending_flag",
-   "actor": 27,
-   "value": 22
+   "then": [
+    {
+     "op": "move_actor_to_room",
+     "entity": 119,
+     "room": 9
+    },
+    {
+     "op": "move_actor_to_xy",
+     "actor": 119,
+     "move_op1": 65535,
+     "walk_anim": 65535,
+     "x": 475,
+     "y": 112
+    },
+    {
+     "op": "start_anim_sequence_and_wait",
+     "channel": 119,
+     "seq": 2
+    },
+    {
+     "op": "actor_set_word0_and_raise_pending_flag",
+     "actor": 27,
+     "value": 22
+    }
+   ]
   }
  ]
 }

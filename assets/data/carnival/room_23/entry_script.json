@@ -1,0 +1,118 @@
+{
+ "note": "Scene ENTRY(+0xC)/SECONDARY(+0x10) scripts, run on room arrival (ROM 0x221A/0x2278, rows 103/104). op-1A cycle anims stripped (cycle.json owns them). exporters/gen_scene_entry_scripts.py",
+ "cite": "chapter struct 0xFCA40, pool 0x1B3D38",
+ "secondary": [
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 119
+  },
+  {
+   "op": "queue_sound_driver_id",
+   "sound_id": 113
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 0,
+   "dest_bit_or_actor": 5,
+   "src_value": 1,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 0,
+   "dest_bit_or_actor": 6,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear"
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    33
+   ]
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "actor_field",
+     "index": 12,
+     "selector": 3
+    },
+    "right": {
+     "source": "immediate",
+     "index": 0,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": [
+    {
+     "op": "attach_inline_position_track_to_slot",
+     "operands": [
+      88,
+      1,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "actor_field",
+     "index": 12,
+     "selector": 3
+    },
+    "right": {
+     "source": "immediate",
+     "index": 1,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": [
+    {
+     "op": "attach_inline_position_track_to_slot",
+     "operands": [
+      28,
+      1,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "actor_field",
+     "index": 12,
+     "selector": 3
+    },
+    "right": {
+     "source": "immediate",
+     "index": 2,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": [
+    {
+     "op": "attach_inline_position_track_to_slot",
+     "operands": [
+      52,
+      1,
+      1
+     ]
+    }
+   ]
+  }
+ ]
+}
