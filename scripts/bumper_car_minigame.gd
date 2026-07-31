@@ -50,23 +50,34 @@ func start() -> void:
 	_slice("res://assets/minigame/bumpercar_red.png", _red_frames)
 	_slice("res://assets/minigame/bumpercar_blue.png", _blue_frames)
 
-	# dim backdrop + arena floor + border
+	# Backdrop = carnival ROOM 5's real background (the bumper-car pavilion the
+	# ride lives in; the ROM snapshots the room state for this overlay -- there is
+	# no separate arena-floor tile set, 0x1900C is the racer HUD portraits). The
+	# cars drive on the room floor. Falls back to a dark box if the asset is absent.
 	_bg = ColorRect.new()
-	_bg.color = Color(0.04, 0.04, 0.08)
+	_bg.color = Color(0.02, 0.02, 0.05)
 	_bg.size = Vector2(VW, VH)
-	add_child(_new_layer(_bg))
-	var floor := ColorRect.new()
-	floor.color = Color(0.12, 0.10, 0.16)
-	floor.position = _arena.position
-	floor.size = _arena.size
-	_bg.add_child(floor)
-	var frame := ReferenceRect.new()
-	frame.editor_only = false
-	frame.border_color = Color(0.9, 0.8, 0.2)
-	frame.border_width = 2.0
-	frame.position = _arena.position - Vector2(2, 2)
-	frame.size = _arena.size + Vector2(4, 4)
-	_bg.add_child(frame)
+	add_child(_bg)
+	var bgpath := "res://assets/data/%s/room_05/background.png" % Game.cluster
+	var bgtex: Texture2D = Game.load_texture(bgpath)
+	if bgtex != null:
+		var room_bg := Sprite2D.new()
+		room_bg.centered = false
+		room_bg.texture = bgtex
+		var tw := float(bgtex.get_width())
+		var th := float(bgtex.get_height())
+		var s := VW / tw
+		room_bg.scale = Vector2(s, s)
+		room_bg.position = Vector2(0, VH - th * s)   # sit the floor at the bottom
+		_bg.add_child(room_bg)
+		# keep the movement arena within the visible floor band
+		_arena = Rect2(20, VH - th * s + 8, VW - 40, th * s - 24)
+	else:
+		var fl := ColorRect.new()
+		fl.color = Color(0.12, 0.10, 0.16)
+		fl.position = _arena.position
+		fl.size = _arena.size
+		_bg.add_child(fl)
 
 	_red = _make_car(_red_frames)
 	_blue = _make_car(_blue_frames)
