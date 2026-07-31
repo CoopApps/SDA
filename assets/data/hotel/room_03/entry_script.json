@@ -1,0 +1,14 @@
+{
+ "note": "Scene ENTRY(+0xC)/SECONDARY(+0x10) scripts, run on room arrival (ROM 0x221A/0x2278, rows 103/104). op-1A cycle anims stripped (cycle.json owns them). exporters/gen_scene_entry_scripts.py",
+ "cite": "chapter struct 0xFCA0C, pool 0x1467AC",
+ "entry": [
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 1
+  },
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 2
+  }
+ ]
+}

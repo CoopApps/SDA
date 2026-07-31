@@ -1,0 +1,23 @@
+{
+ "note": "Scene ENTRY(+0xC)/SECONDARY(+0x10) scripts, run on room arrival (ROM 0x221A/0x2278, rows 103/104). op-1A cycle anims stripped (cycle.json owns them). exporters/gen_scene_entry_scripts.py",
+ "cite": "chapter struct 0xFCA0C, pool 0x1467AC",
+ "secondary": [
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "flag",
+     "index": 11,
+     "selector": 5
+    },
+    "right": {
+     "source": "immediate",
+     "index": 1,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": []
+  }
+ ]
+}

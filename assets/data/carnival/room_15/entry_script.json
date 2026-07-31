@@ -1,0 +1,74 @@
+{
+ "note": "Scene ENTRY(+0xC)/SECONDARY(+0x10) scripts, run on room arrival (ROM 0x221A/0x2278, rows 103/104). op-1A cycle anims stripped (cycle.json owns them). exporters/gen_scene_entry_scripts.py",
+ "cite": "chapter struct 0xFCA40, pool 0x1B3D38",
+ "entry": [
+  {
+   "op": "move_actor_to_xy",
+   "actor": 1,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 336,
+   "y": 0
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    17
+   ]
+  },
+  {
+   "op": "set_channel_suspend_bit",
+   "channel": 2
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 12,
+   "dest_bit_or_actor": 130,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 14,
+   "dest_bit_or_actor": 130,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 9,
+   "dest_bit_or_actor": 2,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 6,
+   "dest_bit_or_actor": 3,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear"
+  },
+  {
+   "op": "actor_set_word0_and_raise_pending_flag",
+   "actor": 130,
+   "value": 75
+  },
+  {
+   "op": "set_actor_shape_index",
+   "actor": 130,
+   "value": 0
+  }
+ ]
+}

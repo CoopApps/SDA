@@ -1,0 +1,58 @@
+{
+ "note": "Scene ENTRY(+0xC)/SECONDARY(+0x10) scripts, run on room arrival (ROM 0x221A/0x2278, rows 103/104). op-1A cycle anims stripped (cycle.json owns them). exporters/gen_scene_entry_scripts.py",
+ "cite": "chapter struct 0xFCA40, pool 0x1B3D38",
+ "entry": [
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    41
+   ]
+  },
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    35
+   ]
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "flag",
+     "index": 7,
+     "selector": 6
+    },
+    "right": {
+     "source": "immediate",
+     "index": 0,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": []
+  },
+  {
+   "op": "move_actor_to_room",
+   "entity": 119,
+   "room": 9
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 119,
+   "move_op1": 65535,
+   "walk_anim": 65535,
+   "x": 475,
+   "y": 112
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 119,
+   "seq": 2
+  },
+  {
+   "op": "actor_set_word0_and_raise_pending_flag",
+   "actor": 27,
+   "value": 22
+  }
+ ]
+}

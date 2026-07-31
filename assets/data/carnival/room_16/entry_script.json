@@ -1,0 +1,314 @@
+{
+ "note": "Scene ENTRY(+0xC)/SECONDARY(+0x10) scripts, run on room arrival (ROM 0x221A/0x2278, rows 103/104). op-1A cycle anims stripped (cycle.json owns them). exporters/gen_scene_entry_scripts.py",
+ "cite": "chapter struct 0xFCA40, pool 0x1B3D38",
+ "secondary": [
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "flag",
+     "index": 5,
+     "selector": 3
+    },
+    "right": {
+     "source": "immediate",
+     "index": 0,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": []
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 144,
+   "seq": 2
+  },
+  {
+   "op": "if_compare_then_block",
+   "condition": {
+    "left": {
+     "source": "flag",
+     "index": 10,
+     "selector": 0
+    },
+    "right": {
+     "source": "immediate",
+     "index": 0,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": [
+    {
+     "op": "if_compare_then_block",
+     "condition": {
+      "left": {
+       "source": "flag",
+       "index": 10,
+       "selector": 1
+      },
+      "right": {
+       "source": "immediate",
+       "index": 0,
+       "selector": 0
+      },
+      "comparator": "eq"
+     },
+     "then": [
+      {
+       "op": "branch_if_compare_false",
+       "condition": {
+        "left": {
+         "source": "actor_field",
+         "index": 12,
+         "selector": 144
+        },
+        "right": {
+         "source": "immediate",
+         "index": 0,
+         "selector": 0
+        },
+        "comparator": "eq"
+       },
+       "then": []
+      },
+      {
+       "op": "draw_text_message_and_wait",
+       "flag_word": 2062,
+       "text_offset": 1,
+       "text": "Hey, hey!  Test your strength! Ring the bell an' win a prize!"
+      },
+      {
+       "op": "branch_if_compare_false",
+       "condition": {
+        "left": {
+         "source": "actor_field",
+         "index": 12,
+         "selector": 144
+        },
+        "right": {
+         "source": "immediate",
+         "index": 1,
+         "selector": 0
+        },
+        "comparator": "eq"
+       },
+       "then": []
+      },
+      {
+       "op": "draw_text_message_and_wait",
+       "flag_word": 2062,
+       "text_offset": 63,
+       "text": "Changed you mind, huh? Give 'er a swing! Only two bucks!"
+      },
+      {
+       "op": "branch_if_compare_false",
+       "condition": {
+        "left": {
+         "source": "actor_field",
+         "index": 12,
+         "selector": 144
+        },
+        "right": {
+         "source": "immediate",
+         "index": 2,
+         "selector": 0
+        },
+        "comparator": "eq"
+       },
+       "then": []
+      },
+      {
+       "op": "draw_text_message_and_wait",
+       "flag_word": 2062,
+       "text_offset": 120,
+       "text": "Come on, kid. Play the game or take a hike. Yer botherin me."
+      },
+      {
+       "op": "assign_flagbit_or_actor_field",
+       "dest": "actor_field",
+       "dest_index": 12,
+       "dest_bit_or_actor": 144,
+       "src_value": 3,
+       "src_bit_or_actor": 0,
+       "mode": 146,
+       "operation": "assign"
+      }
+     ]
+    },
+    {
+     "op": "branch_if_compare_false",
+     "condition": {
+      "left": {
+       "source": "actor_field",
+       "index": 12,
+       "selector": 144
+      },
+      "right": {
+       "source": "immediate",
+       "index": 0,
+       "selector": 0
+      },
+      "comparator": "eq"
+     },
+     "then": []
+    },
+    {
+     "op": "draw_text_message_and_wait",
+     "flag_word": 2062,
+     "text_offset": 181,
+     "text": "Back for another try, huh? You'll get it this time, sure!"
+    },
+    {
+     "op": "branch_if_compare_false",
+     "condition": {
+      "left": {
+       "source": "actor_field",
+       "index": 12,
+       "selector": 144
+      },
+      "right": {
+       "source": "immediate",
+       "index": 1,
+       "selector": 0
+      },
+      "comparator": "eq"
+     },
+     "then": []
+    },
+    {
+     "op": "draw_text_message_and_wait",
+     "flag_word": 2062,
+     "text_offset": 239,
+     "text": "You must have been working out, kid! I can see new muscles on ya!"
+    },
+    {
+     "op": "branch_if_compare_false",
+     "condition": {
+      "left": {
+       "source": "actor_field",
+       "index": 12,
+       "selector": 144
+      },
+      "right": {
+       "source": "immediate",
+       "index": 2,
+       "selector": 0
+      },
+      "comparator": "eq"
+     },
+     "then": []
+    },
+    {
+     "op": "draw_text_message_and_wait",
+     "flag_word": 2062,
+     "text_offset": 305,
+     "text": "Last time was bad luck, plain and simple. It's all about effort. You can win if you really try, kid."
+    },
+    {
+     "op": "assign_flagbit_or_actor_field",
+     "dest": "actor_field",
+     "dest_index": 12,
+     "dest_bit_or_actor": 144,
+     "src_value": 3,
+     "src_bit_or_actor": 0,
+     "mode": 146,
+     "operation": "assign"
+    }
+   ]
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "flag",
+     "index": 9,
+     "selector": 7
+    },
+    "right": {
+     "source": "immediate",
+     "index": 0,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": []
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "actor_field",
+     "index": 12,
+     "selector": 144
+    },
+    "right": {
+     "source": "immediate",
+     "index": 0,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": []
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 2062,
+   "text_offset": 406,
+   "text": "Whaddya want now, kid? You already put me out of business."
+  },
+  {
+   "op": "branch_if_compare_false",
+   "condition": {
+    "left": {
+     "source": "actor_field",
+     "index": 12,
+     "selector": 144
+    },
+    "right": {
+     "source": "immediate",
+     "index": 1,
+     "selector": 0
+    },
+    "comparator": "eq"
+   },
+   "then": []
+  },
+  {
+   "op": "draw_text_message_and_wait",
+   "flag_word": 2062,
+   "text_offset": 465,
+   "text": "Get lost. Hammer game is closed for repairs."
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 12,
+   "dest_bit_or_actor": 144,
+   "src_value": 2,
+   "src_bit_or_actor": 0,
+   "mode": 146,
+   "operation": "assign"
+  },
+  {
+   "op": "move_actor_to_xy",
+   "actor": 2,
+   "move_op1": 1,
+   "walk_anim": 0,
+   "x": 180,
+   "y": 120
+  },
+  {
+   "op": "set_actor_turn_anim_from_transition_table",
+   "slot": 2,
+   "wait": false,
+   "state": 1
+  },
+  {
+   "op": "start_anim_sequence_and_wait",
+   "channel": 2,
+   "seq": 73
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "note": "Scene ENTRY(+0xC)/SECONDARY(+0x10) scripts, run on room arrival (ROM 0x221A/0x2278, rows 103/104). op-1A cycle anims stripped (cycle.json owns them). exporters/gen_scene_entry_scripts.py",
+ "cite": "chapter struct 0xFCA0C, pool 0x1467AC",
+ "entry": [
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "flag",
+   "dest_index": 11,
+   "dest_bit_or_actor": 4,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 17,
+   "operation": "set_clear"
+  },
+  {
+   "op": "assign_flagbit_or_actor_field",
+   "dest": "actor_field",
+   "dest_index": 12,
+   "dest_bit_or_actor": 81,
+   "src_value": 0,
+   "src_bit_or_actor": 0,
+   "mode": 18,
+   "operation": "assign"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "note": "Scene ENTRY(+0xC)/SECONDARY(+0x10) scripts, run on room arrival (ROM 0x221A/0x2278, rows 103/104). op-1A cycle anims stripped (cycle.json owns them). exporters/gen_scene_entry_scripts.py",
+ "cite": "chapter struct 0xFCA40, pool 0x1B3D38",
+ "entry": [
+  {
+   "op": "call_subcommand_from_table",
+   "operands": [
+    13
+   ]
+  },
+  {
+   "op": "move_actor_to_waypoint",
+   "selector": 1,
+   "mode_speed": 65535,
+   "anim_id": 65535,
+   "waypoint_index": 0
+  },
+  {
+   "op": "register_choice_option",
+   "operands": [
+    65535,
+    65535,
+    0,
+    0,
+    15,
+    0
+   ],
+   "actions": []
+  }
+ ]
+}
