@@ -1,0 +1,158 @@
+{
+ "note": "Per-actor perspective depth-scale for the Scooby-Doo Mystery Godot port. FINDING (VERIFIED): the ROM has NO continuous per-actor, Y-based sprite depth-scale. Genesis VDP sprites cannot be hardware-zoomed, and the OAM-emit path (0xAD16-0xADAC, from 0xACCA) selects all size/piece-layout LUTs by the actor TYPE byte (4(A1)) and a flip bit (10(A1)&8), never by Y. The op-12/sub-command-21 mechanism previously suspected of being depth-scale is actually a SCRIPTED PER-OBJECT position-ease effect, NOT an actor depth scaler and NOT applied per-room. Citations: script opcode-12 handler 0x2E9E (4-byte op: word0=0x000C, word1=subcmd); subcmd jump table (longwords) at 0x2EB4, entry 21 = 0x432C (reserve one of 4 slots =2..5, set enable bit3 of , hand off to VBlank); the per-frame multiply at 0xB52A (inside fn 0xB4BE): out = base - (raw*(255-bound))>>8, per axis, raw = fields 14/16(A0) of a ROM graphics descriptor (A0= base +  offset), bound_x= bound_y= (from 0x71CC geometry interp), base = /, result stored to [slot]/[slot]. CONSUMER of that output: it is a screen POSITION in the SAME array/space as the point-and-click CURSOR (hit-test at 0x12CC reads />>3 to pick actors); there is NO OAM sprite-SIZE write anywhere in this path. sub-21 is always bracketed by sub-22 (0x0016 -> 0x436A) as start/stop of a one-shot cutscene effect. EXECUTED (rung 1, m68k interp entering 0xB524): out=base-(raw*(255-bound))>>8 reproduced exactly for bound 0/128/200 (raw=64,base=300 -> 237/269/287). Only 5 op-12/sub-21 sites exist in the whole 2MB ROM, all inside ITEM/PUZZLE object scripts (hotel Shovel@0x149A08, hotel Pole@0x14EDDC, hotel Medallion@0x14E8FE, carnival Hammer@0x1B9F88) - never in any room/scene stream. Scene 16 (the lobby) contains ZERO opcode-12 ops. THEREFORE: for every room, actor depth-scale is DISABLED and scale(y)=1.0. The lobby rendering Blake/Shaggy/Scooby at flat 1:1 is CORRECT per ROM. The port should REMOVE the uncited lerp(0.55..1.0) curve rather than replace it.",
+ "mechanism": {
+  "exists": true,
+  "is_per_actor_room_depth_scale": false,
+  "kind": "scripted one-shot per-object position-ease (item/puzzle cutscenes only)",
+  "enable_op": "opcode 12 sub-command 21 (0x432C)",
+  "disable_op": "opcode 12 sub-command 22 (0x436A)",
+  "formula": "out = base - (raw*(255-bound))>>8  (per axis, 8.8 fixed, MULS signed, ASR arithmetic)",
+  "raw_source": "ROM graphics descriptor fields +14 (X) / +16 (Y), A0= + ",
+  "bound_source": " (X) /  (Y), computed at 0x71CC; ramps 0->255 => factor 255/256 -> 0",
+  "output_consumer": "[slot]/[slot] = a screen POSITION (cursor-space slot array, hit-test 0x12CC). NO OAM size write.",
+  "sites": [
+   {
+    "cluster": "hotel",
+    "scene": "12",
+    "object": "Shovel",
+    "addr": "0x149A08"
+   },
+   {
+    "cluster": "hotel",
+    "scene": "21",
+    "object": "Pole",
+    "addr": "0x14EDDC"
+   },
+   {
+    "cluster": "hotel",
+    "scene": "unlinked",
+    "object": "Medallion",
+    "addr": "0x14E8FE"
+   },
+   {
+    "cluster": "carnival",
+    "scene": "unlinked",
+    "object": "Hammer",
+    "addr": "0x1B9F88"
+   }
+  ]
+ },
+ "rooms": {
+  "hotel.2": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.7": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.8": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.9": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.11": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.12": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.13": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.14": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.15": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.16": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.17": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.18": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.19": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.20": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "hotel.21": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "carnival.2": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "carnival.18": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "carnival.19": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "carnival.20": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  },
+  "carnival.24": {
+   "depth_scale_enabled": false,
+   "scale": 1.0,
+   "reason": "no opcode-12/sub-21 in this scene; ROM applies no per-actor depth scale"
+  }
+ },
+ "lobby_hotel_16": {
+  "depth_scale_enabled": false,
+  "blake": {
+   "y": 64,
+   "scale": 1.0
+  },
+  "shaggy": {
+   "y": 80,
+   "scale": 1.0
+  },
+  "scooby": {
+   "y": 81,
+   "scale": 1.0
+  },
+  "note": "Scene 16 has zero opcode-12 ops; 1:1 is the ROM-correct rendering. Remove the guessed lerp(0.55..1.0)."
+ }
+}

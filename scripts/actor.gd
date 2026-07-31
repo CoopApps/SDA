@@ -177,14 +177,16 @@ func advance_anim(delta: float) -> void:
 		_apply_step()
 
 func update_depth() -> void:
+	# The Genesis applies NO per-actor perspective scale -- verified by execution:
+	# the 0x432C/0xB52A machinery is an item "fly-in" POSITION-ease (5 puzzle sites
+	# only), not a size scale, and the VDP cannot zoom sprites; the OAM-emit path is
+	# type-byte-selected, never Y-driven (see assets/data/global/depth_scale.json,
+	# citations 0x2E9E/0x2EB4[21]/0x432C/0xB52A/0x71CC, consumer 0x12CC). The old
+	# lerp(0.55,1.0) curve was an uncited invention that wrongly resized characters.
+	# Actors render at their native sprite size; depth is conveyed only by z-order.
 	if room == null:
 		return
-	var size: Vector2 = room.pixel_size()
-	var horizon: float = size.y * 0.35
-	var front: float = size.y
-	var tt: float = clampf((position.y - horizon) / (front - horizon), 0.0, 1.0)
-	var s: float = lerpf(0.55, 1.0, tt)
-	scale = Vector2(s, s)
+	scale = Vector2.ONE
 	z_index = int(position.y)
 
 ## Turn to face `point` and stand idle (no walk step) — used after arriving at
