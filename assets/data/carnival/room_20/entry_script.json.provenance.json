@@ -1,0 +1,5 @@
+{
+ "provenance": "ROM_DERIVED",
+ "producer": "exporters/gen_scene_entry_scripts.py",
+ "cite": "ROM scene ENTRY(+0xC)/SECONDARY(+0x10) scripts via the scene-script binding 0x221A; decoded by carver walk_script+decode_actions"
+}
