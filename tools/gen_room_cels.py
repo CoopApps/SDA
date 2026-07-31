@@ -33,34 +33,15 @@ def collect(chapter):
                         encoding="utf-8"))["scenes"]
     out = {}
 
-    def scan(actions, rid):
-        for a in actions or []:
-            if a.get("op") == "actor_set_word0_and_raise_pending_flag":
-                ent = int(a.get("actor", a.get("entity", -1)))
-                val = int(a.get("value", -1))
-                if ent >= 0 and val > 0:
-                    out.setdefault(rid, {}).setdefault(ent, set()).add(val)
-            for k in ("then", "else", "actions"):
-                if isinstance(a.get(k), list):
-                    scan(a[k], rid)
-
-    for rid, sc in man.items():
-        for o in sc.get("objects", []):
-            for b in o.get("behaviors", []):
-                scan(b.get("actions"), rid)
-
     # entity -> rooms: manifest objects PLUS the derived-geometry room for
     # dynamic entities that are NOT manifest objects (Cabinet, Frozen Bell,
-    # Medallion, ...). Without the derived fallback those entities had no room,
-    # so their OPEN/SHUT open-pose cel was never rendered (opening showed no
-    # change). work/hotspot_geometry_derived.json is hotel-only for now.
+    # Medallion, ...). Built FIRST so scan() can attribute each cel to the room
+    # of the ACTOR it changes.
     ent_rooms = {}
     for rid, sc in man.items():
         for o in sc.get("objects", []):
             if o.get("entity_id") is not None:
                 ent_rooms.setdefault(int(o["entity_id"]), set()).add(str(rid))
-    # per-chapter derived-geometry file (hotel + carnival). CHAPTER-SAFE: each
-    # chapter loads only its own file.
     der_path = r"D:/scoobydoo/work/hotspot_geometry_derived%s.json" % (
         "" if chapter == "hotel" else "_" + chapter)
     if os.path.isfile(der_path):
@@ -69,6 +50,28 @@ def collect(chapter):
             for h in der.get(grp, []):
                 if h.get("room") is not None:
                     ent_rooms.setdefault(int(h["entity_id"]), set()).add(str(h["room"]))
+
+    def scan(actions, rid):
+        for a in actions or []:
+            if a.get("op") == "actor_set_word0_and_raise_pending_flag":
+                ent = int(a.get("actor", a.get("entity", -1)))
+                val = int(a.get("value", -1))
+                if ent >= 0 and val > 0:
+                    # A cel is the ACTOR's own graphic, so it renders in the
+                    # ACTOR's room(s) -- NOT the room whose behaviour set it. The
+                    # Outside Door's OPEN handler sets BOTH sides (actor 47 = the
+                    # lobby door, actor 61 = the outside door); attributing by the
+                    # scanned room drew 47's lobby-door cel over room 11's sign.
+                    for r in (ent_rooms.get(ent) or {str(rid)}):
+                        out.setdefault(str(r), {}).setdefault(ent, set()).add(val)
+            for k in ("then", "else", "actions"):
+                if isinstance(a.get(k), list):
+                    scan(a[k], rid)
+
+    for rid, sc in man.items():
+        for o in sc.get("objects", []):
+            for b in o.get("behaviors", []):
+                scan(b.get("actions"), rid)
 
     # puzzle + nested behaviors: attribute to every room the target entity is in
     for name in ("puzzle_behaviors_%s.json", "nested_behaviors_%s.json"):
