@@ -599,7 +599,7 @@ func _show_text(speaker: String, color_hex: String, text: String) -> void:
 		var sa: Dictionary = _actors[speaker]
 		sa["face_left"] = float(sa["x"]) > float(anchor_ref)
 		sa["facing_known"] = true
-	var scale := 0.85
+	var scale := 2.0    # was 0.85 (< native 8px glyph, hard to read); 2x for legibility
 	var anchor := _actor_head_anchor(speaker)
 	_float_color = Color(color_hex)
 	_float_lines = _wrap_text(text, 150, scale)
