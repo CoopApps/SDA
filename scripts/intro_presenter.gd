@@ -569,7 +569,7 @@ func _set_actor_room(id: int, room: int) -> void:
 # hard to read). Bumped to a clean 2x (16px) for legibility; NEAREST keeps it crisp.
 # Wrap width widened to match so lines don't over-wrap in the 320px screen.
 const FLOAT_SCALE := 2.0
-const FLOAT_MAX_W := 260
+const FLOAT_MAX_W := 240   # < the 256 local width so a wrapped line always fits on-screen
 
 var _float_node: Sprite2D
 var _tint_cache: Dictionary = {}
@@ -674,7 +674,12 @@ func _render_float_line(text: String, color: Color, anchor: Vector2) -> void:
 		_blit_line(out, tinted, line, lx, ty)
 		ty += int(gh) + 2
 	_float_node.texture = ImageTexture.create_from_image(out)
-	_float_node.position = Vector2(anchor.x - img_w / 2.0, maxf(1.0, anchor.y - img_h - 3.0))
+	# Keep the whole box on-screen: this node is root-scaled from a 256x224 local
+	# space (see setup()'s scale). Centre on the speaker, then clamp so it never
+	# runs off an edge (the 2x dialogue can overflow when a speaker is near a side).
+	var px := clampf(anchor.x - img_w / 2.0, 2.0, maxf(2.0, 256.0 - img_w - 2.0))
+	var py := clampf(anchor.y - img_h - 3.0, 1.0, maxf(1.0, 224.0 - img_h - 1.0))
+	_float_node.position = Vector2(px, py)
 	_float_node.visible = true
 
 

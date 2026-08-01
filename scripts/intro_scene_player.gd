@@ -602,7 +602,7 @@ func _show_text(speaker: String, color_hex: String, text: String) -> void:
 	var scale := 2.0    # was 0.85 (< native 8px glyph, hard to read); 2x for legibility
 	var anchor := _actor_head_anchor(speaker)
 	_float_color = Color(color_hex)
-	_float_lines = _wrap_text(text, 150, scale)
+	_float_lines = _wrap_text(text, 288, scale)   # < 320 screen width so lines fit; clamp keeps the box on-screen
 	_float_x = anchor.x
 	_float_y = anchor.y
 	_render_float_line(scale)
@@ -642,7 +642,12 @@ func _render_float_line(scale: float) -> void:
 		_float_node.z_index = 2000
 		add_child(_float_node)
 	_float_node.texture = ImageTexture.create_from_image(out)
-	_float_node.position = Vector2(_float_x - img_w / 2.0, max(1.0, _float_y - img_h - 3.0))
+	# Keep the whole box on-screen (320x200 here, no root scale). Centre on the
+	# speaker's head, then clamp to the edges so the 2x dialogue can't stick off
+	# the side when a speaker stands near the left/right of the room.
+	var px := clampf(_float_x - img_w / 2.0, 2.0, maxf(2.0, 320.0 - img_w - 2.0))
+	var py := clampf(_float_y - img_h - 3.0, 1.0, maxf(1.0, 200.0 - img_h - 1.0))
+	_float_node.position = Vector2(px, py)
 	_float_node.visible = true
 
 
