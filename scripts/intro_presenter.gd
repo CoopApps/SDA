@@ -565,8 +565,11 @@ func _set_actor_room(id: int, room: int) -> void:
 ## (room3_line_colors.json), anchor frozen once per line (recomputing every
 ## frame from a live talk-anim causes visible bobbing — found and fixed
 ## earlier this session), only the current speaker's portrait animates.
-const FLOAT_SCALE := 0.85
-const FLOAT_MAX_W := 150
+# Dialogue glyph scale. Was 0.85 (SMALLER than the native 8px ROM glyph -> ~6.8px,
+# hard to read). Bumped to a clean 2x (16px) for legibility; NEAREST keeps it crisp.
+# Wrap width widened to match so lines don't over-wrap in the 320px screen.
+const FLOAT_SCALE := 2.0
+const FLOAT_MAX_W := 260
 
 var _float_node: Sprite2D
 var _tint_cache: Dictionary = {}
